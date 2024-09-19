@@ -1,0 +1,23 @@
+{
+  "name": "asset-processing-poc",
+  "version": "1.0.0",
+  "description": "Asset Processing POC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@adobe/aem-upload": "^2.0.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "form-data": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "gm": "^1.25.0",
+    "http": "^0.0.1-security",
+    "image-size": "^1.1.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}
