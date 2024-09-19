@@ -1,7 +1,7 @@
 // index.js
 
-// Import Methods from Contact Sheet and Convert
-const { contactSheet } =  require('./src/mage.js');
+const { mage } =  require('./src/mage.js');
+const { activate } =  require('./src/bot.js');
 
 //System Admin Methods
 const path = require('path');
@@ -16,4 +16,5 @@ app.use(bodyParser.json());
 
 app.listen( () => {
     console.log(`Starting up Maple bot`);
+    activate();
 });
