@@ -1,9 +1,27 @@
-var robot = require("robotjs");
+const {GlobalKeyboardListener} = require("node-global-key-listener");
+
+const  {robot} = require("robotjs");
+const { mage } = require("./mage.js");
+
+var toggleMovement = false
 
 function activate() {
 
     console.log("Initializing robot API")
 
+}
+
+const v = new GlobalKeyboardListener();
+
+//Log every key that's pressed.
+v.addListener(function (e, down) {
+    console.log(
+        `${e.name} ${e.state == "DOWN" ? "DOWN" : "UP  "} [${e.rawKey._nameRaw}]`
+    );
+});
+
+//move mouse in a smooth curve
+function moveMouse() {
     // Speed up the mouse.
     robot.setMouseDelay(2);
     

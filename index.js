@@ -1,6 +1,4 @@
 // index.js
-
-const { mage } =  require('./src/mage.js');
 const { activate } =  require('./src/bot.js');
 
 //System Admin Methods
