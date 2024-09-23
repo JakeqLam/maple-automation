@@ -1449,18 +1449,57 @@ togglemovement:=!togglemovement
 	if (!togglemovement)
 	{
 		GuiControl,, buttonmovement,  % "HBITMAP:*" . ui_buttonoff_bitmap
-		Sendinput {Blind}{Alt up}
 		movement = 0
+		Pause
 	}
 	else
 	{
 		GuiControl,, buttonmovement, % "HBITMAP:*" . ui_buttonon_bitmap
-		Sendinput {Left down}
-		Sleep, 4000
-		Sendinput {Right down}
+
+		Loop {
+			if (togglemovement) {
+				
+/*
+				Loop, 1 {
+					SendInput {Down Down}
+					Sleep, 300
+					SendInput {d}
+					SendInput {Down Up}
+				}
+					*/
+				Loop, 1 {
+					SendInput {Left Down}
+					Sleep, %Delayvar%
+					SendInput {Left Up}
+				}
+				Loop, 1 {
+					SendInput {Right Down}
+					Sleep, %Delayvar%
+					SendInput {Right Up}
+				}
+/*
+
+				Loop, 1 {
+					SendInput {Up Down}
+					SendInput {d}
+					Sleep, 10
+					SendInput {Up Up}
+				}
+*/				
+
+			} else {
+				break
+			}
+		}
+	
 		movement = 1
 	}
 return
+
+; script commands
+^r::Reload
+^p::Pause
+^z::ExitApp, [ ExitCode]
 
 buttonontop_switch:
 toggleontop:=!toggleontop				
