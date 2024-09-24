@@ -562,7 +562,7 @@ sendallinputs_up()
 	Sendinput {blind}{down up}
 }
 
-
+^t::Reload
 
 
 

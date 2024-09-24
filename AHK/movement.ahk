@@ -67,20 +67,6 @@ Gui, Add, Text, x50 y190 BackgroundTrans, Chat Disconnect (Safeguard)
 
 DDLContent =                                                              ;list made
 (Join|
-Arcana - Between Frost and Thunder 2
-Copper Drakes
-Ellinel Lake - Above the Lake 3
-Five-Color Hill - Hill Path <1>
-Kerning Tower - 3F <3>
-Kerning Tower - 4F <4>
-Lab - Area C-3
-Lachelein - Chicken Festival <2>
-Lachelein - Victory Plate <1>
-Lake of Oblivion - Land of Sorrow
-Ludibrium - Forgotten Passage
-Slurpy Forest - Forest 1
-Slurpy Forest - Forest depths
-Twlight Perion - Site 2
 custom map (small)
 custom map (large)
 )
@@ -223,7 +209,7 @@ togglemenu:=!togglemenu
 	}
 	else
 	{
-		Gui, Show, x1500 y0 w415 h477
+		Gui, Show, x800 y0 w415 h477
 		menu = 1
 	}
 	
@@ -302,7 +288,7 @@ menu_open:
 		
 		
 ;<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><<><><><><><><><><><><><><><><><>><><> small map nagivation with side borders
-		if (navigation = 1 and rune_execute = 0) 
+		if (navigation = 1) 
 		{
 			if (navigation = 1 and Outputvar = "custom map (small)")
 			{
@@ -313,13 +299,15 @@ menu_open:
 				PixelSearch,,, %custom_map_right%, 80, 151, 140, 0xFFDD44, 2, Fast RGB     ;right side
 				if !ErrorLevel
 				{
+					MsgBox "going left"
 					Sendinput {Blind}{Right up}
 					Sendinput {Left down}
 				}
-		
+
 				PixelSearch,,, 12, 80, %custom_map_left%, 140, 0xFFDD44, 2, Fast RGB        ;left side
 				if !ErrorLevel
 				{
+					MsgBox "going right"
 					Sendinput {Blind}{Left up}
 					Sendinput {Right down}
 				}
@@ -403,7 +391,6 @@ togglenavigation:=!togglenavigation
 		Sendinput {Blind}{Down up}
 		GuiControl,, buttonnav,  % "HBITMAP:*" . ui_buttonoff_bitmap
 		navigation = 0
-		rune_execute = 0
 		looping_arrows = 0
 	}
 	else
@@ -436,42 +423,36 @@ return
 buttonmovement_switch:
 togglemovement:=!togglemovement
 
-	if (!togglemovement)
-	{
+	if (!togglemovement){
 		GuiControl,, buttonmovement,  % "HBITMAP:*" . ui_buttonoff_bitmap
 		movement = 0
-	}
-	else
-	{
+		Reload
+	} else {
 		GuiControl,, buttonmovement, % "HBITMAP:*" . ui_buttonon_bitmap
-
+		randNum := 0
 		Loop {
 			if (togglemovement) {
-				Loop, 1 {
-					Sendinput {Blind}{Alt up}
-					SendInput {Left Down}
-					Sleep, %Delayvar%
-					SendInput {Left Up}
-				}
-				Sleep, 2000
-				Loop, 1 {
-					SendInput {Right Down}
-					Sleep, %Delayvar%
-					SendInput {Right Up}
-				}
-			} else {
-				break
+				Random, randNum, 1000, 6000
+				
+				SendInput {Left Down}
+				Sleep, %Delayvar% 
+				Sleep, randNum
+				SendInput {Left Up}
+			
+		
+				SendInput {Right Down}
+				Sleep, %Delayvar%
+				Sleep, randNum
+				SendInput {Right Up}
+				
+					
 			}
 		}
-	
 		movement = 1
 	}
 return
 
-; script commands
-^r::Reload
-^p::Pause
-^v::ExitApp, [ ExitCode]
+
 
 buttonontop_switch:
 toggleontop:=!toggleontop				
@@ -598,16 +579,15 @@ return
 ;<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
 
-
 guiclose:
 ExitApp
 return
 
 
-
-
-
-
+; script commands
+^r::Reload
+^p::Pause
+^z::ExitApp, [ ExitCode]
 
 
 
