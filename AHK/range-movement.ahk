@@ -108,7 +108,7 @@ Gui, Add, DDL, x50 y290 w145 vDDLmovement, Single_Jump|Double_Jump_Fast|Double_J
 Gui, Add, DDL, x200 y290 w100 vDDLmovement_key, Space|q|w|e|r|t|a|s|d|f|g|z|x|c|v
 
 Gui font, cBlack s9, Nova Square
-Gui, Add, edit, x320 y290 w50 r1 vMovement_delay, 1000
+Gui, Add, edit, x320 y290 w50 r1 vMovement_delay, 300
 
 GuiControl, choose, DDLmovement, Single_Jump
 
@@ -433,18 +433,28 @@ togglemovement:=!togglemovement
 		Loop {
 			if (togglemovement) {
 				;Random, randNum, 1000, 6000
+					
+				;shift in place
+						;randNum := 0
+		Loop {
+			if (togglemovement) {
 				
+				;Random, randNum, 1000, 6000
+				Sleep, 7000
 				SendInput {Left Down}
 				Sleep, %Delayvar% 
 				;Sleep, randNum
 				SendInput {Left Up}
-			
+				Sleep, 1000 
 		
 				SendInput {Right Down}
 				Sleep, %Delayvar%
 				;Sleep, randNum
 				SendInput {Right Up}
-				
+				Sleep, 1000 
+					
+			}
+		}
 					
 			}
 		}

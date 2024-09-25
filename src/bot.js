@@ -1,6 +1,10 @@
 const {GlobalKeyboardListener} = require("node-global-key-listener");
 
 const  {robot} = require("robotjs");
+//utils
+
+
+//classes
 const { mage } = require("./mage.js");
 
 var toggleMovement = false
