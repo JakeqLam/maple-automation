@@ -1,7 +1,8 @@
 #include <ImageSearch2015.au3>
+
 #include <Misc.au3>
 #include <AutoItConstants.au3>
-WinActivate("Dream MS")
+;WinActivate("YunaMS")
 #RequireAdmin
 HotKeySet("{/}", "Terminate")
 HotKeySet("-", "Terminate")

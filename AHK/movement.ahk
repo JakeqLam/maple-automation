@@ -32,63 +32,6 @@ Gui, Add, Picture, x40 y365 h25 w155 vgui_button_toggle gbuttontoggle_down, % "H
 Gui, Add, Picture, x220 y365 h25 w155 vgui_button_close gbuttonkill_down, % "HBITMAP:*" . ui_buttonkillswitch_bitmap
 Gui, Add, Picture, x40 y395 h25 w155 vgui_button_autopot gbuttonautopot_down, % "HBITMAP:*" . ui_button_autopot_bitmap
 
-;<><><><><><><><><><><><><><><><><><><><><><><><> Draw Font/text <><><><> Headers
-
-Gui font, cC0C0C0 s9, Nova Square
-Gui, Add, Text, x180 y13  BackgroundTrans, Navigation
-Gui, Add, Text, x177 y225 BackgroundTrans, Movement
-Gui, Add, Text, x192 y340 BackgroundTrans, Misc
-
-;<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> Draw Font/text Navigation tab
-
-Gui, Add, Picture, x32 y36 vbuttonnav gbuttonnav_switch,  % "HBITMAP:*" . ui_buttonoff_bitmap         ; Start Navigation Y of text - 1
-Gui, Add, Picture, x32 y166 vbuttonrune gbuttonrune_toggle,   % "HBITMAP:*" . ui_buttonoff_bitmap                        ;auto rune completion
-Gui, Add, Picture, x32 y191 vbuttondc gbutton_dc,     % "HBITMAP:*" . ui_buttonoff_bitmap             ;chat dc
-
-Gui, Add, Text, x50 y35 BackgroundTrans, Start Navigation (F6) 
-Gui, Add, Text, x50 y55 BackgroundTrans, Map name
-Gui, Add, Text, x50 y105 BackgroundTrans, Custom Map 
-
-slidermapL := new CustomSlider(" x50 y125 w195 h9 c0x444444 c0x8bb53e", 50)   ;number berfore bitmap is width of screen box
-slidermapR := new CustomSlider_reverse(" x50 y145 w195 h9 c0x444444 c0x8bb53e", 50)   ;number berfore bitmap is width of screen box
-slidermapL.pos := 20 ; set new pos
-slidermapR.pos := 20 ; set new pos
-
-Gui, Add, Text, x250 y122 BackgroundTrans, Map Left 
-Gui, Add, Text, x250 y142 BackgroundTrans, Map Right 
-
-Gui, Add, Text, x50 y165 BackgroundTrans, AutoRune Completion 
-Gui, Add, Text, x240 y165 BackgroundTrans, Interact Key 
-Gui, Add, DDL,  x320 y161 w50 vDDLinteract, 1|2|3|4|5|6|7|8|9|0|q|w|e|r|t|y|u|i|o|p|a|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m|Space
-
-Gui, Add, Text, x50 y190 BackgroundTrans, Chat Disconnect (Safeguard) 
-
-;<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> MAPS
-
-DDLContent =                                                              ;list made
-(Join|
-custom map (small)
-custom map (large)
-)
-Gui, Font, cC0C0C0 s9, Nova Square
-Gui, Add, DDL, x50 y76 w250 vDDLselection, %DDLContent%                     ;creates the ui of ddl
-GuiControlGet, Btn, Pos
-GuiControlGet, DDL, Pos                                  ;DDL is dropdown list
-
-Y := DDLY + ((BtnH - DDLH) // 2)                         ;BTN is ? H is height, can be used as btnX btnY BtnW BtnH
-GuiControl, Move, DDL, y%Y%
-
-;GuiControlGet, Outputvar, ,DDLselection,                ;Looks for the output variable of the DDL
-;msgbox %Outputvar%                                      ;prints out the varible
-
-GuiControl, MoveDraw, DDL ; needed to ensure that the control will shown properly after the first Gui, Show, ...
-GuiControl, choose, DDLselection, small map navigation (side borders)
-
-;<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> version font
-
-Gui font, c505050 s9, Nova Square
-Gui, Add, Text, x308 y438 BackgroundTrans, Omes V.0.3.0                                      ;Version number
-
 ;<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> toggle always ontop
 Gui font, cC0C0C0 s9, Nova Square
 Gui, Add, Text, x50 y432 BackgroundTrans, Always ontop
@@ -108,7 +51,7 @@ Gui, Add, DDL, x50 y290 w145 vDDLmovement, Single_Jump|Double_Jump_Fast|Double_J
 Gui, Add, DDL, x200 y290 w100 vDDLmovement_key, Space|q|w|e|r|t|a|s|d|f|g|z|x|c|v
 
 Gui font, cBlack s9, Nova Square
-Gui, Add, edit, x320 y290 w50 r1 vMovement_delay, 1000
+Gui, Add, edit, x320 y290 w50 r1 vMovement_delay, 5000
 
 GuiControl, choose, DDLmovement, Single_Jump
 

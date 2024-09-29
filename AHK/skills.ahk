@@ -118,7 +118,7 @@ Loop 14                                                        ; loops and goes 
 }
 
 Gui, +Caption +LastFound -AlwaysOnTop +OwnDialogs
-Gui, Show, x1500 y700 w415 h410
+Gui, Show, x800 y600 w415 h410
 
 OnMessage(WM_MOUSEWHEEL:=0x20A, "wheel")
 OnMessage(WM_MOUSEMOVE:=0x200, "drag")
