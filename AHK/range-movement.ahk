@@ -439,19 +439,17 @@ togglemovement:=!togglemovement
 		Loop {
 			if (togglemovement) {
 				
-				;Random, randNum, 1000, 6000
-				Sleep, 7000
 				SendInput {Left Down}
 				Sleep, %Delayvar% 
 				;Sleep, randNum
 				SendInput {Left Up}
-				Sleep, 1000 
-		
+				Sleep, 3000 
+
 				SendInput {Right Down}
 				Sleep, %Delayvar%
 				;Sleep, randNum
 				SendInput {Right Up}
-				Sleep, 1000 
+				Sleep, 3000
 					
 			}
 		}
