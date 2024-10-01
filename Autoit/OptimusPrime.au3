@@ -149,7 +149,7 @@ Func moveRandomRight($timerVal)
 EndFunc   ;==>Example
 
 Func stand($timerVal)
-   $res = Random($min, $max) * $timerVal * 2
+   $res = Random($min, $max) * $timerVal
    Sleep($res)
 EndFunc
 
