@@ -24,9 +24,9 @@ GUICtrlCreateLabel("Left Boundary", 20, 20)
 GUICtrlCreateLabel("Right Boundary", 200, 20)
 GUICtrlCreateLabel("Time Interval (ms)", 20, 70)
 
-$LBInputVal = GUICtrlCreateInput("400", 20, 40, 100, 20) ; will not accept drag&drop files
-$RBInputVal = GUICtrlCreateInput("700", 200, 40, 100, 20) ; will not accept drag&drop files
-$timerInputVal = GUICtrlCreateInput("800", 20, 90, 80, 20) ; will not accept drag&drop files
+$LBInputVal = GUICtrlCreateInput("350", 20, 40, 100, 20) ; will not accept drag&drop files
+$RBInputVal = GUICtrlCreateInput("850", 200, 40, 100, 20) ; will not accept drag&drop files
+$timerInputVal = GUICtrlCreateInput("2000", 20, 90, 80, 20) ; will not accept drag&drop files
 $randMovement = GUICtrlCreateCheckbox("Random Movement", 20, 120, 120, 25)
 
 GUISetState(@SW_SHOW)
@@ -75,11 +75,11 @@ While (1)
 	  ElseIf $x1 > $rightBound Then
 		 moveLeft($timerVal)
 	  ElseIf isChecked($randMovement) Then
-		 $rand = Random(0, 2, 1)
+		 $rand = Random(0, 10, 1)
 
-		 If $rand = 1 Then
+		 If $rand <= 4 Then
 			moveRandomRight($timerVal)
-		 ElseIf $rand = 2 Then
+		 ElseIf $rand > 4 and $rand <= 8 Then
 			moveRandomLeft($timerVal)
 		 Else
 			stand($timerVal)
@@ -128,7 +128,7 @@ EndFunc   ;==>Example
 Func moveRandomLeft($timerVal)
    For $i = 2 To 1 Step -1
 	  imageSearchName()
-	  If $x1 < $leftBound or $x1 > $rightBound Then ExitLoop
+	  If $x1 < $rightBound or $x1 > $rightBound Then ExitLoop
 	  Send("{Left down}")
 	  $res = Random($min, $max) * $timerVal
 	  Sleep($res)
