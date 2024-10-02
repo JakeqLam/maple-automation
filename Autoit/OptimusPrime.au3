@@ -126,9 +126,10 @@ EndFunc   ;==>Example
 
 ;move char to left
 Func moveRandomLeft($timerVal)
+
    For $i = 2 To 1 Step -1
 	  imageSearchName()
-	  If $x1 < $rightBound or $x1 > $rightBound Then ExitLoop
+	  If $x1 < $leftBound or $x1 > $rightBound Then ExitLoop
 	  Send("{Left down}")
 	  $res = Random($min, $max) * $timerVal
 	  Sleep($res)
@@ -138,6 +139,7 @@ EndFunc   ;==>Example
 
 ;move char to the right
 Func moveRandomRight($timerVal)
+
    For $i = 2 To 1 Step -1
 	  imageSearchName()
 	  If $x1 < $leftBound or $x1 > $rightBound Then ExitLoop
