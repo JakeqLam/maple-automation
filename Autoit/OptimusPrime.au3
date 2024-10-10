@@ -157,3 +157,4 @@ EndFunc
 
 Func isChecked($idControlID)
    Return BitAND(GUICtrlRead($idControlID), $GUI_CHECKED) = $GUI_CHECKED
+EndFunc
