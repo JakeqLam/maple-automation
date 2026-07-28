@@ -1,0 +1,363 @@
+[00:11:54] Target selection cancelled
+[00:11:58] ImageSearch smoke test stopped
+[08:22:25] ============================================================
+[08:22:25] ImageSearch smoke test starting
+[08:22:25] Script directory: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF
+[08:22:25] AutoIt architecture: x64
+[08:22:25] Desktop size: 2560x1440
+[08:22:25] ImageSearchDLL startup succeeded
+[08:22:25] Controls:
+[08:22:25]   F6  = choose target
+[08:22:25]   F7  = search once
+[08:22:25]   F8  = toggle continuous search
+[08:22:25]   F9  = save screenshot
+[08:22:25]   F10 = clear highlights
+[08:22:25]   Esc = exit
+[08:22:29] Target selected: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\slime.png
+[08:22:41] Continuous search enabled
+[08:22:41] MISS after 161.98 ms
+[08:22:42] MISS after 117.84 ms
+[08:22:42] MISS after 130.45 ms
+[08:22:43] MISS after 131.59 ms
+[08:22:44] MISS after 130.68 ms
+[08:22:45] MISS after 130.57 ms
+[08:22:45] MISS after 117.47 ms
+[08:22:46] MISS after 129.99 ms
+[08:22:47] MISS after 132.07 ms
+[08:22:48] MISS after 128.32 ms
+[08:22:48] MISS after 127.75 ms
+[08:22:49] MISS after 131.14 ms
+[08:22:50] MISS after 142.99 ms
+[08:22:51] MISS after 131.12 ms
+[08:22:51] MISS after 133.13 ms
+[08:22:52] MISS after 128.7 ms
+[08:22:53] MISS after 126.57 ms
+[08:22:54] MISS after 124.2 ms
+[08:22:54] MISS after 130.03 ms
+[08:22:55] MISS after 127.54 ms
+[08:22:56] MISS after 125.41 ms
+[08:22:57] MISS after 135.67 ms
+[08:22:57] MISS after 124.39 ms
+[08:22:58] MISS after 139.22 ms
+[08:22:59] MISS after 129.39 ms
+[08:23:00] MISS after 147.11 ms
+[08:23:00] MISS after 137.6 ms
+[08:23:01] MISS after 141.71 ms
+[08:23:02] MISS after 136.56 ms
+[08:23:03] MISS after 127.4 ms
+[08:23:03] MISS after 123.94 ms
+[08:23:04] MISS after 121.49 ms
+[08:23:05] MISS after 128.83 ms
+[08:23:06] MISS after 118.12 ms
+[08:23:06] MISS after 116.72 ms
+[08:23:07] MISS after 118.28 ms
+[08:23:08] MISS after 124.06 ms
+[08:23:09] MISS after 117.86 ms
+[08:23:09] MISS after 118.17 ms
+[08:23:10] MISS after 119.4 ms
+[08:23:11] MISS after 115.77 ms
+[08:23:12] MISS after 114.18 ms
+[08:23:12] ImageSearch smoke test stopped
+[09:37:37] ============================================================
+[09:37:37] ImageSearch smoke test starting
+[09:37:37] Script directory: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF
+[09:37:37] AutoIt architecture: x64
+[09:37:37] Desktop size: 2560x1440
+[09:37:37] ImageSearchDLL startup succeeded
+[09:37:37] Controls:
+[09:37:37]   F6  = choose target
+[09:37:37]   F7  = search once
+[09:37:37]   F8  = toggle continuous search
+[09:37:37]   F9  = save screenshot
+[09:37:37]   F10 = clear highlights
+[09:37:37]   Esc = exit
+[09:38:11] Target selected: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\slime1.png
+[09:38:26] MISS after 157.72 ms
+[09:38:26] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093826.png
+[09:38:29] MISS after 132.01 ms
+[09:38:29] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093829.png
+[09:38:30] MISS after 123.43 ms
+[09:38:30] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093830.png
+[09:38:35] MISS after 132.04 ms
+[09:38:35] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093835.png
+[09:38:38] MISS after 121.56 ms
+[09:38:39] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093838.png
+[09:38:39] MISS after 119.75 ms
+[09:38:40] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093839.png
+[09:38:40] MISS after 126.36 ms
+[09:38:41] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093840.png
+[09:38:41] MISS after 118.35 ms
+[09:38:41] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093841.png
+[09:38:42] MISS after 135.89 ms
+[09:38:42] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093842.png
+[09:38:48] Target selected: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\slime2.png
+[09:38:50] MISS after 123.73 ms
+[09:38:51] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093850.png
+[09:38:52] MISS after 127.5 ms
+[09:38:52] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093852.png
+[09:38:53] MISS after 128.99 ms
+[09:38:53] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093853.png
+[09:38:54] MISS after 120.56 ms
+[09:38:54] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093854.png
+[09:38:55] MISS after 111.69 ms
+[09:38:55] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093855.png
+[09:38:56] MISS after 120.11 ms
+[09:38:56] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093856.png
+[09:38:56] MISS after 118.15 ms
+[09:38:57] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093856.png
+[09:38:57] MISS after 110.61 ms
+[09:38:57] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093857.png
+[09:39:00] MISS after 132.5 ms
+[09:39:00] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_093900.png
+[09:39:29] Target selection cancelled
+[09:39:41] Target selection cancelled
+[09:58:16] ImageSearch smoke test stopped
+[10:12:21] ============================================================
+[10:12:21] ImageSearch smoke test starting
+[10:12:21] Script directory: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF
+[10:12:21] AutoIt architecture: x64
+[10:12:21] Desktop size: 2560x1440
+[10:12:21] ImageSearchDLL startup succeeded
+[10:12:21] Controls:
+[10:12:21]   F6  = choose target
+[10:12:21]   F7  = search once
+[10:12:21]   F8  = toggle continuous search
+[10:12:21]   F9  = save screenshot
+[10:12:21]   F10 = clear highlights
+[10:12:21]   Esc = exit
+[10:12:30] Target selected: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\slime2.png
+[10:13:09] MISS after 143.9 ms
+[10:13:10] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_101309.png
+[10:14:58] Target selection cancelled
+[12:24:53] Target selected: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\slime1.png
+[12:25:22] Target selection cancelled
+[12:34:18] ============================================================
+[12:34:18] ImageSearch GUI debugger starting
+[12:34:18] Script directory: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF
+[12:34:18] AutoIt architecture: x86
+[12:34:18] Administrator token: yes
+[12:34:18] Desktop size: 2560x1440
+[12:34:18] No keyboard hotkeys are registered
+[12:34:19] ImageSearchDLL startup succeeded
+[12:34:19] Selected default target image: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\slime1.png
+[12:34:19] Target window bound via automatic detection:
+[12:34:19]   Title: 
+[12:34:19]   Handle: 0x005902F6
+[12:34:19]   PID: 31004
+[12:34:19]   Client region: 576,149 to 1855,868
+[12:34:19]   Client size: 1280x720
+[12:34:35] Target window bound via automatic detection:
+[12:34:35]   Title: 
+[12:34:35]   Handle: 0x005902F6
+[12:34:35]   PID: 31004
+[12:34:35]   Client region: 576,149 to 1855,868
+[12:34:35]   Client size: 1280x720
+[12:34:39] Target window bound via automatic detection:
+[12:34:39]   Title: 
+[12:34:39]   Handle: 0x005902F6
+[12:34:39]   PID: 31004
+[12:34:39]   Client region: 576,149 to 1855,868
+[12:34:39]   Client size: 1280x720
+[12:34:40] Target window bound via automatic detection:
+[12:34:40]   Title: 
+[12:34:40]   Handle: 0x005902F6
+[12:34:40]   PID: 31004
+[12:34:40]   Client region: 576,149 to 1855,868
+[12:34:40]   Client size: 1280x720
+[12:34:42] Target window bound via automatic detection:
+[12:34:42]   Title: 
+[12:34:42]   Handle: 0x005902F6
+[12:34:42]   PID: 31004
+[12:34:42]   Client region: 576,149 to 1855,868
+[12:34:42]   Client size: 1280x720
+[12:34:42] Target window bound via automatic detection:
+[12:34:42]   Title: 
+[12:34:42]   Handle: 0x005902F6
+[12:34:42]   PID: 31004
+[12:34:42]   Client region: 576,149 to 1855,868
+[12:34:42]   Client size: 1280x720
+[12:34:44] Target window bound via automatic detection:
+[12:34:44]   Title: 
+[12:34:44]   Handle: 0x005902F6
+[12:34:44]   PID: 31004
+[12:34:44]   Client region: 576,149 to 1855,868
+[12:34:44]   Client size: 1280x720
+[12:34:49] Target window bound via delayed active-window binding:
+[12:34:49]   Title: 
+[12:34:49]   Handle: 0x005902F6
+[12:34:49]   PID: 31004
+[12:34:49]   Client region: 576,149 to 1855,868
+[12:34:49]   Client size: 1280x720
+[12:34:52] MISS in '' after 37.37 ms
+[12:34:52] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_123452_127.png
+[12:34:54] MISS in '' after 27.28 ms
+[12:34:54] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_123454_074.png
+[12:34:56] Target window bound via automatic detection:
+[12:34:56]   Title: 
+[12:34:56]   Handle: 0x005902F6
+[12:34:56]   PID: 31004
+[12:34:56]   Client region: 576,149 to 1855,868
+[12:34:56]   Client size: 1280x720
+[12:35:29] ImageSearch GUI debugger stopped
+[13:23:19] ImageSearch smoke test stopped
+[13:58:49] ============================================================
+[13:58:49] ImageSearch GUI debugger starting
+[13:58:49] Script directory: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF
+[13:58:49] AutoIt architecture: x86
+[13:58:49] Administrator token: yes
+[13:58:49] Desktop size: 2560x1440
+[13:58:49] No keyboard hotkeys are registered
+[13:58:49] ImageSearchDLL startup succeeded
+[13:58:49] Selected default target image: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\slime1.png
+[13:58:49] Target window bound via automatic detection:
+[13:58:49]   Title: 
+[13:58:49]   Handle: 0x005902F6
+[13:58:49]   PID: 31004
+[13:58:49]   Client region: 576,149 to 1855,868
+[13:58:49]   Client size: 1280x720
+[13:58:51] Target window bound via automatic detection:
+[13:58:51]   Title: 
+[13:58:51]   Handle: 0x005902F6
+[13:58:51]   PID: 31004
+[13:58:51]   Client region: 576,149 to 1855,868
+[13:58:51]   Client size: 1280x720
+[13:58:53] Target window bound via automatic detection:
+[13:58:53]   Title: 
+[13:58:53]   Handle: 0x005902F6
+[13:58:53]   PID: 31004
+[13:58:53]   Client region: 576,149 to 1855,868
+[13:58:53]   Client size: 1280x720
+[13:58:54] Target window bound via automatic detection:
+[13:58:54]   Title: 
+[13:58:54]   Handle: 0x005902F6
+[13:58:54]   PID: 31004
+[13:58:54]   Client region: 576,149 to 1855,868
+[13:58:54]   Client size: 1280x720
+[13:58:54] Target window bound via automatic detection:
+[13:58:54]   Title: 
+[13:58:54]   Handle: 0x005902F6
+[13:58:54]   PID: 31004
+[13:58:54]   Client region: 576,149 to 1855,868
+[13:58:54]   Client size: 1280x720
+[13:58:54] Target window bound via automatic detection:
+[13:58:54]   Title: 
+[13:58:54]   Handle: 0x005902F6
+[13:58:54]   PID: 31004
+[13:58:54]   Client region: 576,149 to 1855,868
+[13:58:54]   Client size: 1280x720
+[13:58:57] MISS in '' after 20.81 ms
+[13:58:58] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_135857_999.png
+[13:59:01] Target window bound via automatic detection:
+[13:59:01]   Title: 
+[13:59:01]   Handle: 0x005902F6
+[13:59:01]   PID: 31004
+[13:59:01]   Client region: 576,149 to 1855,868
+[13:59:01]   Client size: 1280x720
+[13:59:06] Target window bound via delayed active-window binding:
+[13:59:06]   Title: 
+[13:59:06]   Handle: 0x005902F6
+[13:59:06]   PID: 31004
+[13:59:06]   Client region: 576,149 to 1855,868
+[13:59:06]   Client size: 1280x720
+[13:59:08] Target window bound via automatic detection:
+[13:59:08]   Title: 
+[13:59:08]   Handle: 0x005902F6
+[13:59:08]   PID: 31004
+[13:59:08]   Client region: 576,149 to 1855,868
+[13:59:08]   Client size: 1280x720
+[13:59:11] Target window bound via automatic detection:
+[13:59:11]   Title: 
+[13:59:11]   Handle: 0x005902F6
+[13:59:11]   PID: 31004
+[13:59:11]   Client region: 576,149 to 1855,868
+[13:59:11]   Client size: 1280x720
+[13:59:13] ImageSearch GUI debugger stopped
+[15:12:11] ============================================================
+[15:12:11] ImageSearch GUI debugger starting
+[15:12:11] Script directory: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF
+[15:12:11] AutoIt architecture: x86
+[15:12:11] Administrator token: yes
+[15:12:11] Desktop size: 2560x1440
+[15:12:11] No keyboard hotkeys are registered
+[15:12:11] ImageSearchDLL startup succeeded
+[15:12:11] Selected default target image: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\slime1.png
+[15:12:12] Target window bound via automatic detection:
+[15:12:12]   Title: MapleStory
+[15:12:12]   Handle: 0x000C11EE
+[15:12:12]   PID: 12696
+[15:12:12]   Process: MapleSaga.exe
+[15:12:12]   Client region: 1108,686 to 1451,775
+[15:12:12]   Client size: 344x90
+[15:12:26] Target window bound via automatic detection:
+[15:12:26]   Title: 
+[15:12:26]   Handle: 0x001021D8
+[15:12:26]   PID: 9104
+[15:12:26]   Process: MapleSaga.exe
+[15:12:26]   Client region: 3,26 to 1282,745
+[15:12:26]   Client size: 1280x720
+[15:12:44] Target window bound via automatic detection:
+[15:12:44]   Title: 
+[15:12:44]   Handle: 0x001021D8
+[15:12:44]   PID: 9104
+[15:12:44]   Process: MapleSaga.exe
+[15:12:44]   Client region: 3,26 to 1282,745
+[15:12:44]   Client size: 1280x720
+[15:12:47] MISS in '' after 29.94 ms
+[15:12:47] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_151247_810.png
+[15:12:49] MISS in '' after 32.33 ms
+[15:12:49] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_151249_140.png
+[15:12:50] MISS in '' after 25.22 ms
+[15:12:50] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\ImageSearchDLL_UDF_v3.5.1\ImageSearchDLL_UDF\debug\failure_not-found_20260728_151250_273.png
+[15:12:55] Target window bound via automatic detection:
+[15:12:55]   Title: 
+[15:12:55]   Handle: 0x001021D8
+[15:12:55]   PID: 9104
+[15:12:55]   Process: MapleSaga.exe
+[15:12:55]   Client region: 3,26 to 1282,745
+[15:12:55]   Client size: 1280x720
+[15:12:57] Continuous search enabled
+[15:12:57] FOUND 1 match(es) in '' after 31.62 ms
+[15:12:57]   Match 1: X=712, Y=492, Width=9, Height=14
+[15:12:58] MISS in '' after 31.51 ms
+[15:12:59] MISS in '' after 30.82 ms
+[15:12:59] MISS in '' after 25.65 ms
+[15:13:00] MISS in '' after 25.22 ms
+[15:13:01] MISS in '' after 32.31 ms
+[15:13:02] MISS in '' after 18.5 ms
+[15:13:02] MISS in '' after 18.46 ms
+[15:13:03] MISS in '' after 16.4 ms
+[15:13:04] MISS in '' after 16.38 ms
+[15:13:05] MISS in '' after 30.44 ms
+[15:13:06] MISS in '' after 30.4 ms
+[15:13:06] MISS in '' after 27.39 ms
+[15:13:07] MISS in '' after 29 ms
+[15:13:08] MISS in '' after 29.34 ms
+[15:13:09] MISS in '' after 25.57 ms
+[15:13:09] MISS in '' after 25.12 ms
+[15:13:10] MISS in '' after 27.04 ms
+[15:13:11] MISS in '' after 24.6 ms
+[15:13:12] MISS in '' after 22.25 ms
+[15:13:13] MISS in '' after 25.53 ms
+[15:13:13] FOUND 1 match(es) in '' after 27.58 ms
+[15:13:13]   Match 1: X=910, Y=495, Width=9, Height=14
+[15:13:14] MISS in '' after 28.87 ms
+[15:13:15] MISS in '' after 26.48 ms
+[15:13:16] MISS in '' after 24.62 ms
+[15:13:16] MISS in '' after 26.84 ms
+[15:13:17] MISS in '' after 27.62 ms
+[15:13:18] MISS in '' after 27.34 ms
+[15:13:19] MISS in '' after 21.67 ms
+[15:13:20] MISS in '' after 21.79 ms
+[15:13:20] MISS in '' after 24.19 ms
+[15:13:21] MISS in '' after 25.55 ms
+[15:13:22] MISS in '' after 29.74 ms
+[15:13:23] FOUND 1 match(es) in '' after 19.24 ms
+[15:13:23]   Match 1: X=792, Y=502, Width=9, Height=14
+[15:13:23] MISS in '' after 19.57 ms
+[15:13:24] MISS in '' after 22.2 ms
+[15:13:25] MISS in '' after 30.19 ms
+[15:13:26] MISS in '' after 16.41 ms
+[15:13:27] MISS in '' after 19.61 ms
+[15:13:27] MISS in '' after 20.91 ms
+[15:13:28] Continuous search disabled: Stopped by user.
+[15:13:39] ImageSearch GUI debugger stopped
