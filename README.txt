@@ -1,95 +1,51 @@
-MAPLE AUTOMATION MVP v0.1.1
-============================
+MAPLE AUTOMATION MVP v0.2.0
 
-PURPOSE
--------
-This is the first combined build of the two successful proofs of concept:
+This build extends the verified combined movement + EXP OCR POC with OCR-based HP/MP reading and guarded autopot decisions.
 
-1. Maple Template Library POC v3
-   - player template library
-   - target template library
-   - nearest-target detection and distance measurement
-   - import and snippet-capture tools
+FEATURES
+- Binds MapleSaga.exe or MapleStory.exe.
+- Detects player and targets from data\player and data\target.
+- Optional horizontal movement and movement-skill taps.
+- Reads the permanent bottom EXP HUD and tracks session XP.
+- Reads HP and MP numeric ratios from the permanent bottom HUD.
+- Computes HP/MP percentages from OCR values.
+- Optional HP and MP potion sends below configurable thresholds.
+- Separate per-potion cooldown enforcement.
+- F6 starts/pauses the combined runtime.
+- F8 immediately stops automation and forces movement/potion keys up.
+- Logs every vitals OCR result and every autopot decision.
 
-2. Maple OCR Session Stats POC v1.4
-   - permanent bottom EXP HUD capture
-   - 6x GDI+ upscale
-   - Tesseract single-line OCR
-   - stable-read confirmation
-   - session EXP, event count, last gain, and XP/hour
+SAFETY DEFAULTS
+- Automatic movement is OFF.
+- HP autopot is OFF.
+- MP autopot is OFF.
+- Potion inputs are sent only while the bound game window is active.
+- Normal threshold decisions require stable OCR confirmation.
+- A reading at least 10 percentage points below threshold is treated as severe and may act after one valid OCR read.
+- Large OCR changes to maximum HP/MP require additional confirmation.
 
-The combined MVP also adds optional horizontal movement toward the nearest detected
-target and optional movement-skill taps.
+DEFAULT AUTOPOT SETTINGS
+- HP threshold: 40%, key F1
+- MP threshold: 30%, key F2
+- Cooldown: 800 ms per potion channel
 
 INSTALL
--------
-Extract this bundle into your existing folder, normally:
+1. Extract into C:\Users\Jake Lam\code\maple-automation.
+2. Keep ImageSearchDLL_UDF_Embedded.au3 beside the main script.
+3. Keep Tesseract installed at C:\Program Files\Tesseract-OCR\tesseract.exe.
+4. Run Run-Maple-Automation-MVP-v0.2.0-Admin.cmd.
 
-    C:\Users\Jake Lam\code\maple-automation
-
-Keep your known-working dependency beside the script:
-
-    ImageSearchDLL_UDF_Embedded.au3
-
-Tesseract should remain installed at the working default path:
-
-    C:\Program Files\Tesseract-OCR\tesseract.exe
-
-RUN
----
-Launch:
-
-    Run-Maple-Automation-MVP-v0.1.1-Admin.cmd
-
-The launcher runs Au3Check first when available, then starts the script.
-
-SAFE FIRST TEST
----------------
-1. Start MapleSaga at the same 1280x720 client size used for template capture.
-2. Open the MVP and confirm Window, Player, Targets, and Nearest are detected.
-3. Leave automatic movement unchecked.
-4. Use Tap Left, Tap Right, and Test Skill to validate the configured keys.
-5. Check Enable automatic horizontal movement.
-6. Click F6 Start, then activate the game window.
-7. Press F8 immediately if movement is unexpected.
-
-HOTKEYS
--------
-F6  Start or pause the combined runtime.
-F8  Emergency stop and release Left, Right, A, and D.
-
-MOVEMENT RULES
---------------
-- Input is sent only while the bound Maple game window is active.
-- The nearest target is selected by Euclidean center distance.
-- Movement uses only the horizontal delta for this MVP.
-- The movement key is released inside Stop Distance.
-- The configured skill key is tapped at Skill Interval while moving.
-- Lost/stale vision releases movement automatically.
+FIRST TEST
+1. Start MapleSaga at 1280x720.
+2. Launch the MVP and confirm the client is bound.
+3. Leave HP/MP autopot unchecked and press F6.
+4. Confirm the GUI reports values matching the bottom HUD.
+5. Open debug\MapleAutomationMVP.log and verify VITALS OCR and AUTOPOT decision lines.
+6. Configure thresholds/keys, enable one channel at a time, and test with F8 ready.
 
 DEBUG OUTPUT
-------------
-    debug\MapleAutomationMVP.log
-    debug\ocr_temp\latest_exp_hud_raw.png
-    debug\ocr_temp\latest_exp_hud_scaled.png
-    debug\ocr_temp\hud_ocr_result.txt
-
-DATA LIBRARY
-------------
-    data\player\*.png
-    data\target\*.png
-
-The bundle carries forward the uploaded SuperKiwi and stump templates.
-
-KNOWN MVP LIMITS
-----------------
-- No vertical platform routing, obstacle handling, or attack logic yet.
-- Target identity is currently the nearest matching target template.
-- Templates remain exact-scale first; display scaling changes may require new captures.
-- EXP rollover safely rebases at level-up but does not yet calculate the rollover gain.
-- HP/MP OCR and autopot are intentionally deferred until their HUD regions are
-  calibrated and verified with the same discipline used for EXP.
-
-V0.1.1 HOTFIX
---------------
-Removed duplicate UTF-8 BOM bytes that prevented AutoIt from parsing #RequireAdmin on line 1.
+- debug\MapleAutomationMVP.log
+- debug\ocr_temp\latest_vitals_hud_raw.png
+- debug\ocr_temp\latest_vitals_hud_scaled.png
+- debug\ocr_temp\vitals_ocr_result.txt
+- Existing EXP and vision debug files remain available.

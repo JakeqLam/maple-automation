@@ -1684,3 +1684,475 @@
 [10:37:14] DISTANCE RESULT: targets=5; nearestIndex=0; dx=3.5; dy=60; distance=60.1; elapsedMs=256.28
 [10:37:14] Combined runtime disabled: Paused by user.
 [10:37:44] Maple Automation MVP v0.1 stopped
+[10:50:46] ============================================================
+[10:50:46] Maple Automation MVP v0.2.0 starting
+[10:50:46] Script directory: C:\Users\Jake Lam\code\maple-automation
+[10:50:46] AutoIt architecture: x64
+[10:50:46] Administrator token: yes
+[10:50:46] Desktop size: 2560x1440
+[10:50:46] Hotkeys: F6 start/pause; F8 emergency stop
+[10:50:46] ImageSearchDLL startup succeeded
+[10:50:46] GDI+ startup succeeded
+[10:50:46] Tesseract path: C:\Program Files\Tesseract-OCR\tesseract.exe
+[10:50:46] Template library reloaded: players=3; targets=5
+[10:50:46] EXP session reset
+[10:50:46] Target window bound via automatic process detection:
+[10:50:46]   Title: 
+[10:50:46]   Process: MapleSaga.exe
+[10:50:46]   PID: 9104
+[10:50:46]   Client region: 210,64 to 1489,783
+[10:50:46]   Client size: 1280x720
+[10:50:52] Combined runtime enabled; OCR=on
+[10:50:52] PLAYER FOUND template=SuperKiwi_selected.png x=793 y=450
+[10:50:52] TARGET TEMPLATE HIT stump1.png matches=1
+[10:50:53] TARGET TEMPLATE HIT stump4.png matches=1
+[10:50:53] TARGET TEMPLATE HIT stump5.png matches=1
+[10:50:53] TARGET 1 template=stump1.png x=865 y=520 dx=55.5 dy=81 distance=98.19
+[10:50:53] TARGET 2 template=stump4.png x=535 y=578 dx=-275.5 dy=132 distance=305.49
+[10:50:53] DISTANCE RESULT: targets=2; nearestIndex=0; dx=55.5; dy=81; distance=98.19; elapsedMs=183.73
+[10:50:53] PLAYER FOUND template=SuperKiwi_selected.png x=793 y=450
+[10:50:53] TARGET TEMPLATE HIT stump1.png matches=1
+[10:50:53] TARGET TEMPLATE HIT stump5.png matches=1
+[10:50:53] TARGET 1 template=stump1.png x=866 y=520 dx=56.5 dy=81 distance=98.76
+[10:50:53] DISTANCE RESULT: targets=1; nearestIndex=0; dx=56.5; dy=81; distance=98.76; elapsedMs=160.17
+[10:50:53] VITALS OCR: HP=216/237 (91.14%); MP=436/436 (100.00%); OCR='HP (216/237! MP [436./436)'
+[10:50:53] AUTOPOT HP: stable read 1/2; current=216/237 (91.14%); no key sent
+[10:50:53] AUTOPOT MP: stable read 1/2; current=436/436 (100.00%); no key sent
+[10:50:54] PLAYER FOUND template=SuperKiwi_selected.png x=793 y=450
+[10:50:54] TARGET TEMPLATE HIT stump1.png matches=1
+[10:50:54] TARGET TEMPLATE HIT stump5.png matches=1
+[10:50:54] TARGET 1 template=stump1.png x=866 y=520 dx=56.5 dy=81 distance=98.76
+[10:50:54] DISTANCE RESULT: targets=1; nearestIndex=0; dx=56.5; dy=81; distance=98.76; elapsedMs=175.35
+[10:50:54] VITALS OCR: HP=216/237 (91.14%); MP=436/436 (100.00%); OCR='HP (216/237! MP [436./436)'
+[10:50:54] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:50:54] AUTOPOT MP: disabled; current=100.00%; threshold=30%; no key sent
+[10:50:55] PLAYER FOUND template=SuperKiwi_selected.png x=793 y=450
+[10:50:55] PLAYER FOUND but TARGET MISS after 155.37 ms
+[10:50:55] PLAYER FOUND template=SuperKiwi_selected.png x=793 y=450
+[10:50:55] PLAYER FOUND but TARGET MISS after 146.1 ms
+[10:50:55] VITALS OCR: HP=216/237 (91.14%); MP=436/436 (100.00%); OCR='HP (216/237! MP [436./436)'
+[10:50:55] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:50:55] AUTOPOT MP: disabled; current=100.00%; threshold=30%; no key sent
+[10:50:55] PLAYER FOUND template=SuperKiwi_selected.png x=775 y=433
+[10:50:55] TARGET TEMPLATE HIT stump3.png matches=1
+[10:50:55] TARGET 1 template=stump3.png x=897 y=521 dx=112 dy=98.5 distance=149.15
+[10:50:55] DISTANCE RESULT: targets=1; nearestIndex=0; dx=112; dy=98.5; distance=149.15; elapsedMs=149.36
+[10:50:56] EXP HUD baseline: EXP 3139 (92.07%); OCR='EXP 3139/92.07%)'
+[10:50:56] PLAYER FOUND template=SuperKiwi_text.png x=736 y=581
+[10:50:56] TARGET TEMPLATE HIT stump3.png matches=2
+[10:50:56] TARGET 1 template=stump3.png x=988 y=460 dx=252 dy=-107.5 distance=273.97
+[10:50:56] TARGET 2 template=stump3.png x=235 y=580 dx=-501 dy=12.5 distance=501.16
+[10:50:56] DISTANCE RESULT: targets=2; nearestIndex=0; dx=252; dy=-107.5; distance=273.97; elapsedMs=191.32
+[10:50:56] VITALS OCR MISS: raw='HP (216/237) MP | 484436)'; crop=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_raw.png; scaled=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_scaled.png; no potion keys sent
+[10:50:56] PLAYER FOUND template=SuperKiwi_selected.png x=749 y=551
+[10:50:57] TARGET TEMPLATE HIT stump4.png matches=1
+[10:50:57] TARGET 1 template=stump4.png x=355 y=558 dx=-411.5 dy=11 distance=411.65
+[10:50:57] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-411.5; dy=11; distance=411.65; elapsedMs=146.09
+[10:50:57] PLAYER FOUND template=SuperKiwi_text.png x=775 y=541
+[10:50:57] TARGET TEMPLATE HIT stump3.png matches=1
+[10:50:57] TARGET 1 template=stump3.png x=298 y=544 dx=-477 dy=16.5 distance=477.29
+[10:50:57] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-477; dy=16.5; distance=477.29; elapsedMs=202.3
+[10:50:57] VITALS OCR MISS: raw='HP (216/237! MP [472436)'; crop=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_raw.png; scaled=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_scaled.png; no potion keys sent
+[10:50:57] PLAYER FOUND template=SuperKiwi_text.png x=787 y=529
+[10:50:57] TARGET TEMPLATE HIT stump1.png matches=1
+[10:50:57] TARGET TEMPLATE HIT stump5.png matches=1
+[10:50:57] TARGET 1 template=stump1.png x=360 y=536 dx=-433.5 dy=21 distance=434.01
+[10:50:57] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-433.5; dy=21; distance=434.01; elapsedMs=175.71
+[10:50:58] PLAYER MISS across all 3 templates
+[10:50:58] PLAYER MISS and TARGET MISS after 143.78 ms
+[10:50:58] PLAYER MISS across all 3 templates
+[10:50:58] TARGET TEMPLATE HIT stump1.png matches=1
+[10:50:58] TARGET TEMPLATE HIT stump5.png matches=1
+[10:50:58] TARGETS FOUND WITHOUT PLAYER: count=1; elapsedMs=145.69
+[10:50:58] VITALS OCR MISS: raw='HP (216/237! MP [460,436)'; crop=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_raw.png; scaled=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_scaled.png; no potion keys sent
+[10:50:59] PLAYER MISS across all 3 templates
+[10:50:59] PLAYER MISS and TARGET MISS after 147.45 ms
+[10:50:59] EXP HUD EVENT: previous=3139; current=3235; percent=93.15; gain=96; OCR='EXP 3235/93.15%)'
+[10:50:59] PLAYER MISS across all 3 templates
+[10:50:59] TARGET TEMPLATE HIT stump1.png matches=1
+[10:50:59] TARGET TEMPLATE HIT stump3.png matches=1
+[10:50:59] TARGET TEMPLATE HIT stump5.png matches=1
+[10:50:59] TARGETS FOUND WITHOUT PLAYER: count=2; elapsedMs=158.79
+[10:50:59] VITALS OCR MISS: raw='HP (216/237! MP [460,436)'; crop=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_raw.png; scaled=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_scaled.png; no potion keys sent
+[10:50:59] PLAYER MISS across all 3 templates
+[10:50:59] TARGET TEMPLATE HIT stump4.png matches=1
+[10:50:59] TARGETS FOUND WITHOUT PLAYER: count=1; elapsedMs=132.69
+[10:51:00] PLAYER MISS across all 3 templates
+[10:51:00] TARGET TEMPLATE HIT stump3.png matches=1
+[10:51:00] TARGETS FOUND WITHOUT PLAYER: count=1; elapsedMs=139.99
+[10:51:00] VITALS OCR MISS: raw='HP (216/237) MP (448.436)'; crop=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_raw.png; scaled=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_scaled.png; no potion keys sent
+[10:51:01] PLAYER MISS across all 3 templates
+[10:51:01] PLAYER MISS and TARGET MISS after 145.43 ms
+[10:51:01] VITALS OCR: HP=216/237 (91.14%); MP=436/436 (100.00%); OCR='HP (216/237! MP (436/436)'
+[10:51:01] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:01] AUTOPOT MP: disabled; current=100.00%; threshold=30%; no key sent
+[10:51:01] PLAYER MISS across all 3 templates
+[10:51:01] PLAYER MISS and TARGET MISS after 147.58 ms
+[10:51:01] PLAYER MISS across all 3 templates
+[10:51:01] PLAYER MISS and TARGET MISS after 135.95 ms
+[10:51:02] PLAYER MISS across all 3 templates
+[10:51:02] PLAYER MISS and TARGET MISS after 141.05 ms
+[10:51:02] VITALS OCR: HP=216/237 (91.14%); MP=424/436 (97.25%); OCR='HP (216/237) MP (424.436)'
+[10:51:02] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:02] AUTOPOT MP: disabled; current=97.25%; threshold=30%; no key sent
+[10:51:02] PLAYER MISS across all 3 templates
+[10:51:02] PLAYER MISS and TARGET MISS after 144.81 ms
+[10:51:03] PLAYER MISS across all 3 templates
+[10:51:03] TARGET TEMPLATE HIT stump1.png matches=2
+[10:51:03] TARGET TEMPLATE HIT stump5.png matches=1
+[10:51:03] TARGETS FOUND WITHOUT PLAYER: count=2; elapsedMs=142.75
+[10:51:03] VITALS OCR: HP=216/237 (91.14%); MP=424/436 (97.25%); OCR='HP (216/237) MP (424.436)'
+[10:51:03] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:03] AUTOPOT MP: disabled; current=97.25%; threshold=30%; no key sent
+[10:51:03] PLAYER MISS across all 3 templates
+[10:51:03] TARGET TEMPLATE HIT stump4.png matches=1
+[10:51:03] TARGETS FOUND WITHOUT PLAYER: count=1; elapsedMs=144.93
+[10:51:03] EXP HUD EVENT: previous=3235; current=3427; percent=95.32; gain=192; OCR='EXP 3427/95.32%)'
+[10:51:03] PLAYER MISS across all 3 templates
+[10:51:03] TARGET TEMPLATE HIT stump1.png matches=2
+[10:51:03] TARGET TEMPLATE HIT stump5.png matches=1
+[10:51:03] TARGETS FOUND WITHOUT PLAYER: count=2; elapsedMs=137.01
+[10:51:04] VITALS OCR: HP=216/237 (91.14%); MP=424/436 (97.25%); OCR='HP (216/237) MP (424.436)'
+[10:51:04] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:04] AUTOPOT MP: disabled; current=97.25%; threshold=30%; no key sent
+[10:51:04] PLAYER MISS across all 3 templates
+[10:51:04] TARGET TEMPLATE HIT stump4.png matches=1
+[10:51:04] TARGETS FOUND WITHOUT PLAYER: count=1; elapsedMs=147.88
+[10:51:04] PLAYER MISS across all 3 templates
+[10:51:04] TARGET TEMPLATE HIT stump1.png matches=1
+[10:51:04] TARGETS FOUND WITHOUT PLAYER: count=1; elapsedMs=139.86
+[10:51:05] PLAYER MISS across all 3 templates
+[10:51:05] PLAYER MISS and TARGET MISS after 157.35 ms
+[10:51:05] VITALS OCR MISS: raw='HP (216/237! MP [412436)'; crop=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_raw.png; scaled=C:\Users\Jake Lam\code\maple-automation\debug\ocr_temp\latest_vitals_hud_scaled.png; no potion keys sent
+[10:51:05] PLAYER MISS across all 3 templates
+[10:51:05] PLAYER MISS and TARGET MISS after 132.17 ms
+[10:51:05] EXP HUD EVENT: previous=3427; current=3431; percent=-1; gain=4; OCR='EXP 3431[396.05%)'
+[10:51:05] PLAYER MISS across all 3 templates
+[10:51:06] PLAYER MISS and TARGET MISS after 135.62 ms
+[10:51:06] PLAYER MISS across all 3 templates
+[10:51:06] PLAYER MISS and TARGET MISS after 140.97 ms
+[10:51:06] VITALS OCR: HP=216/237 (91.14%); MP=400/436 (91.74%); OCR='HP (216/237! MP (400/436)'
+[10:51:06] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:06] AUTOPOT MP: stable read 1/2; current=400/436 (91.74%); no key sent
+[10:51:06] PLAYER MISS across all 3 templates
+[10:51:06] PLAYER MISS and TARGET MISS after 145.61 ms
+[10:51:07] PLAYER FOUND template=SuperKiwi_selected.png x=922 y=450
+[10:51:07] PLAYER FOUND but TARGET MISS after 140.04 ms
+[10:51:07] VITALS OCR: HP=216/237 (91.14%); MP=411/7436 (5.53%); OCR='HP (216/237! MP (411.7436)'
+[10:51:07] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:07] AUTOPOT MP: suspicious maximum change 436 -> 7436 (1605.5%); max changed; verify 1/4; no key sent
+[10:51:07] PLAYER FOUND template=SuperKiwi_text.png x=916 y=455
+[10:51:07] PLAYER FOUND but TARGET MISS after 174.38 ms
+[10:51:07] PLAYER FOUND template=SuperKiwi_text.png x=897 y=455
+[10:51:08] PLAYER FOUND but TARGET MISS after 148.26 ms
+[10:51:08] VITALS OCR: HP=216/237 (91.14%); MP=333/7436 (4.48%); OCR='HP (216/237! MP (333.7436)'
+[10:51:08] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:08] AUTOPOT MP: suspicious maximum change 436 -> 7436 (1605.5%); max changed; verify 2/4; no key sent
+[10:51:08] PLAYER FOUND template=SuperKiwi_selected.png x=898 y=450
+[10:51:08] PLAYER FOUND but TARGET MISS after 144.42 ms
+[10:51:08] PLAYER FOUND template=SuperKiwi_text.png x=916 y=455
+[10:51:08] PLAYER FOUND but TARGET MISS after 163.97 ms
+[10:51:09] VITALS OCR: HP=216/237 (91.14%); MP=387/436 (88.76%); OCR='HP (216/237! MP (387,436)'
+[10:51:09] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:09] AUTOPOT MP: stable read 1/2; current=387/436 (88.76%); no key sent
+[10:51:09] PLAYER FOUND template=SuperKiwi_selected.png x=871 y=450
+[10:51:09] TARGET TEMPLATE HIT stump4.png matches=1
+[10:51:09] TARGET 1 template=stump4.png x=1332 y=401 dx=443.5 dy=-45 distance=445.78
+[10:51:09] DISTANCE RESULT: targets=1; nearestIndex=0; dx=443.5; dy=-45; distance=445.78; elapsedMs=142.73
+[10:51:09] VITALS OCR: HP=216/237 (91.14%); MP=387/436 (88.76%); OCR='HP (216/237! MP (387,436)'
+[10:51:09] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:10] AUTOPOT MP: disabled; current=88.76%; threshold=30%; no key sent
+[10:51:10] PLAYER MISS across all 3 templates
+[10:51:10] PLAYER MISS and TARGET MISS after 142.61 ms
+[10:51:10] EXP HUD EVENT: previous=3431; current=8619; percent=-1; gain=5188; OCR='EXP 8619/97.S50%)'
+[10:51:10] PLAYER MISS across all 3 templates
+[10:51:10] TARGET TEMPLATE HIT stump1.png matches=1
+[10:51:10] TARGET TEMPLATE HIT stump5.png matches=1
+[10:51:10] TARGETS FOUND WITHOUT PLAYER: count=1; elapsedMs=141.86
+[10:51:12] VITALS OCR: HP=216/237 (91.14%); MP=387/436 (88.76%); OCR='HP (216/237! MP (387,436)'
+[10:51:12] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:12] AUTOPOT MP: disabled; current=88.76%; threshold=30%; no key sent
+[10:51:12] PLAYER MISS across all 3 templates
+[10:51:12] PLAYER MISS and TARGET MISS after 144.95 ms
+[10:51:12] VITALS OCR: HP=216/237 (91.14%); MP=387/436 (88.76%); OCR='HP (216/237! MP (387,436)'
+[10:51:12] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:12] AUTOPOT MP: disabled; current=88.76%; threshold=30%; no key sent
+[10:51:13] PLAYER MISS across all 3 templates
+[10:51:13] PLAYER MISS and TARGET MISS after 146.33 ms
+[10:51:13] PLAYER MISS across all 3 templates
+[10:51:13] PLAYER MISS and TARGET MISS after 135.97 ms
+[10:51:13] VITALS OCR: HP=216/237 (91.14%); MP=387/436 (88.76%); OCR='HP (216/237! MP (387,436)'
+[10:51:13] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:13] AUTOPOT MP: disabled; current=88.76%; threshold=30%; no key sent
+[10:51:13] PLAYER MISS across all 3 templates
+[10:51:13] PLAYER MISS and TARGET MISS after 133.01 ms
+[10:51:14] PLAYER MISS across all 3 templates
+[10:51:14] PLAYER MISS and TARGET MISS after 140.16 ms
+[10:51:14] VITALS OCR: HP=216/237 (91.14%); MP=387/436 (88.76%); OCR='HP (216/237! MP (387,436)'
+[10:51:14] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:14] AUTOPOT MP: disabled; current=88.76%; threshold=30%; no key sent
+[10:51:14] PLAYER MISS across all 3 templates
+[10:51:14] PLAYER MISS and TARGET MISS after 144.43 ms
+[10:51:15] PLAYER MISS across all 3 templates
+[10:51:15] PLAYER MISS and TARGET MISS after 138.51 ms
+[10:51:15] VITALS OCR: HP=216/237 (91.14%); MP=387/436 (88.76%); OCR='HP (216/237! MP (387,436)'
+[10:51:15] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:15] AUTOPOT MP: disabled; current=88.76%; threshold=30%; no key sent
+[10:51:15] PLAYER MISS across all 3 templates
+[10:51:15] PLAYER MISS and TARGET MISS after 150.62 ms
+[10:51:15] PLAYER MISS across all 3 templates
+[10:51:16] PLAYER MISS and TARGET MISS after 137.54 ms
+[10:51:16] PLAYER MISS across all 3 templates
+[10:51:16] PLAYER MISS and TARGET MISS after 141.85 ms
+[10:51:16] VITALS OCR: HP=216/237 (91.14%); MP=398/436 (91.28%); OCR='HP (216/237! MP [398./436)'
+[10:51:16] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:16] AUTOPOT MP: disabled; current=91.28%; threshold=30%; no key sent
+[10:51:16] PLAYER MISS across all 3 templates
+[10:51:16] PLAYER MISS and TARGET MISS after 132.27 ms
+[10:51:17] PLAYER MISS across all 3 templates
+[10:51:17] PLAYER MISS and TARGET MISS after 140.55 ms
+[10:51:17] VITALS OCR: HP=216/237 (91.14%); MP=398/436 (91.28%); OCR='HP (216/237! MP [398./436)'
+[10:51:17] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:17] AUTOPOT MP: disabled; current=91.28%; threshold=30%; no key sent
+[10:51:17] PLAYER MISS across all 3 templates
+[10:51:17] PLAYER MISS and TARGET MISS after 151.31 ms
+[10:51:18] PLAYER MISS across all 3 templates
+[10:51:18] PLAYER MISS and TARGET MISS after 134.07 ms
+[10:51:18] PLAYER MISS across all 3 templates
+[10:51:18] PLAYER MISS and TARGET MISS after 137.45 ms
+[10:51:18] VITALS OCR: HP=216/237 (91.14%); MP=398/436 (91.28%); OCR='HP (216/237! MP [398./436)'
+[10:51:18] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:18] AUTOPOT MP: disabled; current=91.28%; threshold=30%; no key sent
+[10:51:18] PLAYER MISS across all 3 templates
+[10:51:19] PLAYER MISS and TARGET MISS after 141.41 ms
+[10:51:19] PLAYER MISS across all 3 templates
+[10:51:19] PLAYER MISS and TARGET MISS after 133.53 ms
+[10:51:19] VITALS OCR: HP=216/237 (91.14%); MP=398/436 (91.28%); OCR='HP (216/237! MP [398./436)'
+[10:51:19] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:19] AUTOPOT MP: disabled; current=91.28%; threshold=30%; no key sent
+[10:51:19] PLAYER MISS across all 3 templates
+[10:51:19] PLAYER MISS and TARGET MISS after 143.01 ms
+[10:51:20] PLAYER MISS across all 3 templates
+[10:51:20] PLAYER MISS and TARGET MISS after 132.02 ms
+[10:51:20] PLAYER MISS across all 3 templates
+[10:51:20] PLAYER MISS and TARGET MISS after 141.22 ms
+[10:51:20] VITALS OCR: HP=216/237 (91.14%); MP=398/436 (91.28%); OCR='HP (216/237! MP [398./436)'
+[10:51:20] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:20] AUTOPOT MP: disabled; current=91.28%; threshold=30%; no key sent
+[10:51:21] PLAYER FOUND template=SuperKiwi_text.png x=860 y=455
+[10:51:21] PLAYER FOUND but TARGET MISS after 157.76 ms
+[10:51:21] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:21] PLAYER FOUND but TARGET MISS after 147.07 ms
+[10:51:21] VITALS OCR: HP=216/237 (91.14%); MP=398/436 (91.28%); OCR='HP (216/237! MP [398./436)'
+[10:51:21] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:21] AUTOPOT MP: disabled; current=91.28%; threshold=30%; no key sent
+[10:51:21] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:21] PLAYER FOUND but TARGET MISS after 138.6 ms
+[10:51:22] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:22] PLAYER FOUND but TARGET MISS after 142.06 ms
+[10:51:22] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:22] PLAYER FOUND but TARGET MISS after 149.99 ms
+[10:51:23] VITALS OCR: HP=216/237 (91.14%); MP=398/436 (91.28%); OCR='HP (216/237! MP [398./436)'
+[10:51:23] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:23] AUTOPOT MP: disabled; current=91.28%; threshold=30%; no key sent
+[10:51:23] PLAYER MISS across all 3 templates
+[10:51:23] PLAYER MISS and TARGET MISS after 138.32 ms
+[10:51:23] PLAYER MISS across all 3 templates
+[10:51:23] PLAYER MISS and TARGET MISS after 131.16 ms
+[10:51:23] VITALS OCR: HP=216/237 (91.14%); MP=398/436 (91.28%); OCR='HP (216/237! MP [398./436)'
+[10:51:23] AUTOPOT HP: disabled; current=91.14%; threshold=40%; no key sent
+[10:51:23] AUTOPOT MP: disabled; current=91.28%; threshold=30%; no key sent
+[10:51:23] PLAYER MISS across all 3 templates
+[10:51:24] PLAYER MISS and TARGET MISS after 143.91 ms
+[10:51:24] PLAYER MISS across all 3 templates
+[10:51:24] PLAYER MISS and TARGET MISS after 147.19 ms
+[10:51:24] PLAYER MISS across all 3 templates
+[10:51:24] PLAYER MISS and TARGET MISS after 138.23 ms
+[10:51:25] VITALS OCR: HP=226/237 (95.36%); MP=398/436 (91.28%); OCR='HP (226/237! MP [398./436)'
+[10:51:25] AUTOPOT HP: disabled; current=95.36%; threshold=40%; no key sent
+[10:51:25] AUTOPOT MP: disabled; current=91.28%; threshold=30%; no key sent
+[10:51:25] PLAYER MISS across all 3 templates
+[10:51:25] PLAYER MISS and TARGET MISS after 143.47 ms
+[10:51:25] PLAYER MISS across all 3 templates
+[10:51:25] PLAYER MISS and TARGET MISS after 133.49 ms
+[10:51:25] VITALS OCR: HP=226/237 (95.36%); MP=398/436 (91.28%); OCR='HP (226/237! MP [398./436)'
+[10:51:25] AUTOPOT HP: disabled; current=95.36%; threshold=40%; no key sent
+[10:51:25] AUTOPOT MP: disabled; current=91.28%; threshold=30%; no key sent
+[10:51:26] PLAYER MISS across all 3 templates
+[10:51:26] PLAYER MISS and TARGET MISS after 142.96 ms
+[10:51:26] PLAYER MISS across all 3 templates
+[10:51:26] PLAYER MISS and TARGET MISS after 132.29 ms
+[10:51:26] PLAYER MISS across all 3 templates
+[10:51:27] PLAYER MISS and TARGET MISS after 136.63 ms
+[10:51:27] VITALS OCR: HP=226/237 (95.36%); MP=403/436 (92.43%); OCR='HP (226/237! MP | 403./436)'
+[10:51:27] AUTOPOT HP: disabled; current=95.36%; threshold=40%; no key sent
+[10:51:27] AUTOPOT MP: disabled; current=92.43%; threshold=30%; no key sent
+[10:51:27] PLAYER FOUND template=SuperKiwi_text.png x=860 y=455
+[10:51:27] PLAYER FOUND but TARGET MISS after 156.93 ms
+[10:51:27] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:27] PLAYER FOUND but TARGET MISS after 161.33 ms
+[10:51:28] VITALS OCR: HP=226/237 (95.36%); MP=403/436 (92.43%); OCR='HP (226/237! MP | 403./436)'
+[10:51:28] AUTOPOT HP: disabled; current=95.36%; threshold=40%; no key sent
+[10:51:28] AUTOPOT MP: disabled; current=92.43%; threshold=30%; no key sent
+[10:51:28] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:28] PLAYER FOUND but TARGET MISS after 139.08 ms
+[10:51:28] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:28] PLAYER FOUND but TARGET MISS after 141.53 ms
+[10:51:28] VITALS OCR: HP=226/237 (95.36%); MP=403/436 (92.43%); OCR='HP (226/237! MP | 403./436)'
+[10:51:28] AUTOPOT HP: disabled; current=95.36%; threshold=40%; no key sent
+[10:51:28] AUTOPOT MP: disabled; current=92.43%; threshold=30%; no key sent
+[10:51:29] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:29] PLAYER FOUND but TARGET MISS after 159.96 ms
+[10:51:29] VITALS OCR: HP=226/237 (95.36%); MP=403/436 (92.43%); OCR='HP (226/237! MP | 403./436)'
+[10:51:29] AUTOPOT HP: disabled; current=95.36%; threshold=40%; no key sent
+[10:51:29] AUTOPOT MP: disabled; current=92.43%; threshold=30%; no key sent
+[10:51:29] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:29] PLAYER FOUND but TARGET MISS after 157.09 ms
+[10:51:30] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:30] PLAYER FOUND but TARGET MISS after 144.44 ms
+[10:51:30] VITALS OCR: HP=226/237 (95.36%); MP=403/436 (92.43%); OCR='HP (226/237! MP | 403./436)'
+[10:51:30] AUTOPOT HP: disabled; current=95.36%; threshold=40%; no key sent
+[10:51:30] AUTOPOT MP: disabled; current=92.43%; threshold=30%; no key sent
+[10:51:30] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:30] PLAYER FOUND but TARGET MISS after 138.8 ms
+[10:51:30] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:31] PLAYER FOUND but TARGET MISS after 142.5 ms
+[10:51:31] VITALS OCR: HP=226/237 (95.36%); MP=403/436 (92.43%); OCR='HP (226/237! MP | 403./436)'
+[10:51:31] AUTOPOT HP: disabled; current=95.36%; threshold=40%; no key sent
+[10:51:31] AUTOPOT MP: disabled; current=92.43%; threshold=30%; no key sent
+[10:51:31] PLAYER FOUND template=SuperKiwi_selected.png x=849 y=450
+[10:51:31] PLAYER FOUND but TARGET MISS after 153.46 ms
+[10:51:32] VITALS OCR: HP=226/237 (95.36%); MP=403/436 (92.43%); OCR='HP (226/237! MP | 403./436)'
+[10:51:32] AUTOPOT HP: disabled; current=95.36%; threshold=40%; no key sent
+[10:51:32] AUTOPOT MP: disabled; current=92.43%; threshold=30%; no key sent
+[10:51:32] PLAYER FOUND template=SuperKiwi_text.png x=860 y=455
+[10:51:32] PLAYER FOUND but TARGET MISS after 169.21 ms
+[10:51:32] PLAYER FOUND template=SuperKiwi_text.png x=860 y=455
+[10:51:32] PLAYER FOUND but TARGET MISS after 157.56 ms
+[10:51:32] PLAYER MISS across all 3 templates
+[10:51:32] PLAYER MISS and TARGET MISS after 141.54 ms
+[10:51:33] VITALS OCR: HP=226/237 (95.36%); MP=403/436 (92.43%); OCR='HP (226/237! MP | 403./436)'
+[10:51:33] AUTOPOT HP: disabled; current=95.36%; threshold=40%; no key sent
+[10:51:33] AUTOPOT MP: disabled; current=92.43%; threshold=30%; no key sent
+[10:51:33] PLAYER MISS across all 3 templates
+[10:51:33] PLAYER MISS and TARGET MISS after 131.9 ms
+[10:51:33] PLAYER MISS across all 3 templates
+[10:51:33] PLAYER MISS and TARGET MISS after 131.3 ms
+[10:51:34] VITALS OCR: HP=236/237 (99.58%); MP=403/436 (92.43%); OCR='HP (236/237! MP | 403./436)'
+[10:51:34] AUTOPOT HP: disabled; current=99.58%; threshold=40%; no key sent
+[10:51:34] AUTOPOT MP: disabled; current=92.43%; threshold=30%; no key sent
+[10:51:34] PLAYER MISS across all 3 templates
+[10:51:34] PLAYER MISS and TARGET MISS after 183.53 ms
+[10:51:34] PLAYER MISS across all 3 templates
+[10:51:34] PLAYER MISS and TARGET MISS after 138.43 ms
+[10:51:34] VITALS OCR: HP=236/237 (99.58%); MP=403/436 (92.43%); OCR='HP (236/237! MP | 403./436)'
+[10:51:34] AUTOPOT HP: disabled; current=99.58%; threshold=40%; no key sent
+[10:51:34] AUTOPOT MP: disabled; current=92.43%; threshold=30%; no key sent
+[10:51:35] PLAYER MISS across all 3 templates
+[10:51:35] PLAYER MISS and TARGET MISS after 137.04 ms
+[10:51:35] PLAYER MISS across all 3 templates
+[10:51:35] PLAYER MISS and TARGET MISS after 139.08 ms
+[10:51:35] PLAYER MISS across all 3 templates
+[10:51:35] PLAYER MISS and TARGET MISS after 142.64 ms
+[10:51:36] VITALS OCR: HP=236/237 (99.58%); MP=403/436 (92.43%); OCR='HP (236/237! MP | 403./436)'
+[10:51:36] AUTOPOT HP: disabled; current=99.58%; threshold=40%; no key sent
+[10:51:36] AUTOPOT MP: disabled; current=92.43%; threshold=30%; no key sent
+[10:51:36] PLAYER MISS across all 3 templates
+[10:51:36] PLAYER MISS and TARGET MISS after 131.73 ms
+[10:51:36] PLAYER MISS across all 3 templates
+[10:51:36] PLAYER MISS and TARGET MISS after 136.44 ms
+[10:51:36] PLAYER MISS across all 3 templates
+[10:51:36] PLAYER MISS and TARGET MISS after 142.54 ms
+[10:51:37] VITALS OCR: HP=236/237 (99.58%); MP=420/436 (96.33%); OCR='HP (236/237! MP [420/436)'
+[10:51:37] AUTOPOT HP: disabled; current=99.58%; threshold=40%; no key sent
+[10:51:37] AUTOPOT MP: disabled; current=96.33%; threshold=30%; no key sent
+[10:51:37] PLAYER MISS across all 3 templates
+[10:51:37] PLAYER MISS and TARGET MISS after 133.89 ms
+[10:51:37] PLAYER MISS across all 3 templates
+[10:51:38] PLAYER MISS and TARGET MISS after 162.01 ms
+[10:51:38] VITALS OCR: HP=236/237 (99.58%); MP=420/436 (96.33%); OCR='HP (236/237! MP [420/436)'
+[10:51:38] AUTOPOT HP: disabled; current=99.58%; threshold=40%; no key sent
+[10:51:38] AUTOPOT MP: disabled; current=96.33%; threshold=30%; no key sent
+[10:51:38] PLAYER MISS across all 3 templates
+[10:51:38] PLAYER MISS and TARGET MISS after 134.62 ms
+[10:51:38] PLAYER MISS across all 3 templates
+[10:51:38] PLAYER MISS and TARGET MISS after 140.23 ms
+[10:51:38] PLAYER MISS across all 3 templates
+[10:51:39] PLAYER MISS and TARGET MISS after 144.2 ms
+[10:51:39] VITALS OCR: HP=236/237 (99.58%); MP=420/436 (96.33%); OCR='HP (236/237! MP [420/436)'
+[10:51:39] AUTOPOT HP: disabled; current=99.58%; threshold=40%; no key sent
+[10:51:39] AUTOPOT MP: disabled; current=96.33%; threshold=30%; no key sent
+[10:51:39] PLAYER MISS across all 3 templates
+[10:51:39] PLAYER MISS and TARGET MISS after 131.19 ms
+[10:51:39] PLAYER MISS across all 3 templates
+[10:51:40] PLAYER MISS and TARGET MISS after 142.3 ms
+[10:51:40] VITALS OCR: HP=236/237 (99.58%); MP=420/436 (96.33%); OCR='HP (236/237! MP [420/436)'
+[10:51:40] AUTOPOT HP: disabled; current=99.58%; threshold=40%; no key sent
+[10:51:40] AUTOPOT MP: disabled; current=96.33%; threshold=30%; no key sent
+[10:51:40] PLAYER MISS across all 3 templates
+[10:51:40] PLAYER MISS and TARGET MISS after 148.32 ms
+[10:51:40] PLAYER MISS across all 3 templates
+[10:51:40] PLAYER MISS and TARGET MISS after 139.69 ms
+[10:51:40] VITALS OCR: HP=236/237 (99.58%); MP=420/436 (96.33%); OCR='HP (236/237! MP [420/436)'
+[10:51:40] AUTOPOT HP: disabled; current=99.58%; threshold=40%; no key sent
+[10:51:41] AUTOPOT MP: disabled; current=96.33%; threshold=30%; no key sent
+[10:51:41] PLAYER MISS across all 3 templates
+[10:51:41] PLAYER MISS and TARGET MISS after 154.96 ms
+[10:51:41] PLAYER MISS across all 3 templates
+[10:51:41] PLAYER MISS and TARGET MISS after 141.76 ms
+[10:51:41] VITALS OCR: HP=236/237 (99.58%); MP=420/436 (96.33%); OCR='HP (236/237! MP [420/436)'
+[10:51:41] AUTOPOT HP: disabled; current=99.58%; threshold=40%; no key sent
+[10:51:41] AUTOPOT MP: disabled; current=96.33%; threshold=30%; no key sent
+[10:51:42] PLAYER MISS across all 3 templates
+[10:51:42] PLAYER MISS and TARGET MISS after 143.67 ms
+[10:51:42] VITALS OCR: HP=236/237 (99.58%); MP=420/436 (96.33%); OCR='HP (236/237! MP [420/436)'
+[10:51:42] AUTOPOT HP: disabled; current=99.58%; threshold=40%; no key sent
+[10:51:42] AUTOPOT MP: disabled; current=96.33%; threshold=30%; no key sent
+[10:51:42] PLAYER MISS across all 3 templates
+[10:51:42] PLAYER MISS and TARGET MISS after 141.17 ms
+[10:51:43] PLAYER MISS across all 3 templates
+[10:51:43] PLAYER MISS and TARGET MISS after 131.84 ms
+[10:51:43] PLAYER MISS across all 3 templates
+[10:51:43] PLAYER MISS and TARGET MISS after 136.39 ms
+[10:51:43] VITALS OCR: HP=236/237 (99.58%); MP=420/436 (96.33%); OCR='HP (236/237! MP [420/436)'
+[10:51:43] AUTOPOT HP: disabled; current=99.58%; threshold=40%; no key sent
+[10:51:43] AUTOPOT MP: disabled; current=96.33%; threshold=30%; no key sent
+[10:51:43] PLAYER MISS across all 3 templates
+[10:51:43] PLAYER MISS and TARGET MISS after 138.95 ms
+[10:51:44] PLAYER MISS across all 3 templates
+[10:51:44] PLAYER MISS and TARGET MISS after 154.05 ms
+[10:51:44] VITALS OCR: HP=237/237 (100.00%); MP=420/436 (96.33%); OCR='HP (237/237) MP [420/436)'
+[10:51:44] AUTOPOT HP: disabled; current=100.00%; threshold=40%; no key sent
+[10:51:44] AUTOPOT MP: disabled; current=96.33%; threshold=30%; no key sent
+[10:51:44] PLAYER MISS across all 3 templates
+[10:51:44] PLAYER MISS and TARGET MISS after 138.17 ms
+[10:51:45] PLAYER MISS across all 3 templates
+[10:51:45] PLAYER MISS and TARGET MISS after 143.46 ms
+[10:51:45] PLAYER MISS across all 3 templates
+[10:51:45] PLAYER MISS and TARGET MISS after 143.96 ms
+[10:51:45] VITALS OCR: HP=237/237 (100.00%); MP=420/436 (96.33%); OCR='HP (237/237) MP [420/436)'
+[10:51:45] AUTOPOT HP: disabled; current=100.00%; threshold=40%; no key sent
+[10:51:45] AUTOPOT MP: disabled; current=96.33%; threshold=30%; no key sent
+[10:51:45] PLAYER MISS across all 3 templates
+[10:51:45] PLAYER MISS and TARGET MISS after 146.36 ms
+[10:51:45] Combined runtime disabled: Paused by user.
+[10:52:18] Maple Automation MVP v0.2.0 stopped
+[12:51:23] ============================================================
+[12:51:23] Maple Automation MVP v0.2.0 starting
+[12:51:23] Script directory: C:\Users\Jake Lam\code\maple-automation
+[12:51:23] AutoIt architecture: x64
+[12:51:23] Administrator token: yes
+[12:51:23] Desktop size: 2560x1440
+[12:51:23] Hotkeys: F6 start/pause; F8 emergency stop
+[12:51:23] ImageSearchDLL startup succeeded
+[12:51:23] GDI+ startup succeeded
+[12:51:23] Tesseract path: C:\Program Files\Tesseract-OCR\tesseract.exe
+[12:51:23] Template library reloaded: players=3; targets=5
+[12:51:23] EXP session reset
+[12:51:23] Target window bound via automatic process detection:
+[12:51:23]   Title: 
+[12:51:23]   Process: MapleSaga.exe
+[12:51:23]   PID: 9104
+[12:51:23]   Client region: 301,269 to 1580,988
+[12:51:23]   Client size: 1280x720
+[12:51:33] Maple Automation MVP v0.2.0 stopped
