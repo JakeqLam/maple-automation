@@ -3,30 +3,42 @@
 #AutoIt3Wrapper_UseX64=y
 
 #include "ImageSearchDLL_UDF_Embedded.au3"
+#include <AutoItConstants.au3>
 #include <GUIConstantsEx.au3>
 #include <StaticConstants.au3>
 #include <WindowsConstants.au3>
 #include <FileConstants.au3>
+#include <EditConstants.au3>
+#include <ComboConstants.au3>
+#include <GDIPlus.au3>
 #include <Misc.au3>
 
 Opt("MustDeclareVars", 1)
 Opt("TrayAutoPause", 0)
 Opt("MouseCoordMode", 1)
 Opt("PixelCoordMode", 1)
+Opt("SendKeyDelay", 10)
+Opt("SendKeyDownDelay", 25)
 
 ; ============================================================================
-; Maple Template Library POC v3
+; Maple Automation MVP v0.1
 ;
-; Read-only computer-vision proof of concept:
-;   1. Load every PNG from data\player and data\target
-;   2. Detect player identity and target variants
-;   3. Deduplicate overlapping target results
-;   4. Find the nearest target to the center of the SuperKiwi nameplate
-;   5. Report horizontal, vertical, and Euclidean pixel distance
+; Combined vertical slice:
+;   1. Bind MapleSaga.exe / MapleStory.exe.
+;   2. Load player and target PNG templates from data\player and data\target.
+;   3. Detect the player, all targets, and the nearest target.
+;   4. Optionally move horizontally toward the nearest target.
+;   5. Optionally tap a movement skill while moving.
+;   6. Read the permanent bottom EXP HUD with Tesseract.
+;   7. Track session EXP, events, last gain, and XP/hour.
 ;
-; No global hotkeys are registered.
-; Images can be imported or captured without editing this script.
-; This script DOES NOT click or send keyboard input.
+; Safety:
+;   F6 toggles runtime start/pause.
+;   F8 is an emergency stop and releases movement keys.
+;   Automatic input is sent only while the bound game window is active.
+;
+; Not in this first combined slice:
+;   HP/MP OCR and autopot. Those need their own calibrated HUD readers.
 ; ============================================================================
 
 Global Const $SEARCH_SCREEN = -1
@@ -37,7 +49,6 @@ Global Const $TARGET_TEMPLATE_DIRECTORY = $DATA_DIRECTORY & "\target"
 
 Global $g_aPlayerTemplates[1]
 Global $g_iPlayerTemplateCount = 0
-
 Global $g_aTargetTemplates[1]
 Global $g_iTargetTemplateCount = 0
 
@@ -46,18 +57,12 @@ Global Const $TARGET_TOLERANCE = 25
 Global Const $PLAYER_MAX_RESULTS = 1
 Global Const $TARGET_MAX_RESULTS_PER_TEMPLATE = 20
 Global Const $MAX_UNIQUE_TARGETS = 50
-
-; These templates were captured from the live client, so exact scale is the
-; safest first POC. Expand this later only if display scaling changes.
 Global Const $MIN_SCALE = 1.00
 Global Const $MAX_SCALE = 1.00
 Global Const $SCALE_STEP = 0.10
-
 Global Const $CONTINUOUS_INTERVAL = 300
 Global Const $AUTO_DETECT_INTERVAL = 2000
 Global Const $DUPLICATE_CENTER_RADIUS = 20
-
-; Reject small launcher/helper windows owned by the same process.
 Global Const $MIN_GAME_CLIENT_WIDTH = 640
 Global Const $MIN_GAME_CLIENT_HEIGHT = 400
 
@@ -67,8 +72,25 @@ Global Const $NEAREST_OVERLAY_COLOR = 0xFF8C00
 Global Const $OVERLAY_BORDER = 3
 Global Const $MAX_OVERLAY_WINDOWS = 220
 
-Global Const $PANEL_WIDTH = 570
-Global Const $PANEL_HEIGHT = 650
+Global Const $PANEL_WIDTH = 620
+Global Const $PANEL_HEIGHT = 950
+
+Global Const $APP_COLOR_BACKGROUND = 0x1F1F1F
+Global Const $APP_COLOR_PANEL = 0x2A2A2A
+Global Const $APP_COLOR_TEXT = 0xF2F2F2
+Global Const $APP_COLOR_MUTED = 0xB0B0B0
+Global Const $APP_COLOR_ACCENT = 0x1EB5B5
+
+Global Const $APP_OCR_INTERVAL = 1000
+Global Const $APP_HUD_STABLE_READS = 2
+Global Const $APP_HUD_SCALE = 6
+Global Const $APP_HUD_X1_RATIO = 0.339
+Global Const $APP_HUD_X2_RATIO = 0.427
+Global Const $APP_HUD_Y1_RATIO = 0.948
+Global Const $APP_HUD_Y2_RATIO = 0.977
+Global Const $APP_MISS_LOG_INTERVAL_MS = 5000
+Global Const $APP_VISION_STALE_MS = 900
+Global Const $APP_STATS_REFRESH_MS = 250
 
 Global $g_aTargetProcessNames[2] = ["MapleSaga.exe", "MapleStory.exe"]
 
@@ -78,26 +100,82 @@ Global $g_iTargetWindowPID = 0
 Global $g_sTargetProcessName = ""
 
 Global $g_sDebugDirectory = @ScriptDir & "\debug"
-Global $g_sLogPath = $g_sDebugDirectory & "\MapleTemplateLibraryPOC_v3.log"
+Global $g_sOcrTempDirectory = $g_sDebugDirectory & "\ocr_temp"
+Global $g_sLogPath = $g_sDebugDirectory & "\MapleAutomationMVP.log"
+Global $g_sLatestHudRawPath = $g_sOcrTempDirectory & "\latest_exp_hud_raw.png"
+Global $g_sLatestHudScaledPath = $g_sOcrTempDirectory & "\latest_exp_hud_scaled.png"
 
 Global $g_bImageSearchStarted = False
+Global $g_bGdiPlusStarted = False
 Global $g_bContinuous = False
+Global $g_bOcrMonitoring = False
 Global $g_bSearchBusy = False
 
 Global $g_hContinuousTimer = TimerInit()
 Global $g_hAutoDetectTimer = TimerInit()
+Global $g_hOcrTimer = TimerInit()
+Global $g_hStatsRefreshTimer = TimerInit()
+Global $g_hSkillTimer = TimerInit()
+Global $g_hVisionSuccessTimer = TimerInit()
+Global $g_hMissLogTimer = TimerInit()
 
 Global $g_aOverlayHandles[$MAX_OVERLAY_WINDOWS]
 Global $g_iOverlayCount = 0
 
-; GUI
+; Latest accepted vision snapshot.
+Global $g_bVisionPlayerFound = False
+Global $g_bVisionTargetFound = False
+Global $g_nVisionDeltaX = 0
+Global $g_nVisionDeltaY = 0
+Global $g_nVisionDistance = 0
+Global $g_iVisionTargetCount = 0
+Global $g_sVisionTargetTemplate = ""
+
+; Movement state.
+Global $g_sHeldMovementKey = ""
+Global $g_sLastInput = "None"
+
+; EXP session state.
+Global $g_sTesseractPath = ""
+Global $g_hSessionStart = TimerInit()
+Global $g_nSessionExp = 0
+Global $g_iExpEvents = 0
+Global $g_nLastGain = 0
+Global $g_sLastRead = ""
+Global $g_iLastAcceptedHudExp = -1
+Global $g_iHudCandidateExp = -1
+Global $g_iHudCandidateReads = 0
+Global $g_sLastHudOcr = ""
+
+; GUI handles and controls.
 Global $g_hControlGui = 0
 Global $g_idWindowValue = 0
 Global $g_idTemplateValue = 0
 Global $g_idPlayerValue = 0
 Global $g_idTargetValue = 0
 Global $g_idDistanceValue = 0
+Global $g_idAutomationStatusValue = 0
+Global $g_idLastInputValue = 0
+Global $g_idTesseractValue = 0
+Global $g_idSessionTimeValue = 0
+Global $g_idXpHourValue = 0
+Global $g_idTotalValue = 0
+Global $g_idEventsValue = 0
+Global $g_idLastGainValue = 0
+Global $g_idLastReadValue = 0
 Global $g_idStatusValue = 0
+
+Global $g_idAutoMoveCheckbox = 0
+Global $g_idUseSkillCheckbox = 0
+Global $g_idLeftKeyCombo = 0
+Global $g_idRightKeyCombo = 0
+Global $g_idSkillKeyCombo = 0
+Global $g_idSkillIntervalInput = 0
+Global $g_idStopDistanceInput = 0
+Global $g_idTapLeftButton = 0
+Global $g_idTapRightButton = 0
+Global $g_idTestSkillButton = 0
+Global $g_idResetSessionButton = 0
 
 Global $g_idDetectButton = 0
 Global $g_idDelayedBindButton = 0
@@ -114,42 +192,54 @@ Global $g_idImportTargetButton = 0
 Global $g_idCapturePlayerButton = 0
 Global $g_idCaptureTargetButton = 0
 Global $g_idExitButton = 0
+Global $g_idEmergencyButton = 0
 
 DirCreate($g_sDebugDirectory)
+DirCreate($g_sOcrTempDirectory)
 DirCreate($DATA_DIRECTORY)
 DirCreate($PLAYER_TEMPLATE_DIRECTORY)
 DirCreate($TARGET_TEMPLATE_DIRECTORY)
 OnAutoItExitRegister("_OnExit")
+HotKeySet("{F6}", "_HotkeyToggleRuntime")
+HotKeySet("{F8}", "_HotkeyEmergencyStop")
 
 _Log("============================================================")
-_Log("Maple Template Library POC v3 starting")
+_Log("Maple Automation MVP v0.1 starting")
 _Log("Script directory: " & @ScriptDir)
 _Log("AutoIt architecture: " & (@AutoItX64 ? "x64" : "x86"))
 _Log("Administrator token: " & (IsAdmin() ? "yes" : "no"))
 _Log("Desktop size: " & @DesktopWidth & "x" & @DesktopHeight)
-_Log("No keyboard hotkeys are registered")
+_Log("Hotkeys: F6 start/pause; F8 emergency stop")
 
 If Not _ImageSearch_Startup() Then
     Local $iStartupError = @error
     Local $iStartupExtended = @extended
-
     MsgBox(16, "ImageSearch startup failed", _
             "ImageSearchDLL could not start." & @CRLF & @CRLF & _
             "@error: " & $iStartupError & @CRLF & _
             "@extended: " & $iStartupExtended & @CRLF & @CRLF & _
-            "The embedded UDF may require the Microsoft Visual C++ " & _
-            "2015-2022 Redistributable.")
-
+            "Confirm ImageSearchDLL_UDF_Embedded.au3 is beside this script.")
     Exit 1
 EndIf
-
 $g_bImageSearchStarted = True
 _Log("ImageSearchDLL startup succeeded")
 
+_GDIPlus_Startup()
+$g_bGdiPlusStarted = True
+_Log("GDI+ startup succeeded")
+
+$g_sTesseractPath = _FindTesseractPath()
+If $g_sTesseractPath <> "" Then
+    _Log("Tesseract path: " & $g_sTesseractPath)
+Else
+    _Log("Tesseract path: not found; movement vision remains available")
+EndIf
+
 _CreateControlPanel()
 _ReloadTemplateLibrary(False)
+_ResetExpSession()
 _AutoDetectGameClient(False)
-
+_UpdateSessionStats()
 GUISetState(@SW_SHOW, $g_hControlGui)
 
 While True
@@ -158,54 +248,67 @@ While True
     Switch $iMessage
         Case $GUI_EVENT_CLOSE, $g_idExitButton
             ExitLoop
-
         Case $g_idDetectButton
             _AutoDetectGameClient(True)
-
         Case $g_idDelayedBindButton
             _BindForegroundWindowAfterDelay()
-
         Case $g_idSearchButton
             _RunDistanceSearch(True)
-
+            _UpdateMovementControl()
         Case $g_idContinuousButton
             _ToggleContinuousSearch()
-
         Case $g_idCaptureButton
             _SaveTargetWindowScreenshot("manual")
-
         Case $g_idClearButton
             _ClearHighlights()
             _SetStatus("Highlights cleared.")
-
         Case $g_idOpenDebugButton
             ShellExecute($g_sDebugDirectory)
-
         Case $g_idActivateButton
             _ActivateTargetWindow()
-
         Case $g_idReloadDataButton
             _ReloadTemplateLibrary(True)
-
         Case $g_idOpenDataButton
             ShellExecute($DATA_DIRECTORY)
-
         Case $g_idImportPlayerButton
             _ImportTemplateImages($PLAYER_TEMPLATE_DIRECTORY, "player")
-
         Case $g_idImportTargetButton
             _ImportTemplateImages($TARGET_TEMPLATE_DIRECTORY, "target")
-
         Case $g_idCapturePlayerButton
             _CaptureTemplateSnippet($PLAYER_TEMPLATE_DIRECTORY, "player")
-
         Case $g_idCaptureTargetButton
             _CaptureTemplateSnippet($TARGET_TEMPLATE_DIRECTORY, "target")
+        Case $g_idTapLeftButton
+            _TapConfiguredMovementKey(True)
+        Case $g_idTapRightButton
+            _TapConfiguredMovementKey(False)
+        Case $g_idTestSkillButton
+            _TapConfiguredSkill(True)
+        Case $g_idResetSessionButton
+            _ResetExpSession()
+        Case $g_idEmergencyButton
+            _EmergencyStop("Emergency Stop button")
     EndSwitch
 
     If $g_bContinuous And TimerDiff($g_hContinuousTimer) >= $CONTINUOUS_INTERVAL Then
         $g_hContinuousTimer = TimerInit()
         _RunDistanceSearch(False)
+    EndIf
+
+    If $g_bContinuous Then
+        _UpdateMovementControl()
+    Else
+        _ReleaseMovementKey()
+    EndIf
+
+    If $g_bOcrMonitoring And TimerDiff($g_hOcrTimer) >= $APP_OCR_INTERVAL Then
+        $g_hOcrTimer = TimerInit()
+        _ScanExperienceOnce()
+    EndIf
+
+    If TimerDiff($g_hStatsRefreshTimer) >= $APP_STATS_REFRESH_MS Then
+        $g_hStatsRefreshTimer = TimerInit()
+        _UpdateSessionStats()
     EndIf
 
     If TimerDiff($g_hAutoDetectTimer) >= $AUTO_DETECT_INTERVAL Then
@@ -224,7 +327,7 @@ Exit
 
 Func _CreateControlPanel()
     $g_hControlGui = GUICreate( _
-            "Maple Template Library POC v3", _
+            "Maple Automation MVP v0.1", _
             $PANEL_WIDTH, _
             $PANEL_HEIGHT, _
             -1, _
@@ -232,127 +335,163 @@ Func _CreateControlPanel()
             $WS_OVERLAPPEDWINDOW, _
             $WS_EX_TOPMOST)
 
-    GUICtrlCreateLabel( _
-            "PLAYER-TO-TARGET TEMPLATE POC v3", _
-            18, 14, 534, 24, $SS_CENTER)
-    GUICtrlSetFont(-1, 11, 700)
+    GUISetBkColor($APP_COLOR_BACKGROUND, $g_hControlGui)
 
-    GUICtrlCreateLabel("Bound window:", 18, 51, 105, 18)
-    $g_idWindowValue = GUICtrlCreateLabel("Not detected", 126, 49, 426, 36)
-    GUICtrlSetFont($g_idWindowValue, 9, 600)
+    Local $idTitle = GUICtrlCreateLabel("MAPLE AUTOMATION MVP", 18, 12, 584, 26, $SS_CENTER)
+    GUICtrlSetFont($idTitle, 13, 700)
+    GUICtrlSetColor($idTitle, $APP_COLOR_TEXT)
 
-    GUICtrlCreateLabel("Data library:", 18, 89, 105, 18)
-    $g_idTemplateValue = GUICtrlCreateLabel("Checking...", 126, 87, 426, 42)
+    Local $idSubtitle = GUICtrlCreateLabel( _
+            "Template navigation + bottom EXP HUD telemetry", _
+            18, 38, 584, 18, $SS_CENTER)
+    GUICtrlSetColor($idSubtitle, $APP_COLOR_MUTED)
 
-    GUICtrlCreateLabel("Player:", 18, 135, 105, 18)
-    $g_idPlayerValue = GUICtrlCreateLabel("Not detected", 126, 133, 426, 22)
+    _CreateSectionLabel("BINDING + VISION", 18, 66)
+    _CreateCaption("Window", 18, 94)
+    $g_idWindowValue = _CreateValueLabel("Not detected", 116, 91, 486, 36)
 
-    GUICtrlCreateLabel("Targets:", 18, 162, 105, 18)
-    $g_idTargetValue = GUICtrlCreateLabel("Not detected", 126, 160, 426, 22)
+    _CreateCaption("Templates", 18, 132)
+    $g_idTemplateValue = _CreateValueLabel("Checking...", 116, 129, 486, 36)
 
-    GUICtrlCreateLabel("Nearest:", 18, 189, 105, 18)
-    $g_idDistanceValue = GUICtrlCreateLabel( _
-            "No distance yet", _
-            126, 187, 426, 48, _
-            BitOR($SS_LEFT, $SS_SUNKEN))
-    GUICtrlSetFont($g_idDistanceValue, 9, 700)
+    _CreateCaption("Player", 18, 170)
+    $g_idPlayerValue = _CreateValueLabel("Not detected", 116, 167, 486, 24)
 
-    GUICtrlCreateLabel("Status:", 18, 243, 105, 18)
-    $g_idStatusValue = GUICtrlCreateLabel( _
-            "Ready. Images are loaded from data\player and data\target.", _
-            18, 264, 534, 70, _
-            BitOR($SS_LEFT, $SS_SUNKEN))
+    _CreateCaption("Targets", 18, 199)
+    $g_idTargetValue = _CreateValueLabel("Not detected", 116, 196, 486, 24)
 
-    $g_idDetectButton = GUICtrlCreateButton( _
-            "Detect Game Client", 18, 350, 260, 34)
+    _CreateCaption("Nearest", 18, 228)
+    $g_idDistanceValue = _CreateValueLabel("No distance yet", 116, 225, 486, 46)
 
-    $g_idDelayedBindButton = GUICtrlCreateButton( _
-            "Bind Active in 3 Seconds", 292, 350, 260, 34)
+    _CreateSectionLabel("MOVEMENT", 18, 284)
+    $g_idAutoMoveCheckbox = GUICtrlCreateCheckbox( _
+            "Enable automatic horizontal movement", 18, 312, 286, 22)
+    GUICtrlSetState($g_idAutoMoveCheckbox, $GUI_UNCHECKED)
+    GUICtrlSetColor($g_idAutoMoveCheckbox, $APP_COLOR_TEXT)
 
-    $g_idSearchButton = GUICtrlCreateButton( _
-            "Search + Measure Once", 18, 392, 260, 34)
+    $g_idUseSkillCheckbox = GUICtrlCreateCheckbox( _
+            "Tap movement skill while moving", 318, 312, 284, 22)
+    GUICtrlSetState($g_idUseSkillCheckbox, $GUI_CHECKED)
+    GUICtrlSetColor($g_idUseSkillCheckbox, $APP_COLOR_TEXT)
+
+    _CreateCaption("Move left", 18, 346)
+    $g_idLeftKeyCombo = GUICtrlCreateCombo("Left Arrow", 116, 342, 170, 24, $CBS_DROPDOWNLIST)
+    GUICtrlSetData($g_idLeftKeyCombo, "Left Arrow|A", "Left Arrow")
+
+    _CreateCaption("Move right", 318, 346)
+    $g_idRightKeyCombo = GUICtrlCreateCombo("Right Arrow", 416, 342, 186, 24, $CBS_DROPDOWNLIST)
+    GUICtrlSetData($g_idRightKeyCombo, "Right Arrow|D", "Right Arrow")
+
+    _CreateCaption("Skill key", 18, 380)
+    $g_idSkillKeyCombo = GUICtrlCreateCombo("Alt", 116, 376, 170, 24, $CBS_DROPDOWNLIST)
+    GUICtrlSetData($g_idSkillKeyCombo, "None|Alt|Ctrl|Space|Z|X|C", "Alt")
+
+    _CreateCaption("Interval ms", 318, 380)
+    $g_idSkillIntervalInput = GUICtrlCreateInput("1000", 416, 376, 80, 24)
+
+    _CreateCaption("Stop px", 510, 380)
+    $g_idStopDistanceInput = GUICtrlCreateInput("80", 562, 376, 40, 24)
+
+    $g_idTapLeftButton = GUICtrlCreateButton("Tap Left", 18, 414, 170, 30)
+    $g_idTapRightButton = GUICtrlCreateButton("Tap Right", 202, 414, 170, 30)
+    $g_idTestSkillButton = GUICtrlCreateButton("Test Skill", 386, 414, 216, 30)
+
+    _CreateCaption("Automation", 18, 458)
+    $g_idAutomationStatusValue = _CreateValueLabel("Paused", 116, 455, 486, 28)
+    _CreateCaption("Last input", 18, 490)
+    $g_idLastInputValue = _CreateValueLabel("None", 116, 487, 486, 28)
+
+    _CreateSectionLabel("EXP SESSION", 18, 530)
+    _CreateCaption("Tesseract", 18, 558)
+    $g_idTesseractValue = _CreateValueLabel("Checking...", 116, 555, 486, 28)
+
+    _CreateMiniStat("Session time", 18, 594, 178, $g_idSessionTimeValue)
+    _CreateMiniStat("XP / hr", 212, 594, 178, $g_idXpHourValue)
+    _CreateMiniStat("Total XP", 406, 594, 196, $g_idTotalValue)
+    _CreateMiniStat("Events", 18, 646, 178, $g_idEventsValue)
+    _CreateMiniStat("Last gain", 212, 646, 178, $g_idLastGainValue)
+    _CreateMiniStat("Last HUD read", 406, 646, 196, $g_idLastReadValue)
+
+    $g_idResetSessionButton = GUICtrlCreateButton("Reset EXP Session", 406, 696, 196, 28)
+
+    _CreateSectionLabel("TOOLS", 18, 738)
+    $g_idDetectButton = GUICtrlCreateButton("Detect Client", 18, 764, 136, 28)
+    $g_idSearchButton = GUICtrlCreateButton("Search Once", 166, 764, 136, 28)
+    $g_idReloadDataButton = GUICtrlCreateButton("Reload /data", 314, 764, 136, 28)
+    $g_idOpenDebugButton = GUICtrlCreateButton("Open Debug", 462, 764, 140, 28)
+
+    $g_idCapturePlayerButton = GUICtrlCreateButton("Capture Player", 18, 800, 136, 28)
+    $g_idCaptureTargetButton = GUICtrlCreateButton("Capture Target", 166, 800, 136, 28)
+    $g_idOpenDataButton = GUICtrlCreateButton("Open /data", 314, 800, 136, 28)
+    $g_idCaptureButton = GUICtrlCreateButton("Capture Client", 462, 800, 140, 28)
+
+    ; Less-frequent controls remain available without dominating the MVP UI.
+    $g_idDelayedBindButton = GUICtrlCreateButton("Bind Active", 18, 836, 106, 26)
+    $g_idImportPlayerButton = GUICtrlCreateButton("Import Player", 132, 836, 106, 26)
+    $g_idImportTargetButton = GUICtrlCreateButton("Import Target", 246, 836, 106, 26)
+    $g_idClearButton = GUICtrlCreateButton("Clear Marks", 360, 836, 106, 26)
+    $g_idActivateButton = GUICtrlCreateButton("Activate", 474, 836, 62, 26)
+    $g_idExitButton = GUICtrlCreateButton("Exit", 544, 836, 58, 26)
+
+    $g_idStatusValue = GUICtrlCreateEdit( _
+            "", 18, 872, 584, 28, BitOR($ES_READONLY, $ES_MULTILINE))
+    GUICtrlSetBkColor($g_idStatusValue, $APP_COLOR_PANEL)
+    GUICtrlSetColor($g_idStatusValue, $APP_COLOR_TEXT)
 
     $g_idContinuousButton = GUICtrlCreateButton( _
-            "Start Continuous", 292, 392, 260, 34)
-
-    $g_idReloadDataButton = GUICtrlCreateButton( _
-            "Reload /data", 18, 434, 170, 34)
-
-    $g_idOpenDataButton = GUICtrlCreateButton( _
-            "Open /data", 200, 434, 170, 34)
-
-    $g_idOpenDebugButton = GUICtrlCreateButton( _
-            "Open Debug", 382, 434, 170, 34)
-
-    $g_idImportPlayerButton = GUICtrlCreateButton( _
-            "Import Player Images", 18, 476, 260, 34)
-
-    $g_idImportTargetButton = GUICtrlCreateButton( _
-            "Import Target Images", 292, 476, 260, 34)
-
-    $g_idCapturePlayerButton = GUICtrlCreateButton( _
-            "Capture Player Snippet", 18, 518, 260, 34)
-
-    $g_idCaptureTargetButton = GUICtrlCreateButton( _
-            "Capture Target Snippet", 292, 518, 260, 34)
-
-    $g_idCaptureButton = GUICtrlCreateButton( _
-            "Capture Bound Window", 18, 560, 170, 32)
-
-    $g_idClearButton = GUICtrlCreateButton( _
-            "Clear Highlights", 200, 560, 170, 32)
-
-    $g_idActivateButton = GUICtrlCreateButton( _
-            "Activate Game", 382, 560, 170, 32)
-
-    $g_idExitButton = GUICtrlCreateButton( _
-            "Exit", 452, 608, 100, 28)
-
-    GUICtrlSetTip($g_idDetectButton, _
-            "Finds the largest visible MapleSaga.exe or MapleStory.exe window.")
-
-    GUICtrlSetTip($g_idDelayedBindButton, _
-            "Hides this panel. Activate the desired game window before the countdown ends.")
-
-    GUICtrlSetTip($g_idSearchButton, _
-            "Searches every PNG in data\player and data\target.")
+            "F6 Start", 18, 906, 282, 28)
+    $g_idEmergencyButton = GUICtrlCreateButton( _
+            "F8 EMERGENCY STOP", 314, 906, 288, 28)
+    GUICtrlSetTip($g_idEmergencyButton, _
+            "Press F8 at any time to stop and release movement keys.")
 
     GUICtrlSetTip($g_idContinuousButton, _
-            "Repeats the search approximately every " & $CONTINUOUS_INTERVAL & " ms.")
+            "F6 starts or pauses target vision, optional movement, and EXP OCR.")
+    GUICtrlSetTip($g_idAutoMoveCheckbox, _
+            "Automatic input is sent only while the bound game window is active.")
+    GUICtrlSetTip($g_idStopDistanceInput, _
+            "Horizontal center distance at which movement keys are released.")
 
-    GUICtrlSetTip($g_idReloadDataButton, _
-            "Rescans the data folders without restarting the script.")
+    _SetStatus("Ready. F6 starts the combined runtime; F8 stops immediately.")
+EndFunc
 
-    GUICtrlSetTip($g_idImportPlayerButton, _
-            "Select one or many PNG files and copy them into data\player.")
+Func _CreateSectionLabel($sText, $iX, $iY)
+    Local $id = GUICtrlCreateLabel($sText, $iX, $iY, 584, 20)
+    GUICtrlSetFont($id, 10, 700)
+    GUICtrlSetColor($id, $APP_COLOR_ACCENT)
+EndFunc
 
-    GUICtrlSetTip($g_idImportTargetButton, _
-            "Select one or many PNG files and copy them into data\target.")
+Func _CreateCaption($sText, $iX, $iY)
+    Local $id = GUICtrlCreateLabel($sText, $iX, $iY, 92, 20)
+    GUICtrlSetColor($id, $APP_COLOR_MUTED)
+EndFunc
 
-    GUICtrlSetTip($g_idCapturePlayerButton, _
-            "Drag a rectangle over the bound game window and save it into data\player.")
+Func _CreateValueLabel($sText, $iX, $iY, $iW, $iH)
+    Local $id = GUICtrlCreateLabel($sText, $iX, $iY, $iW, $iH, BitOR($SS_LEFT, $SS_SUNKEN))
+    GUICtrlSetBkColor($id, $APP_COLOR_PANEL)
+    GUICtrlSetColor($id, $APP_COLOR_TEXT)
+    GUICtrlSetFont($id, 9, 600)
+    Return $id
+EndFunc
 
-    GUICtrlSetTip($g_idCaptureTargetButton, _
-            "Drag a rectangle over the bound game window and save it into data\target.")
-
-    GUICtrlSetTip($g_idCaptureButton, _
-            "Saves the complete bound game client to the debug folder.")
+Func _CreateMiniStat($sCaption, $iX, $iY, $iW, ByRef $idValue)
+    Local $idCaption = GUICtrlCreateLabel($sCaption, $iX, $iY, $iW, 18)
+    GUICtrlSetColor($idCaption, $APP_COLOR_MUTED)
+    $idValue = _CreateValueLabel("-", $iX, $iY + 18, $iW, 28)
 EndFunc
 
 Func _SetStatus($sMessage)
-    If $g_idStatusValue <> 0 Then
-        GUICtrlSetData($g_idStatusValue, $sMessage)
-    EndIf
+    If $g_idStatusValue <> 0 Then GUICtrlSetData($g_idStatusValue, $sMessage)
+EndFunc
+
+Func _SetAutomationStatus($sMessage)
+    If $g_idAutomationStatusValue <> 0 Then GUICtrlSetData($g_idAutomationStatusValue, $sMessage)
 EndFunc
 
 Func _UpdateTemplateDisplay()
-    GUICtrlSetData( _
-            $g_idTemplateValue, _
-            "data\player: " & $g_iPlayerTemplateCount & _
-            " PNG(s) | data\target: " & $g_iTargetTemplateCount & _
-            " PNG(s)" & @CRLF & _
-            "Tolerance: player " & $PLAYER_TOLERANCE & _
-            " | target " & $TARGET_TOLERANCE)
+    GUICtrlSetData($g_idTemplateValue, _
+            "player: " & $g_iPlayerTemplateCount & _
+            " PNG(s) | target: " & $g_iTargetTemplateCount & _
+            " PNG(s) | tolerance " & $PLAYER_TOLERANCE & "/" & $TARGET_TOLERANCE)
 EndFunc
 
 Func _UpdateWindowDisplay()
@@ -363,25 +502,21 @@ Func _UpdateWindowDisplay()
 
     Local $aClientSize = WinGetClientSize($g_hTargetWindow)
     Local $sSize = ""
-
-    If IsArray($aClientSize) Then
-        $sSize = " | " & $aClientSize[0] & "x" & $aClientSize[1]
-    EndIf
+    If IsArray($aClientSize) Then $sSize = " | " & $aClientSize[0] & "x" & $aClientSize[1]
 
     Local $sIdentity = $g_sTargetWindowTitle
-
     If StringStripWS($sIdentity, 8) = "" Then
         $sIdentity = $g_sTargetProcessName
     ElseIf $g_sTargetProcessName <> "" Then
         $sIdentity &= " [" & $g_sTargetProcessName & "]"
     EndIf
 
-    GUICtrlSetData( _
-            $g_idWindowValue, _
+    GUICtrlSetData($g_idWindowValue, _
             $sIdentity & " | PID " & $g_iTargetWindowPID & $sSize)
 EndFunc
 
 Func _ResetDetectionDisplay()
+    _ResetVisionSnapshot()
     GUICtrlSetData($g_idPlayerValue, "Not detected")
     GUICtrlSetData($g_idTargetValue, "Not detected")
     GUICtrlSetData($g_idDistanceValue, "No distance yet")
@@ -389,16 +524,11 @@ EndFunc
 
 Func _SetContinuousUi()
     If $g_bContinuous Then
-        GUICtrlSetData($g_idContinuousButton, "Stop Continuous")
+        GUICtrlSetData($g_idContinuousButton, "F6 Pause")
     Else
-        GUICtrlSetData($g_idContinuousButton, "Start Continuous")
+        GUICtrlSetData($g_idContinuousButton, "F6 Start")
     EndIf
 EndFunc
-
-
-; ============================================================================
-; /data template library, import, and snippet capture
-; ============================================================================
 
 Func _ReloadTemplateLibrary($bNotify)
     DirCreate($DATA_DIRECTORY)
@@ -898,10 +1028,6 @@ Func _RunImmediateLibraryTest()
     _RunDistanceSearch(False)
 EndFunc
 
-; ============================================================================
-; Window detection and binding
-; ============================================================================
-
 Func _AutoDetectGameClient($bNotify)
     Local $hDetectedWindow = _FindLargestVisibleTargetProcessWindow()
 
@@ -941,6 +1067,7 @@ Func _MaintainBestGameWindow()
             $g_sTargetProcessName = ""
             _UpdateWindowDisplay()
             _DisableContinuousSearch("The game window closed.")
+            _ResetVisionSnapshot()
         EndIf
 
         Return
@@ -1078,8 +1205,12 @@ Func _BindTargetWindow($hWindow, $sSource)
         $g_sTargetProcessName = "PID " & $g_iTargetWindowPID
     EndIf
 
+    _ReleaseMovementKey()
     _ClearHighlights()
     _ResetDetectionDisplay()
+    $g_iLastAcceptedHudExp = -1
+    $g_iHudCandidateExp = -1
+    $g_iHudCandidateReads = 0
     _UpdateWindowDisplay()
     _PositionPanelNextToTarget()
 
@@ -1216,35 +1347,6 @@ Func _GetClientArea($hWindow)
     Return $aClientSize[0] * $aClientSize[1]
 EndFunc
 
-; ============================================================================
-; Distance search
-; ============================================================================
-
-Func _ToggleContinuousSearch()
-    If $g_bContinuous Then
-        _DisableContinuousSearch("Stopped by user.")
-        _SetStatus("Continuous distance search stopped.")
-        Return
-    EndIf
-
-    If Not _ValidateReadyToSearch() Then Return
-
-    $g_bContinuous = True
-    $g_hContinuousTimer = TimerInit()
-
-    _Log("Continuous distance search enabled")
-    _SetContinuousUi()
-    _RunDistanceSearch(False)
-EndFunc
-
-Func _DisableContinuousSearch($sReason)
-    If Not $g_bContinuous Then Return
-
-    $g_bContinuous = False
-    _SetContinuousUi()
-    _Log("Continuous distance search disabled: " & $sReason)
-EndFunc
-
 Func _ValidateReadyToSearch()
     _UpdateTemplateDisplay()
 
@@ -1277,6 +1379,7 @@ EndFunc
 
 Func _RunDistanceSearch($bCaptureOnMiss)
     If $g_bSearchBusy Then Return
+    _ResetVisionSnapshot()
 
     If Not _ValidateReadyToSearch() Then
         _DisableContinuousSearch("Search prerequisites are invalid.")
@@ -1363,6 +1466,8 @@ Func _RunDistanceSearch($bCaptureOnMiss)
     If $bPlayerFound Then
         $nPlayerCenterX = $iPlayerX + ($iPlayerWidth / 2)
         $nPlayerCenterY = $iPlayerY + ($iPlayerHeight / 2)
+
+        $g_bVisionPlayerFound = True
 
         _DrawHighlight( _
                 $iPlayerX, _
@@ -1483,6 +1588,8 @@ Func _RunDistanceSearch($bCaptureOnMiss)
         Return
     EndIf
 
+    $g_iVisionTargetCount = $iTargetCount
+
     GUICtrlSetData( _
             $g_idTargetValue, _
             $iTargetCount & " unique target(s) detected")
@@ -1598,6 +1705,14 @@ Func _RunDistanceSearch($bCaptureOnMiss)
         $sVerticalDirection = "above"
     EndIf
 
+    $g_bVisionTargetFound = True
+    $g_nVisionDeltaX = $nNearestDeltaX
+    $g_nVisionDeltaY = $nNearestDeltaY
+    $g_nVisionDistance = $nNearestDistance
+    $g_sVisionTargetTemplate = _FileNameOnly( _
+            $g_aTargetTemplates[$aTargetMatches[$iNearestIndex][4]])
+    $g_hVisionSuccessTimer = TimerInit()
+
     $nElapsed = Round(TimerDiff($hTimer), 2)
 
     GUICtrlSetData( _
@@ -1673,10 +1788,6 @@ Func _AddUniqueTargetMatch( _
 
     Return True
 EndFunc
-
-; ============================================================================
-; Highlight overlays
-; ============================================================================
 
 Func _DrawHighlight($iX, $iY, $iWidth, $iHeight, $iColor)
     If $iWidth < ($OVERLAY_BORDER * 2) Then
@@ -1759,10 +1870,6 @@ Func _ClearHighlights()
 
     $g_iOverlayCount = 0
 EndFunc
-
-; ============================================================================
-; Screenshots and logging
-; ============================================================================
 
 Func _SaveTargetWindowScreenshot($sPrefix)
     Local $iLeft = 0
@@ -1853,13 +1960,522 @@ Func _TimestampWithMilliseconds()
             @HOUR & @MIN & @SEC & "_" & $sMilliseconds
 EndFunc
 
-Func _OnExit()
-    $g_bContinuous = False
-    _ClearHighlights()
+; ============================================================================
+; Combined runtime and movement
+; ============================================================================
 
-    If $g_bImageSearchStarted Then
-        _ImageSearch_Shutdown()
+Func _ToggleContinuousSearch()
+    If $g_bContinuous Then
+        _DisableContinuousSearch("Paused by user.")
+        _SetStatus("Combined runtime paused. EXP session totals were retained.")
+        Return
     EndIf
 
-    _Log("Maple Template Library POC v3 stopped")
+    If Not _ValidateReadyToSearch() Then Return
+
+    $g_bContinuous = True
+    $g_bOcrMonitoring = ($g_sTesseractPath <> "")
+    $g_hContinuousTimer = TimerInit()
+    $g_hOcrTimer = TimerInit()
+    $g_hSkillTimer = TimerInit()
+
+    ; Establish a fresh baseline so EXP earned while paused is not counted.
+    $g_iLastAcceptedHudExp = -1
+    $g_iHudCandidateExp = -1
+    $g_iHudCandidateReads = 0
+
+    _SetContinuousUi()
+    _SetAutomationStatus("Starting vision...")
+    _Log("Combined runtime enabled; OCR=" & ($g_bOcrMonitoring ? "on" : "off"))
+
+    _RunDistanceSearch(False)
+    _ActivateTargetWindow()
+EndFunc
+
+Func _DisableContinuousSearch($sReason)
+    If Not $g_bContinuous And Not $g_bOcrMonitoring Then
+        _ReleaseMovementKey()
+        Return
+    EndIf
+
+    $g_bContinuous = False
+    $g_bOcrMonitoring = False
+    _ReleaseMovementKey()
+    _SetContinuousUi()
+    _SetAutomationStatus("Paused")
+    _Log("Combined runtime disabled: " & $sReason)
+EndFunc
+
+Func _HotkeyToggleRuntime()
+    _ToggleContinuousSearch()
+EndFunc
+
+Func _HotkeyEmergencyStop()
+    _EmergencyStop("F8 emergency stop")
+EndFunc
+
+Func _EmergencyStop($sReason)
+    $g_bContinuous = False
+    $g_bOcrMonitoring = False
+    _ReleaseMovementKey()
+    _ReleaseAllConfiguredMovementKeys()
+    _SetContinuousUi()
+    _SetAutomationStatus("EMERGENCY STOPPED")
+    _SetStatus($sReason & ". Movement keys released.")
+    _Log("EMERGENCY STOP: " & $sReason)
+EndFunc
+
+Func _ResetVisionSnapshot()
+    $g_bVisionPlayerFound = False
+    $g_bVisionTargetFound = False
+    $g_nVisionDeltaX = 0
+    $g_nVisionDeltaY = 0
+    $g_nVisionDistance = 0
+    $g_iVisionTargetCount = 0
+    $g_sVisionTargetTemplate = ""
+EndFunc
+
+Func _UpdateMovementControl()
+    If Not $g_bContinuous Then
+        _ReleaseMovementKey()
+        Return
+    EndIf
+
+    If GUICtrlRead($g_idAutoMoveCheckbox) <> $GUI_CHECKED Then
+        _ReleaseMovementKey()
+        _SetAutomationStatus("Vision active; automatic movement disabled")
+        Return
+    EndIf
+
+    If Not $g_bVisionPlayerFound Or Not $g_bVisionTargetFound Then
+        _ReleaseMovementKey()
+        _SetAutomationStatus("Waiting for player + target")
+        Return
+    EndIf
+
+    If TimerDiff($g_hVisionSuccessTimer) > $APP_VISION_STALE_MS Then
+        _ReleaseMovementKey()
+        _SetAutomationStatus("Vision stale; movement released")
+        Return
+    EndIf
+
+    If $g_hTargetWindow = 0 Or Not WinExists($g_hTargetWindow) Then
+        _ReleaseMovementKey()
+        _SetAutomationStatus("Game window unavailable")
+        Return
+    EndIf
+
+    ; Do not type into another application if the user changes focus.
+    If Not WinActive($g_hTargetWindow) Then
+        _ReleaseMovementKey()
+        _SetAutomationStatus("Game not active; movement safely paused")
+        Return
+    EndIf
+
+    Local $iStopDistance = Int(Number(GUICtrlRead($g_idStopDistanceInput)))
+    $iStopDistance = _ClampValue($iStopDistance, 10, 500)
+
+    If Abs($g_nVisionDeltaX) <= $iStopDistance Then
+        _ReleaseMovementKey()
+        _SetAutomationStatus( _
+                "Target inside stop distance: " & Round(Abs($g_nVisionDeltaX), 1) & " px")
+        Return
+    EndIf
+
+    Local $sDirection = "right"
+    Local $sKeyLabel = GUICtrlRead($g_idRightKeyCombo)
+    If $g_nVisionDeltaX < 0 Then
+        $sDirection = "left"
+        $sKeyLabel = GUICtrlRead($g_idLeftKeyCombo)
+    EndIf
+
+    _HoldMovementKey($sKeyLabel)
+    _SetAutomationStatus( _
+            "Moving " & $sDirection & " toward nearest target | DX " & _
+            Round($g_nVisionDeltaX, 1) & " px")
+
+    If GUICtrlRead($g_idUseSkillCheckbox) = $GUI_CHECKED Then
+        Local $iInterval = Int(Number(GUICtrlRead($g_idSkillIntervalInput)))
+        $iInterval = _ClampValue($iInterval, 100, 10000)
+        If TimerDiff($g_hSkillTimer) >= $iInterval Then
+            $g_hSkillTimer = TimerInit()
+            _TapConfiguredSkill(False)
+        EndIf
+    EndIf
+EndFunc
+
+Func _HoldMovementKey($sKeyLabel)
+    If $sKeyLabel = "" Then Return
+    If $g_sHeldMovementKey = $sKeyLabel Then Return
+
+    _ReleaseMovementKey()
+
+    Local $sToken = _MovementHoldToken($sKeyLabel)
+    If $sToken = "" Then Return
+
+    Send("{" & $sToken & " down}")
+    $g_sHeldMovementKey = $sKeyLabel
+    $g_sLastInput = $sKeyLabel & " down"
+    GUICtrlSetData($g_idLastInputValue, $g_sLastInput)
+    _Log("INPUT HOLD: " & $g_sLastInput)
+EndFunc
+
+Func _ReleaseMovementKey()
+    If $g_sHeldMovementKey = "" Then Return
+
+    Local $sToken = _MovementHoldToken($g_sHeldMovementKey)
+    If $sToken <> "" Then Send("{" & $sToken & " up}")
+
+    $g_sLastInput = $g_sHeldMovementKey & " up"
+    GUICtrlSetData($g_idLastInputValue, $g_sLastInput)
+    _Log("INPUT RELEASE: " & $g_sLastInput)
+    $g_sHeldMovementKey = ""
+EndFunc
+
+Func _ReleaseAllConfiguredMovementKeys()
+    Send("{LEFT up}{RIGHT up}{A up}{D up}")
+    $g_sHeldMovementKey = ""
+EndFunc
+
+Func _MovementHoldToken($sKeyLabel)
+    Switch StringUpper(StringStripWS($sKeyLabel, 8))
+        Case "LEFT ARROW"
+            Return "LEFT"
+        Case "RIGHT ARROW"
+            Return "RIGHT"
+        Case "A"
+            Return "A"
+        Case "D"
+            Return "D"
+    EndSwitch
+    Return ""
+EndFunc
+
+Func _TapConfiguredMovementKey($bLeft)
+    If Not _EnsureGameActiveForManualInput() Then Return
+
+    Local $sLabel = GUICtrlRead($g_idRightKeyCombo)
+    If $bLeft Then $sLabel = GUICtrlRead($g_idLeftKeyCombo)
+
+    Local $sToken = _MovementHoldToken($sLabel)
+    If $sToken = "" Then Return
+
+    Send("{" & $sToken & "}")
+    $g_sLastInput = "Tap " & $sLabel
+    GUICtrlSetData($g_idLastInputValue, $g_sLastInput)
+    _SetStatus("Sent " & $g_sLastInput & " to the active game window.")
+    _Log("INPUT TAP: " & $g_sLastInput)
+EndFunc
+
+Func _TapConfiguredSkill($bManual)
+    If $bManual And Not _EnsureGameActiveForManualInput() Then Return
+    If Not $bManual And Not WinActive($g_hTargetWindow) Then Return
+
+    Local $sLabel = GUICtrlRead($g_idSkillKeyCombo)
+    Local $sSend = _SkillSendToken($sLabel)
+    If $sSend = "" Then Return
+
+    Send($sSend)
+    $g_sLastInput = "Skill " & $sLabel
+    GUICtrlSetData($g_idLastInputValue, $g_sLastInput)
+    If $bManual Then _SetStatus("Sent test skill: " & $sLabel)
+    _Log("INPUT SKILL: " & $sLabel)
+EndFunc
+
+Func _SkillSendToken($sKeyLabel)
+    Switch StringUpper(StringStripWS($sKeyLabel, 8))
+        Case "ALT"
+            Return "{ALT}"
+        Case "CTRL"
+            Return "{CTRL}"
+        Case "SPACE"
+            Return "{SPACE}"
+        Case "Z"
+            Return "z"
+        Case "X"
+            Return "x"
+        Case "C"
+            Return "c"
+    EndSwitch
+    Return ""
+EndFunc
+
+Func _EnsureGameActiveForManualInput()
+    If $g_hTargetWindow = 0 Or Not WinExists($g_hTargetWindow) Then
+        _SetStatus("No valid game window is bound.")
+        Return False
+    EndIf
+
+    WinActivate($g_hTargetWindow)
+    If Not WinWaitActive($g_hTargetWindow, "", 2) Then
+        _SetStatus("Could not activate the bound game window.")
+        Return False
+    EndIf
+    Return True
+EndFunc
+
+; ============================================================================
+; Bottom EXP HUD OCR and session statistics
+; ============================================================================
+
+Func _FindTesseractPath()
+    Local $aCandidates[5] = [ _
+            @ScriptDir & "\tesseract.exe", _
+            @ScriptDir & "\Tesseract-OCR\tesseract.exe", _
+            @ProgramFilesDir & "\Tesseract-OCR\tesseract.exe", _
+            @ProgramFilesDir & " (x86)\Tesseract-OCR\tesseract.exe", _
+            "C:\Program Files\Tesseract-OCR\tesseract.exe" _
+    ]
+
+    Local $i
+    For $i = 0 To UBound($aCandidates) - 1
+        If FileExists($aCandidates[$i]) Then Return $aCandidates[$i]
+    Next
+    Return ""
+EndFunc
+
+Func _ResetExpSession()
+    $g_hSessionStart = TimerInit()
+    $g_nSessionExp = 0
+    $g_iExpEvents = 0
+    $g_nLastGain = 0
+    $g_sLastRead = ""
+    $g_iLastAcceptedHudExp = -1
+    $g_iHudCandidateExp = -1
+    $g_iHudCandidateReads = 0
+    $g_sLastHudOcr = ""
+    $g_hMissLogTimer = TimerInit()
+    _UpdateSessionStats()
+    _SetStatus("EXP session reset.")
+    _Log("EXP session reset")
+EndFunc
+
+Func _UpdateSessionStats()
+    Local $iSessionSeconds = Int(TimerDiff($g_hSessionStart) / 1000)
+    Local $nHours = $iSessionSeconds / 3600.0
+    Local $nXpHour = 0
+    If $nHours > 0 Then $nXpHour = $g_nSessionExp / $nHours
+
+    GUICtrlSetData($g_idSessionTimeValue, _FormatSeconds($iSessionSeconds))
+    GUICtrlSetData($g_idXpHourValue, _FormatCompact($nXpHour))
+    GUICtrlSetData($g_idTotalValue, _FormatCompact($g_nSessionExp))
+    GUICtrlSetData($g_idEventsValue, $g_iExpEvents)
+    GUICtrlSetData($g_idLastGainValue, _FormatCompact($g_nLastGain))
+    GUICtrlSetData($g_idLastReadValue, ($g_sLastRead <> "" ? $g_sLastRead : "-"))
+    GUICtrlSetData($g_idTesseractValue, _
+            ($g_sTesseractPath <> "" ? $g_sTesseractPath : "Not found; EXP OCR disabled"))
+    _UpdateWindowDisplay()
+EndFunc
+
+Func _ScanExperienceOnce()
+    If $g_bSearchBusy Then Return
+    $g_bSearchBusy = True
+
+    Local $iCurrentExp = 0
+    Local $nCurrentPercent = -1
+    Local $sOcrOutput = ""
+
+    If _TryReadCurrentHudExp($iCurrentExp, $nCurrentPercent, $sOcrOutput) Then
+        $g_sLastHudOcr = $sOcrOutput
+
+        If $iCurrentExp <> $g_iHudCandidateExp Then
+            $g_iHudCandidateExp = $iCurrentExp
+            $g_iHudCandidateReads = 1
+        Else
+            $g_iHudCandidateReads += 1
+        EndIf
+
+        If $g_iHudCandidateReads >= $APP_HUD_STABLE_READS Then
+            _AcceptStableHudExp($iCurrentExp, $nCurrentPercent, $sOcrOutput)
+        EndIf
+    Else
+        $g_iHudCandidateExp = -1
+        $g_iHudCandidateReads = 0
+
+        If TimerDiff($g_hMissLogTimer) >= $APP_MISS_LOG_INTERVAL_MS Then
+            $g_hMissLogTimer = TimerInit()
+            _Log("Bottom EXP HUD OCR miss; raw='" & $sOcrOutput & _
+                    "'; crop=" & $g_sLatestHudRawPath & _
+                    "; scaled=" & $g_sLatestHudScaledPath)
+        EndIf
+    EndIf
+
+    _UpdateSessionStats()
+    $g_bSearchBusy = False
+EndFunc
+
+Func _AcceptStableHudExp($iCurrentExp, $nCurrentPercent, $sOcrOutput)
+    $g_sLastRead = _FormatHudRead($iCurrentExp, $nCurrentPercent)
+    GUICtrlSetData($g_idLastReadValue, $g_sLastRead)
+
+    If $g_iLastAcceptedHudExp < 0 Then
+        $g_iLastAcceptedHudExp = $iCurrentExp
+        _Log("EXP HUD baseline: " & $g_sLastRead & "; OCR='" & $sOcrOutput & "'")
+        Return
+    EndIf
+
+    If $iCurrentExp = $g_iLastAcceptedHudExp Then Return
+
+    If $iCurrentExp > $g_iLastAcceptedHudExp Then
+        Local $iPreviousExp = $g_iLastAcceptedHudExp
+        Local $iGain = $iCurrentExp - $iPreviousExp
+        $g_nLastGain = $iGain
+        $g_nSessionExp += $iGain
+        $g_iExpEvents += 1
+        $g_iLastAcceptedHudExp = $iCurrentExp
+        _Log("EXP HUD EVENT: previous=" & $iPreviousExp & _
+                "; current=" & $iCurrentExp & _
+                "; percent=" & $nCurrentPercent & _
+                "; gain=" & $iGain & _
+                "; OCR='" & $sOcrOutput & "'")
+        Return
+    EndIf
+
+    _Log("EXP HUD decreased from " & $g_iLastAcceptedHudExp & _
+            " to " & $iCurrentExp & _
+            "; probable level-up or OCR correction; rebasing without gain." & _
+            " OCR='" & $sOcrOutput & "'")
+    $g_iLastAcceptedHudExp = $iCurrentExp
+EndFunc
+
+Func _FormatHudRead($iExp, $nPercent)
+    If $nPercent >= 0 Then
+        Return "EXP " & $iExp & " (" & StringFormat("%.2f", $nPercent) & "%)"
+    EndIf
+    Return "EXP " & $iExp
+EndFunc
+
+Func _TryReadCurrentHudExp(ByRef $iCurrentExp, ByRef $nCurrentPercent, ByRef $sOcrOutput)
+    $iCurrentExp = 0
+    $nCurrentPercent = -1
+    $sOcrOutput = ""
+    If $g_sTesseractPath = "" Then Return False
+
+    Local $iLeft = 0, $iTop = 0, $iRight = 0, $iBottom = 0
+    If Not _GetTargetWindowRect($iLeft, $iTop, $iRight, $iBottom) Then Return False
+
+    Local $iClientWidth = $iRight - $iLeft + 1
+    Local $iClientHeight = $iBottom - $iTop + 1
+    Local $iHudLeft = $iLeft + Int($iClientWidth * $APP_HUD_X1_RATIO)
+    Local $iHudRight = $iLeft + Int($iClientWidth * $APP_HUD_X2_RATIO)
+    Local $iHudTop = $iTop + Int($iClientHeight * $APP_HUD_Y1_RATIO)
+    Local $iHudBottom = $iTop + Int($iClientHeight * $APP_HUD_Y2_RATIO)
+
+    Local $bSaved = _ImageSearch_ScreenCapture_SaveImage( _
+            $g_sLatestHudRawPath, $iHudLeft, $iHudTop, $iHudRight, $iHudBottom, $SEARCH_SCREEN)
+    If Not $bSaved Or Not FileExists($g_sLatestHudRawPath) Then Return False
+
+    If Not _CreateScaledOcrImage( _
+            $g_sLatestHudRawPath, $g_sLatestHudScaledPath, $APP_HUD_SCALE) Then Return False
+
+    $sOcrOutput = _RunTesseractOnHudImage($g_sLatestHudScaledPath)
+    If $sOcrOutput = "" Then Return False
+    Return _ExtractHudValues($sOcrOutput, $iCurrentExp, $nCurrentPercent)
+EndFunc
+
+Func _CreateScaledOcrImage($sSourcePath, $sDestinationPath, $iScale)
+    If Not $g_bGdiPlusStarted Or Not FileExists($sSourcePath) Or $iScale < 1 Then Return False
+
+    Local $hSourceImage = _GDIPlus_ImageLoadFromFile($sSourcePath)
+    If $hSourceImage = 0 Then Return False
+
+    Local $iSourceWidth = _GDIPlus_ImageGetWidth($hSourceImage)
+    Local $iSourceHeight = _GDIPlus_ImageGetHeight($hSourceImage)
+    If $iSourceWidth < 1 Or $iSourceHeight < 1 Then
+        _GDIPlus_ImageDispose($hSourceImage)
+        Return False
+    EndIf
+
+    Local $iOutputWidth = $iSourceWidth * $iScale
+    Local $iOutputHeight = $iSourceHeight * $iScale
+    Local $hOutputBitmap = _GDIPlus_BitmapCreateFromScan0($iOutputWidth, $iOutputHeight)
+    If $hOutputBitmap = 0 Then
+        _GDIPlus_ImageDispose($hSourceImage)
+        Return False
+    EndIf
+
+    Local $hGraphics = _GDIPlus_ImageGetGraphicsContext($hOutputBitmap)
+    If $hGraphics = 0 Then
+        _GDIPlus_BitmapDispose($hOutputBitmap)
+        _GDIPlus_ImageDispose($hSourceImage)
+        Return False
+    EndIf
+
+    _GDIPlus_GraphicsSetInterpolationMode($hGraphics, $GDIP_INTERPOLATIONMODE_HIGHQUALITYBICUBIC)
+    Local $bDrawn = _GDIPlus_GraphicsDrawImageRect( _
+            $hGraphics, $hSourceImage, 0, 0, $iOutputWidth, $iOutputHeight)
+    Local $bSaved = False
+    If $bDrawn Then $bSaved = _GDIPlus_ImageSaveToFile($hOutputBitmap, $sDestinationPath)
+
+    _GDIPlus_GraphicsDispose($hGraphics)
+    _GDIPlus_BitmapDispose($hOutputBitmap)
+    _GDIPlus_ImageDispose($hSourceImage)
+    Return $bSaved And FileExists($sDestinationPath)
+EndFunc
+
+Func _RunTesseractOnHudImage($sImagePath)
+    Local $sOutputBase = $g_sOcrTempDirectory & "\hud_ocr_result"
+    Local $sOutputPath = $sOutputBase & ".txt"
+    FileDelete($sOutputPath)
+
+    Local $sCommand = '"' & $g_sTesseractPath & '" "' & $sImagePath & _
+            '" "' & $sOutputBase & '" -l eng --psm 7'
+    Local $iExitCode = RunWait($sCommand, @ScriptDir, @SW_HIDE)
+    If $iExitCode <> 0 Or Not FileExists($sOutputPath) Then Return ""
+
+    Local $sOutput = FileRead($sOutputPath)
+    Return StringStripWS( _
+            StringReplace(StringReplace($sOutput, @CR, " "), @LF, " "), 7)
+EndFunc
+
+Func _ExtractHudValues($sText, ByRef $iExp, ByRef $nPercent)
+    $iExp = -1
+    $nPercent = -1
+    If $sText = "" Then Return False
+
+    Local $sUpper = StringUpper($sText)
+    ; Repair OCR spacing such as 27. 72% or 27 .72% before parsing.
+    $sUpper = StringRegExpReplace($sUpper, '([0-9])\s*\.\s*([0-9])', '$1.$2')
+
+    Local $aExpMatches = StringRegExp($sUpper, 'EXP[^0-9]*([0-9]{1,10})', 3)
+    If @error Or Not IsArray($aExpMatches) Or UBound($aExpMatches) < 1 Then Return False
+
+    Local $sDigits = $aExpMatches[0]
+    If Not StringRegExp($sDigits, '^[0-9]+$') Then Return False
+    $iExp = Int(Number($sDigits))
+
+    Local $aPercentMatches = StringRegExp( _
+            $sUpper, '([0-9]{1,3}\.[0-9]{1,2})[^0-9]*%', 3)
+    If IsArray($aPercentMatches) And UBound($aPercentMatches) >= 1 Then
+        Local $nParsedPercent = Number($aPercentMatches[0])
+        If $nParsedPercent >= 0 And $nParsedPercent <= 100 Then $nPercent = $nParsedPercent
+    EndIf
+
+    Return $iExp >= 0
+EndFunc
+
+Func _FormatSeconds($iSeconds)
+    Local $iHours = Int($iSeconds / 3600)
+    Local $iMinutes = Int(Mod($iSeconds, 3600) / 60)
+    Local $iRemainder = Int(Mod($iSeconds, 60))
+    Return StringFormat("%02d:%02d:%02d", $iHours, $iMinutes, $iRemainder)
+EndFunc
+
+Func _FormatCompact($nValue)
+    If $nValue >= 1000000 Then Return StringFormat("%.2fM", $nValue / 1000000.0)
+    If $nValue >= 1000 Then Return StringFormat("%.1fK", $nValue / 1000.0)
+    Return StringFormat("%.0f", $nValue)
+EndFunc
+
+Func _OnExit()
+    $g_bContinuous = False
+    $g_bOcrMonitoring = False
+    _ReleaseMovementKey()
+    _ReleaseAllConfiguredMovementKeys()
+    _ClearHighlights()
+    HotKeySet("{F6}")
+    HotKeySet("{F8}")
+    If $g_bGdiPlusStarted Then _GDIPlus_Shutdown()
+    If $g_bImageSearchStarted Then _ImageSearch_Shutdown()
+    _Log("Maple Automation MVP v0.1 stopped")
 EndFunc

@@ -1,113 +1,95 @@
-MAPLE TEMPLATE LIBRARY POC v3
-=============================
+MAPLE AUTOMATION MVP v0.1.1
+============================
+
+PURPOSE
+-------
+This is the first combined build of the two successful proofs of concept:
+
+1. Maple Template Library POC v3
+   - player template library
+   - target template library
+   - nearest-target detection and distance measurement
+   - import and snippet-capture tools
+
+2. Maple OCR Session Stats POC v1.4
+   - permanent bottom EXP HUD capture
+   - 6x GDI+ upscale
+   - Tesseract single-line OCR
+   - stable-read confirmation
+   - session EXP, event count, last gain, and XP/hour
+
+The combined MVP also adds optional horizontal movement toward the nearest detected
+target and optional movement-skill taps.
 
 INSTALL
 -------
-Extract the complete ZIP directly into:
+Extract this bundle into your existing folder, normally:
 
-C:\Users\Jake Lam\code\maple-automation
+    C:\Users\Jake Lam\code\maple-automation
 
-Keep your existing file at the project root:
+Keep your known-working dependency beside the script:
 
-ImageSearchDLL_UDF_Embedded.au3
+    ImageSearchDLL_UDF_Embedded.au3
 
-Run:
+Tesseract should remain installed at the working default path:
 
-Run-Maple-Template-Library-POC-v3-Admin.cmd
+    C:\Program Files\Tesseract-OCR\tesseract.exe
 
+RUN
+---
+Launch:
 
-/DATA LAYOUT
-------------
-Every searchable image now lives under the single /data tree:
+    Run-Maple-Automation-MVP-v0.1.1-Admin.cmd
 
-data\
-  player\
-    SuperKiwi_plain.png
-    SuperKiwi_selected.png
-    SuperKiwi_text.png
+The launcher runs Au3Check first when available, then starts the script.
 
-  target\
-    stump1.png
-    stump2.png
-    stump3.png
-    stump4.png
-    stump5.png
-
-The filenames are no longer hard-coded.
-
-- Every PNG directly inside data\player is treated as a player/username
-  identity template.
-- Every PNG directly inside data\target is treated as a target template.
-- Click "Reload /data" after manually adding or removing files.
-- Restarting the POC also reloads both folders.
-
-
-IMPORTING IMAGES
-----------------
-"Import Player Images"
-- Select one or many PNG files.
-- Copies them into data\player.
-- Duplicate filenames receive _2, _3, and so on.
-- Reloads the library automatically.
-- Runs an immediate search when the game is already bound.
-
-"Import Target Images"
-- Performs the same workflow for data\target.
-
-
-CAPTURING SNIPPETS
-------------------
-"Capture Player Snippet" or "Capture Target Snippet":
-
-1. The control panel hides.
-2. Drag a rectangle over the bound MapleSaga game client.
-3. Release the left mouse button.
-4. Enter a filename.
-5. The PNG is saved into the selected /data category.
-6. The library reloads and immediately tests the templates.
-
-Press Esc or right-click before completing the rectangle to cancel.
-The capture waits up to 20 seconds for the selection to begin.
-
-
-SEARCH BEHAVIOR
+SAFE FIRST TEST
 ---------------
-- Searches every player PNG until the first player match.
-- Searches every target PNG and collects all target matches.
-- Deduplicates overlapping detections across alternate target images.
-- Chooses the nearest target by center-to-center screen distance.
-- Continues target searching even when the player is temporarily missing.
+1. Start MapleSaga at the same 1280x720 client size used for template capture.
+2. Open the MVP and confirm Window, Player, Targets, and Nearest are detected.
+3. Leave automatic movement unchecked.
+4. Use Tap Left, Tap Right, and Test Skill to validate the configured keys.
+5. Check Enable automatic horizontal movement.
+6. Click F6 Start, then activate the game window.
+7. Press F8 immediately if movement is unexpected.
 
-Overlay colors:
-- Blue: player
-- Orange: nearest target
-- Green: other targets
+HOTKEYS
+-------
+F6  Start or pause the combined runtime.
+F8  Emergency stop and release Left, Right, A, and D.
 
-This script remains read-only:
-- no keyboard hotkeys
-- no clicks sent to MapleSaga
-- no movement or combat automation
+MOVEMENT RULES
+--------------
+- Input is sent only while the bound Maple game window is active.
+- The nearest target is selected by Euclidean center distance.
+- Movement uses only the horizontal delta for this MVP.
+- The movement key is released inside Stop Distance.
+- The configured skill key is tapped at Skill Interval while moving.
+- Lost/stale vision releases movement automatically.
 
+DEBUG OUTPUT
+------------
+    debug\MapleAutomationMVP.log
+    debug\ocr_temp\latest_exp_hud_raw.png
+    debug\ocr_temp\latest_exp_hud_scaled.png
+    debug\ocr_temp\hud_ocr_result.txt
 
-PERFORMANCE
------------
-Search cost grows roughly with the number of images in /data.
+DATA LIBRARY
+------------
+    data\player\*.png
+    data\target\*.png
 
-The current bundle contains:
-- 3 player templates
-- 5 target templates
+The bundle carries forward the uploaded SuperKiwi and stump templates.
 
-Continuous search uses a 300 ms interval. The search cannot overlap itself,
-so a large template library may update more slowly but will not launch
-concurrent searches.
+KNOWN MVP LIMITS
+----------------
+- No vertical platform routing, obstacle handling, or attack logic yet.
+- Target identity is currently the nearest matching target template.
+- Templates remain exact-scale first; display scaling changes may require new captures.
+- EXP rollover safely rebases at level-up but does not yet calculate the rollover gain.
+- HP/MP OCR and autopot are intentionally deferred until their HUD regions are
+  calibrated and verified with the same discipline used for EXP.
 
-
-DEBUG
------
-Log and captures:
-
-C:\Users\Jake Lam\code\maple-automation\debug
-
-Main log:
-
-MapleTemplateLibraryPOC_v3.log
+V0.1.1 HOTFIX
+--------------
+Removed duplicate UTF-8 BOM bytes that prevented AutoIt from parsing #RequireAdmin on line 1.
