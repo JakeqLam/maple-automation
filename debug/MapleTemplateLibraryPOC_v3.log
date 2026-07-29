@@ -1,0 +1,1934 @@
+[04:40:10] PLAYER MISS across all 3 templates
+[04:40:10] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:10] TARGET TEMPLATE HIT stump4.png matches=4
+[04:40:11] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:11] TARGETS FOUND WITHOUT PLAYER: count=6; elapsedMs=212.33
+[04:40:11] Failure screenshot saved: C:\Users\Jake Lam\code\maple-automation\debug\failure_player-not-found-targets-found_20260729_044011_069.png
+[04:40:16] Continuous distance search enabled
+[04:40:16] PLAYER MISS across all 3 templates
+[04:40:16] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:16] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:16] TARGETS FOUND WITHOUT PLAYER: count=3; elapsedMs=163.01
+[04:40:16] PLAYER MISS across all 3 templates
+[04:40:16] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:16] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:16] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:16] TARGETS FOUND WITHOUT PLAYER: count=3; elapsedMs=156.02
+[04:40:16] PLAYER MISS across all 3 templates
+[04:40:16] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:16] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:16] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:16] TARGETS FOUND WITHOUT PLAYER: count=4; elapsedMs=158.16
+[04:40:17] PLAYER MISS across all 3 templates
+[04:40:17] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:17] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:17] TARGETS FOUND WITHOUT PLAYER: count=3; elapsedMs=154.63
+[04:40:17] PLAYER MISS across all 3 templates
+[04:40:17] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:17] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:17] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:18] TARGETS FOUND WITHOUT PLAYER: count=4; elapsedMs=163.24
+[04:40:18] PLAYER MISS across all 3 templates
+[04:40:18] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:18] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:18] TARGETS FOUND WITHOUT PLAYER: count=3; elapsedMs=165.79
+[04:40:18] PLAYER FOUND template=SuperKiwi_selected.png x=704 y=510
+[04:40:18] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:18] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:18] TARGET 1 template=stump1.png x=697 y=187 dx=-23.5 dy=-312 distance=312.88
+[04:40:18] TARGET 2 template=stump1.png x=1401 y=295 dx=680.5 dy=-204 distance=710.42
+[04:40:18] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-23.5; dy=-312; distance=312.88; elapsedMs=186.73
+[04:40:18] PLAYER FOUND template=SuperKiwi_selected.png x=686 y=513
+[04:40:18] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:18] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:18] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:18] TARGET 1 template=stump1.png x=715 y=187 dx=12.5 dy=-315 distance=315.25
+[04:40:18] TARGET 2 template=stump4.png x=1293 y=331 dx=589.5 dy=-178 distance=615.79
+[04:40:18] DISTANCE RESULT: targets=2; nearestIndex=0; dx=12.5; dy=-315; distance=315.25; elapsedMs=175.42
+[04:40:19] PLAYER FOUND template=SuperKiwi_selected.png x=701 y=513
+[04:40:19] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:19] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:19] TARGET 1 template=stump1.png x=731 y=187 dx=13.5 dy=-315 distance=315.29
+[04:40:19] DISTANCE RESULT: targets=1; nearestIndex=0; dx=13.5; dy=-315; distance=315.29; elapsedMs=180.38
+[04:40:19] PLAYER FOUND template=SuperKiwi_selected.png x=722 y=513
+[04:40:19] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:19] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:19] TARGET 1 template=stump1.png x=751 y=187 dx=12.5 dy=-315 distance=315.25
+[04:40:19] TARGET 2 template=stump5.png x=1037 y=238 dx=300.5 dy=-268 distance=402.65
+[04:40:20] DISTANCE RESULT: targets=2; nearestIndex=0; dx=12.5; dy=-315; distance=315.25; elapsedMs=200.55
+[04:40:20] PLAYER FOUND template=SuperKiwi_selected.png x=728 y=513
+[04:40:20] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:20] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:20] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:20] TARGET 1 template=stump1.png x=1045 y=238 dx=300.5 dy=-264 distance=400
+[04:40:20] TARGET 2 template=stump1.png x=1084 y=438 dx=339.5 dy=-64 distance=345.48
+[04:40:20] TARGET 3 template=stump1.png x=1036 y=448 dx=291.5 dy=-54 distance=296.46
+[04:40:20] TARGET 4 template=stump3.png x=1091 y=264 dx=353 dy=-238.5 distance=426.02
+[04:40:20] DISTANCE RESULT: targets=4; nearestIndex=2; dx=291.5; dy=-54; distance=296.46; elapsedMs=216.77
+[04:40:20] PLAYER FOUND template=SuperKiwi_selected.png x=732 y=513
+[04:40:20] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:20] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:20] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:20] TARGET 1 template=stump1.png x=1049 y=238 dx=300.5 dy=-264 distance=400
+[04:40:20] TARGET 2 template=stump4.png x=732 y=187 dx=-17.5 dy=-322 distance=322.48
+[04:40:20] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-17.5; dy=-322; distance=322.48; elapsedMs=184.73
+[04:40:20] PLAYER FOUND template=SuperKiwi_selected.png x=736 y=513
+[04:40:20] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:20] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:20] TARGET 1 template=stump1.png x=736 y=190 dx=-16.5 dy=-312 distance=312.44
+[04:40:20] TARGET 2 template=stump1.png x=1052 y=238 dx=299.5 dy=-264 distance=399.24
+[04:40:20] TARGET 3 template=stump5.png x=1063 y=444 dx=312.5 dy=-62 distance=318.59
+[04:40:20] TARGET 4 template=stump5.png x=1017 y=449 dx=266.5 dy=-57 distance=272.53
+[04:40:20] DISTANCE RESULT: targets=4; nearestIndex=3; dx=266.5; dy=-57; distance=272.53; elapsedMs=208.91
+[04:40:21] PLAYER FOUND template=SuperKiwi_selected.png x=739 y=513
+[04:40:21] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:21] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:21] TARGET 1 template=stump1.png x=1055 y=238 dx=299.5 dy=-264 distance=399.24
+[04:40:21] TARGET 2 template=stump1.png x=1410 y=321 dx=654.5 dy=-181 distance=679.07
+[04:40:21] DISTANCE RESULT: targets=2; nearestIndex=0; dx=299.5; dy=-264; distance=399.24; elapsedMs=189.81
+[04:40:21] PLAYER FOUND template=SuperKiwi_selected.png x=739 y=513
+[04:40:21] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:22] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:22] TARGET 1 template=stump1.png x=1055 y=238 dx=299.5 dy=-264 distance=399.24
+[04:40:22] DISTANCE RESULT: targets=1; nearestIndex=0; dx=299.5; dy=-264; distance=399.24; elapsedMs=179.47
+[04:40:22] PLAYER FOUND template=SuperKiwi_selected.png x=739 y=513
+[04:40:22] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:22] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:22] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:22] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:22] TARGET 1 template=stump1.png x=1055 y=238 dx=299.5 dy=-264 distance=399.24
+[04:40:22] TARGET 2 template=stump1.png x=1019 y=449 dx=263.5 dy=-53 distance=268.78
+[04:40:22] TARGET 3 template=stump3.png x=754 y=185 dx=5 dy=-317.5 distance=317.54
+[04:40:22] TARGET 4 template=stump4.png x=961 y=454 dx=204.5 dy=-55 distance=211.77
+[04:40:22] DISTANCE RESULT: targets=4; nearestIndex=3; dx=204.5; dy=-55; distance=211.77; elapsedMs=195.16
+[04:40:22] PLAYER FOUND template=SuperKiwi_selected.png x=739 y=513
+[04:40:22] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:22] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:22] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:22] TARGET 1 template=stump1.png x=1016 y=449 dx=260.5 dy=-53 distance=265.84
+[04:40:22] TARGET 2 template=stump4.png x=1298 y=331 dx=541.5 dy=-178 distance=570.01
+[04:40:22] DISTANCE RESULT: targets=2; nearestIndex=0; dx=260.5; dy=-53; distance=265.84; elapsedMs=198.35
+[04:40:22] PLAYER FOUND template=SuperKiwi_selected.png x=739 y=513
+[04:40:22] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:22] TARGET TEMPLATE HIT stump3.png matches=2
+[04:40:22] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:22] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:22] TARGET 1 template=stump1.png x=1019 y=449 dx=263.5 dy=-53 distance=268.78
+[04:40:22] TARGET 2 template=stump3.png x=968 y=181 dx=219 dy=-321.5 distance=389
+[04:40:23] TARGET 3 template=stump3.png x=779 y=187 dx=30 dy=-315.5 distance=316.92
+[04:40:23] TARGET 4 template=stump4.png x=935 y=455 dx=178.5 dy=-54 distance=186.49
+[04:40:23] DISTANCE RESULT: targets=4; nearestIndex=3; dx=178.5; dy=-54; distance=186.49; elapsedMs=223.71
+[04:40:23] PLAYER FOUND template=SuperKiwi_selected.png x=739 y=513
+[04:40:23] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:23] TARGET TEMPLATE HIT stump4.png matches=2
+[04:40:23] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:23] TARGET 1 template=stump1.png x=1020 y=449 dx=264.5 dy=-53 distance=269.76
+[04:40:23] TARGET 2 template=stump4.png x=426 y=118 dx=-330.5 dy=-391 distance=511.97
+[04:40:23] TARGET 3 template=stump4.png x=1272 y=337 dx=515.5 dy=-172 distance=543.44
+[04:40:23] DISTANCE RESULT: targets=3; nearestIndex=0; dx=264.5; dy=-53; distance=269.76; elapsedMs=193.43
+[04:40:24] PLAYER FOUND template=SuperKiwi_selected.png x=747 y=512
+[04:40:24] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:24] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:24] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:24] TARGET 1 template=stump1.png x=1020 y=449 dx=256.5 dy=-52 distance=261.72
+[04:40:24] TARGET 2 template=stump4.png x=1240 y=341 dx=475.5 dy=-167 distance=503.97
+[04:40:24] TARGET 3 template=stump5.png x=397 y=144 dx=-364.5 dy=-361 distance=513.01
+[04:40:24] TARGET 4 template=stump5.png x=901 y=459 dx=139.5 dy=-46 distance=146.89
+[04:40:24] DISTANCE RESULT: targets=4; nearestIndex=3; dx=139.5; dy=-46; distance=146.89; elapsedMs=217.51
+[04:40:24] PLAYER FOUND template=SuperKiwi_text.png x=759 y=517
+[04:40:24] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:24] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:24] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:24] TARGET 1 template=stump1.png x=1020 y=449 dx=254.5 dy=-54 distance=260.17
+[04:40:24] TARGET 2 template=stump1.png x=905 y=459 dx=139.5 dy=-44 distance=146.27
+[04:40:24] TARGET 3 template=stump3.png x=832 y=183 dx=73 dy=-320.5 distance=328.71
+[04:40:24] DISTANCE RESULT: targets=3; nearestIndex=1; dx=139.5; dy=-44; distance=146.27; elapsedMs=200.62
+[04:40:24] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:24] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:24] TARGET TEMPLATE HIT stump4.png matches=2
+[04:40:24] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:24] TARGET 1 template=stump1.png x=1020 y=449 dx=255.5 dy=-52 distance=260.74
+[04:40:24] TARGET 2 template=stump4.png x=367 y=154 dx=-398.5 dy=-354 distance=533.03
+[04:40:24] TARGET 3 template=stump4.png x=1218 y=355 dx=452.5 dy=-153 distance=477.67
+[04:40:24] TARGET 4 template=stump5.png x=851 y=185 dx=88.5 dy=-320 distance=332.01
+[04:40:24] DISTANCE RESULT: targets=4; nearestIndex=0; dx=255.5; dy=-52; distance=260.74; elapsedMs=206.59
+[04:40:24] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:25] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:25] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:25] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:25] TARGET TEMPLATE HIT stump5.png matches=4
+[04:40:25] TARGET 1 template=stump1.png x=367 y=160 dx=-397.5 dy=-341 distance=523.72
+[04:40:25] TARGET 2 template=stump1.png x=1221 y=364 dx=456.5 dy=-137 distance=476.61
+[04:40:25] TARGET 3 template=stump1.png x=1020 y=449 dx=255.5 dy=-52 distance=260.74
+[04:40:25] TARGET 4 template=stump3.png x=1239 y=294 dx=481 dy=-207.5 distance=523.85
+[04:40:25] TARGET 5 template=stump4.png x=1383 y=324 dx=617.5 dy=-184 distance=644.33
+[04:40:25] TARGET 6 template=stump5.png x=1154 y=277 dx=391.5 dy=-228 distance=453.05
+[04:40:25] DISTANCE RESULT: targets=6; nearestIndex=2; dx=255.5; dy=-52; distance=260.74; elapsedMs=242.25
+[04:40:25] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:25] TARGET TEMPLATE HIT stump1.png matches=4
+[04:40:25] TARGET TEMPLATE HIT stump4.png matches=2
+[04:40:25] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:25] TARGET 1 template=stump1.png x=368 y=160 dx=-396.5 dy=-341 distance=522.97
+[04:40:25] TARGET 2 template=stump1.png x=1383 y=328 dx=618.5 dy=-173 distance=642.24
+[04:40:25] TARGET 3 template=stump1.png x=1222 y=363 dx=457.5 dy=-138 distance=477.86
+[04:40:25] TARGET 4 template=stump1.png x=1020 y=449 dx=255.5 dy=-52 distance=260.74
+[04:40:25] TARGET 5 template=stump4.png x=825 y=183 dx=59.5 dy=-325 distance=330.4
+[04:40:25] TARGET 6 template=stump4.png x=1030 y=225 dx=264.5 dy=-283 distance=387.36
+[04:40:25] DISTANCE RESULT: targets=6; nearestIndex=3; dx=255.5; dy=-52; distance=260.74; elapsedMs=259.33
+[04:40:26] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:26] TARGET TEMPLATE HIT stump1.png matches=5
+[04:40:26] TARGET TEMPLATE HIT stump4.png matches=2
+[04:40:26] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:26] TARGET 1 template=stump1.png x=368 y=160 dx=-396.5 dy=-341 distance=522.97
+[04:40:26] TARGET 2 template=stump1.png x=1009 y=203 dx=244.5 dy=-298 distance=385.47
+[04:40:26] TARGET 3 template=stump1.png x=1256 y=298 dx=491.5 dy=-203 distance=531.77
+[04:40:26] TARGET 4 template=stump1.png x=1222 y=363 dx=457.5 dy=-138 distance=477.86
+[04:40:26] TARGET 5 template=stump1.png x=1020 y=449 dx=255.5 dy=-52 distance=260.74
+[04:40:26] TARGET 6 template=stump4.png x=1332 y=332 dx=566.5 dy=-176 distance=593.21
+[04:40:26] TARGET 7 template=stump4.png x=588 y=596 dx=-177.5 dy=88 distance=198.12
+[04:40:26] DISTANCE RESULT: targets=7; nearestIndex=6; dx=-177.5; dy=88; distance=198.12; elapsedMs=272.38
+[04:40:26] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:26] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:26] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:26] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:26] TARGET 1 template=stump1.png x=367 y=160 dx=-397.5 dy=-341 distance=523.72
+[04:40:26] TARGET 2 template=stump1.png x=1222 y=363 dx=457.5 dy=-138 distance=477.86
+[04:40:26] TARGET 3 template=stump1.png x=1020 y=449 dx=255.5 dy=-52 distance=260.74
+[04:40:26] TARGET 4 template=stump4.png x=775 y=187 dx=9.5 dy=-321 distance=321.14
+[04:40:26] DISTANCE RESULT: targets=4; nearestIndex=2; dx=255.5; dy=-52; distance=260.74; elapsedMs=211.02
+[04:40:26] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:27] TARGET TEMPLATE HIT stump1.png matches=5
+[04:40:27] TARGET TEMPLATE HIT stump5.png matches=5
+[04:40:27] TARGET 1 template=stump1.png x=776 y=189 dx=11.5 dy=-312 distance=312.21
+[04:40:27] TARGET 2 template=stump1.png x=992 y=190 dx=227.5 dy=-311 distance=385.33
+[04:40:27] TARGET 3 template=stump1.png x=1239 y=292 dx=474.5 dy=-209 distance=518.49
+[04:40:27] TARGET 4 template=stump1.png x=1222 y=363 dx=457.5 dy=-138 distance=477.86
+[04:40:27] TARGET 5 template=stump1.png x=1020 y=449 dx=255.5 dy=-52 distance=260.74
+[04:40:27] TARGET 6 template=stump5.png x=1317 y=334 dx=554.5 dy=-171 distance=580.27
+[04:40:27] DISTANCE RESULT: targets=6; nearestIndex=4; dx=255.5; dy=-52; distance=260.74; elapsedMs=239.47
+[04:40:27] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:27] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:27] TARGET 1 template=stump3.png x=1149 y=276 dx=391 dy=-225.5 distance=451.37
+[04:40:27] DISTANCE RESULT: targets=1; nearestIndex=0; dx=391; dy=-225.5; distance=451.37; elapsedMs=165.69
+[04:40:28] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:28] TARGET TEMPLATE HIT stump3.png matches=3
+[04:40:28] TARGET 1 template=stump3.png x=795 y=187 dx=37 dy=-314.5 distance=316.67
+[04:40:28] TARGET 2 template=stump3.png x=1241 y=341 dx=483 dy=-160.5 distance=508.97
+[04:40:28] TARGET 3 template=stump3.png x=1046 y=446 dx=288 dy=-55.5 distance=293.3
+[04:40:28] DISTANCE RESULT: targets=3; nearestIndex=2; dx=288; dy=-55.5; distance=293.3; elapsedMs=195.7
+[04:40:28] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:28] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:28] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:28] TARGET 1 template=stump1.png x=1183 y=285 dx=418.5 dy=-216 distance=470.95
+[04:40:28] TARGET 2 template=stump1.png x=536 y=571 dx=-228.5 dy=70 distance=238.98
+[04:40:28] TARGET 3 template=stump5.png x=814 y=189 dx=51.5 dy=-316 distance=320.17
+[04:40:28] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-228.5; dy=70; distance=238.98; elapsedMs=216.33
+[04:40:28] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:28] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:28] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:28] TARGET 1 template=stump1.png x=365 y=160 dx=-399.5 dy=-341 distance=525.24
+[04:40:28] TARGET 2 template=stump1.png x=537 y=571 dx=-227.5 dy=70 distance=238.03
+[04:40:28] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-227.5; dy=70; distance=238.03; elapsedMs=194.66
+[04:40:29] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:29] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:29] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:29] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:29] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:29] TARGET 1 template=stump1.png x=537 y=571 dx=-227.5 dy=70 distance=238.03
+[04:40:29] TARGET 2 template=stump3.png x=1047 y=238 dx=289 dy=-263.5 distance=391.09
+[04:40:29] TARGET 3 template=stump4.png x=788 y=187 dx=22.5 dy=-321 distance=321.79
+[04:40:29] DISTANCE RESULT: targets=3; nearestIndex=0; dx=-227.5; dy=70; distance=238.03; elapsedMs=211.79
+[04:40:29] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:29] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:29] TARGET TEMPLATE HIT stump3.png matches=2
+[04:40:29] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:29] TARGET 1 template=stump1.png x=1126 y=270 dx=361.5 dy=-231 distance=429
+[04:40:29] TARGET 2 template=stump1.png x=537 y=571 dx=-227.5 dy=70 distance=238.03
+[04:40:29] TARGET 3 template=stump3.png x=1169 y=282 dx=411 dy=-219.5 distance=465.94
+[04:40:29] TARGET 4 template=stump3.png x=185 y=657 dx=-573 dy=155.5 distance=593.72
+[04:40:29] DISTANCE RESULT: targets=4; nearestIndex=1; dx=-227.5; dy=70; distance=238.03; elapsedMs=228.85
+[04:40:30] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:30] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:30] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:30] TARGET 1 template=stump1.png x=1279 y=339 dx=514.5 dy=-162 distance=539.4
+[04:40:30] DISTANCE RESULT: targets=1; nearestIndex=0; dx=514.5; dy=-162; distance=539.4; elapsedMs=185.06
+[04:40:30] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:30] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:30] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:30] TARGET 1 template=stump1.png x=741 y=189 dx=-23.5 dy=-312 distance=312.88
+[04:40:30] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-23.5; dy=-312; distance=312.88; elapsedMs=165.43
+[04:40:31] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:31] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:31] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:31] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:31] TARGET 1 template=stump1.png x=1295 y=336 dx=530.5 dy=-165 distance=555.57
+[04:40:31] TARGET 2 template=stump1.png x=1256 y=341 dx=491.5 dy=-160 distance=516.89
+[04:40:31] TARGET 3 template=stump4.png x=1039 y=446 dx=273.5 dy=-62 distance=280.44
+[04:40:31] TARGET 4 template=stump5.png x=1084 y=256 dx=321.5 dy=-249 distance=406.65
+[04:40:31] DISTANCE RESULT: targets=4; nearestIndex=2; dx=273.5; dy=-62; distance=280.44; elapsedMs=217.37
+[04:40:31] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:31] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:31] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:31] TARGET 1 template=stump1.png x=1088 y=256 dx=323.5 dy=-245 distance=405.8
+[04:40:31] TARGET 2 template=stump1.png x=1039 y=448 dx=274.5 dy=-53 distance=279.57
+[04:40:31] TARGET 3 template=stump5.png x=711 y=201 dx=-51.5 dy=-304 distance=308.33
+[04:40:31] DISTANCE RESULT: targets=3; nearestIndex=1; dx=274.5; dy=-53; distance=279.57; elapsedMs=201.89
+[04:40:31] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:31] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:31] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:31] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:31] TARGET 1 template=stump1.png x=1087 y=256 dx=322.5 dy=-245 distance=405.01
+[04:40:31] TARGET 2 template=stump1.png x=1271 y=340 dx=506.5 dy=-161 distance=531.47
+[04:40:31] TARGET 3 template=stump3.png x=597 y=603 dx=-161 dy=101.5 distance=190.32
+[04:40:31] TARGET 4 template=stump4.png x=1220 y=354 dx=454.5 dy=-154 distance=479.88
+[04:40:31] DISTANCE RESULT: targets=4; nearestIndex=2; dx=-161; dy=101.5; distance=190.32; elapsedMs=214.35
+[04:40:32] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:32] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:32] TARGET TEMPLATE HIT stump4.png matches=2
+[04:40:32] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:32] TARGET 1 template=stump1.png x=1197 y=387 dx=432.5 dy=-114 distance=447.27
+[04:40:32] TARGET 2 template=stump4.png x=658 y=240 dx=-107.5 dy=-268 distance=288.76
+[04:40:32] TARGET 3 template=stump4.png x=982 y=447 dx=216.5 dy=-61 distance=224.93
+[04:40:32] DISTANCE RESULT: targets=3; nearestIndex=2; dx=216.5; dy=-61; distance=224.93; elapsedMs=196.43
+[04:40:32] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:32] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:32] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:32] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:32] TARGET 1 template=stump1.png x=1049 y=233 dx=284.5 dy=-268 distance=390.85
+[04:40:32] TARGET 2 template=stump1.png x=657 y=249 dx=-107.5 dy=-252 distance=273.97
+[04:40:32] TARGET 3 template=stump3.png x=371 y=329 dx=-387 dy=-172.5 distance=423.7
+[04:40:32] TARGET 4 template=stump5.png x=1150 y=277 dx=387.5 dy=-228 distance=449.6
+[04:40:33] DISTANCE RESULT: targets=4; nearestIndex=1; dx=-107.5; dy=-252; distance=273.97; elapsedMs=203.12
+[04:40:33] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:33] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:33] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:33] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:33] TARGET 1 template=stump1.png x=1047 y=233 dx=282.5 dy=-268 distance=389.4
+[04:40:33] TARGET 2 template=stump1.png x=1214 y=287 dx=449.5 dy=-214 distance=497.84
+[04:40:33] TARGET 3 template=stump1.png x=1172 y=403 dx=407.5 dy=-98 distance=419.12
+[04:40:33] TARGET 4 template=stump3.png x=1286 y=334 dx=528 dy=-167.5 distance=553.93
+[04:40:33] DISTANCE RESULT: targets=4; nearestIndex=0; dx=282.5; dy=-268; distance=389.4; elapsedMs=206.73
+[04:40:33] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:33] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:33] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:33] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:33] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:33] TARGET 1 template=stump1.png x=1047 y=233 dx=282.5 dy=-268 distance=389.4
+[04:40:33] TARGET 2 template=stump1.png x=632 y=265 dx=-132.5 dy=-236 distance=270.65
+[04:40:33] TARGET 3 template=stump3.png x=980 y=449 dx=222 dy=-52.5 distance=228.12
+[04:40:33] TARGET 4 template=stump4.png x=1122 y=269 dx=356.5 dy=-239 distance=429.2
+[04:40:33] DISTANCE RESULT: targets=4; nearestIndex=2; dx=222; dy=-52.5; distance=228.12; elapsedMs=214.94
+[04:40:33] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:33] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:33] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:33] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:33] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:33] TARGET 1 template=stump1.png x=1047 y=233 dx=282.5 dy=-268 distance=389.4
+[04:40:33] TARGET 2 template=stump1.png x=1188 y=286 dx=423.5 dy=-215 distance=474.95
+[04:40:33] TARGET 3 template=stump3.png x=683 y=653 dx=-75 dy=151.5 distance=169.05
+[04:40:33] TARGET 4 template=stump4.png x=1133 y=418 dx=367.5 dy=-90 distance=378.36
+[04:40:33] DISTANCE RESULT: targets=4; nearestIndex=2; dx=-75; dy=151.5; distance=169.05; elapsedMs=213.6
+[04:40:34] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:34] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:34] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:34] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:34] TARGET 1 template=stump1.png x=1120 y=428 dx=355.5 dy=-73 distance=362.92
+[04:40:34] TARGET 2 template=stump4.png x=571 y=283 dx=-194.5 dy=-225 distance=297.41
+[04:40:34] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-194.5; dy=-225; distance=297.41; elapsedMs=196.07
+[04:40:35] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:35] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:35] TARGET TEMPLATE HIT stump4.png matches=2
+[04:40:35] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:35] TARGET 1 template=stump1.png x=1081 y=252 dx=316.5 dy=-249 distance=402.71
+[04:40:35] TARGET 2 template=stump1.png x=570 y=288 dx=-194.5 dy=-213 distance=288.44
+[04:40:35] TARGET 3 template=stump1.png x=1123 y=427 dx=358.5 dy=-74 distance=366.06
+[04:40:35] TARGET 4 template=stump4.png x=1023 y=220 dx=257.5 dy=-288 distance=386.33
+[04:40:35] TARGET 5 template=stump4.png x=1131 y=272 dx=365.5 dy=-236 distance=435.07
+[04:40:35] DISTANCE RESULT: targets=5; nearestIndex=1; dx=-194.5; dy=-213; distance=288.44; elapsedMs=219.99
+[04:40:35] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:35] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:35] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:35] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:35] TARGET 1 template=stump1.png x=1026 y=216 dx=261.5 dy=-285 distance=386.79
+[04:40:35] TARGET 2 template=stump1.png x=1081 y=252 dx=316.5 dy=-249 distance=402.71
+[04:40:35] TARGET 3 template=stump1.png x=1124 y=427 dx=359.5 dy=-74 distance=367.04
+[04:40:35] TARGET 4 template=stump4.png x=547 y=289 dx=-218.5 dy=-219 distance=309.36
+[04:40:35] DISTANCE RESULT: targets=4; nearestIndex=3; dx=-218.5; dy=-219; distance=309.36; elapsedMs=211.59
+[04:40:35] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:35] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:35] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:35] TARGET 1 template=stump1.png x=1081 y=252 dx=316.5 dy=-249 distance=402.71
+[04:40:35] TARGET 2 template=stump1.png x=546 y=295 dx=-218.5 dy=-206 distance=300.3
+[04:40:35] TARGET 3 template=stump1.png x=1124 y=427 dx=359.5 dy=-74 distance=367.04
+[04:40:35] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-218.5; dy=-206; distance=300.3; elapsedMs=209.89
+[04:40:36] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:36] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:36] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:36] TARGET 1 template=stump1.png x=1109 y=266 dx=344.5 dy=-235 distance=417.02
+[04:40:36] TARGET 2 template=stump1.png x=1124 y=427 dx=359.5 dy=-74 distance=367.04
+[04:40:36] DISTANCE RESULT: targets=2; nearestIndex=1; dx=359.5; dy=-74; distance=367.04; elapsedMs=191.72
+[04:40:36] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:36] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:36] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:36] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:36] TARGET 1 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:36] TARGET 2 template=stump4.png x=1055 y=243 dx=289.5 dy=-265 distance=392.47
+[04:40:36] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-236.5; dy=-205; distance=312.98; elapsedMs=199.19
+[04:40:37] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:37] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:37] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:37] TARGET 1 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:37] TARGET 2 template=stump1.png x=718 y=661 dx=-46.5 dy=160 distance=166.62
+[04:40:37] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-46.5; dy=160; distance=166.62; elapsedMs=189.39
+[04:40:37] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:37] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:37] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:37] TARGET 1 template=stump1.png x=1062 y=243 dx=297.5 dy=-258 distance=393.79
+[04:40:37] TARGET 2 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:37] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-236.5; dy=-205; distance=312.98; elapsedMs=167.22
+[04:40:37] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:37] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:37] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:37] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:37] TARGET 1 template=stump1.png x=1037 y=226 dx=272.5 dy=-275 distance=387.14
+[04:40:37] TARGET 2 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:37] TARGET 3 template=stump3.png x=1134 y=418 dx=376 dy=-83.5 distance=385.16
+[04:40:37] TARGET 4 template=stump5.png x=686 y=655 dx=-76.5 dy=150 distance=168.38
+[04:40:38] DISTANCE RESULT: targets=4; nearestIndex=3; dx=-76.5; dy=150; distance=168.38; elapsedMs=230.25
+[04:40:38] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:38] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:38] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:38] TARGET 1 template=stump1.png x=1042 y=229 dx=277.5 dy=-272 distance=388.57
+[04:40:38] TARGET 2 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:38] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-236.5; dy=-205; distance=312.98; elapsedMs=171.45
+[04:40:38] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:39] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:39] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:39] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:39] TARGET 1 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:39] TARGET 2 template=stump4.png x=170 y=664 dx=-595.5 dy=156 distance=615.59
+[04:40:39] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-236.5; dy=-205; distance=312.98; elapsedMs=181.41
+[04:40:39] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:39] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:39] TARGET TEMPLATE HIT stump3.png matches=2
+[04:40:39] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:39] TARGET 1 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:39] TARGET 2 template=stump3.png x=1128 y=271 dx=370 dy=-230.5 distance=435.92
+[04:40:39] TARGET 3 template=stump3.png x=659 y=642 dx=-99 dy=140.5 distance=171.88
+[04:40:39] DISTANCE RESULT: targets=3; nearestIndex=2; dx=-99; dy=140.5; distance=171.88; elapsedMs=207.26
+[04:40:39] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:39] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:39] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:39] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:39] TARGET 1 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:39] TARGET 2 template=stump3.png x=384 y=146 dx=-374 dy=-355.5 distance=516
+[04:40:39] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-236.5; dy=-205; distance=312.98; elapsedMs=186.7
+[04:40:39] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:39] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:40] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:40] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:40] TARGET 1 template=stump1.png x=402 y=144 dx=-362.5 dy=-357 distance=508.78
+[04:40:40] TARGET 2 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:40] TARGET 3 template=stump3.png x=689 y=655 dx=-69 dy=153.5 distance=168.3
+[04:40:40] DISTANCE RESULT: targets=3; nearestIndex=2; dx=-69; dy=153.5; distance=168.3; elapsedMs=226.89
+[04:40:40] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:40] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:40] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:40] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:40] TARGET 1 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:40] TARGET 2 template=stump4.png x=1130 y=271 dx=364.5 dy=-237 distance=434.77
+[04:40:40] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-236.5; dy=-205; distance=312.98; elapsedMs=198.47
+[04:40:41] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:41] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:41] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:41] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:41] TARGET 1 template=stump1.png x=1039 y=226 dx=274.5 dy=-275 distance=388.56
+[04:40:41] TARGET 2 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:41] TARGET 3 template=stump4.png x=1094 y=262 dx=328.5 dy=-246 distance=410.4
+[04:40:41] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-236.5; dy=-205; distance=312.98; elapsedMs=212.54
+[04:40:41] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:41] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:41] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:41] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:41] TARGET 1 template=stump1.png x=1039 y=226 dx=274.5 dy=-275 distance=388.56
+[04:40:41] TARGET 2 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:41] TARGET 3 template=stump3.png x=743 y=668 dx=-15 dy=166.5 distance=167.17
+[04:40:41] DISTANCE RESULT: targets=3; nearestIndex=2; dx=-15; dy=166.5; distance=167.17; elapsedMs=190.35
+[04:40:41] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:41] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:41] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:41] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:41] TARGET 1 template=stump1.png x=1039 y=226 dx=274.5 dy=-275 distance=388.56
+[04:40:41] TARGET 2 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:41] TARGET 3 template=stump4.png x=1071 y=251 dx=305.5 dy=-257 distance=399.22
+[04:40:41] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-236.5; dy=-205; distance=312.98; elapsedMs=242.27
+[04:40:42] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:42] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:42] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:42] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:42] TARGET 1 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:42] TARGET 2 template=stump3.png x=384 y=146 dx=-374 dy=-355.5 distance=516
+[04:40:42] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-236.5; dy=-205; distance=312.98; elapsedMs=202.11
+[04:40:42] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:42] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:42] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:42] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:42] TARGET 1 template=stump1.png x=528 y=296 dx=-236.5 dy=-205 distance=312.98
+[04:40:42] TARGET 2 template=stump4.png x=1051 y=240 dx=285.5 dy=-268 distance=391.58
+[04:40:42] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-236.5; dy=-205; distance=312.98; elapsedMs=195.83
+[04:40:43] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:43] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:43] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:43] TARGET 1 template=stump4.png x=498 y=295 dx=-267.5 dy=-213 distance=341.94
+[04:40:43] TARGET 2 template=stump5.png x=1030 y=223 dx=267.5 dy=-282 distance=388.69
+[04:40:43] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-267.5; dy=-213; distance=341.94; elapsedMs=223.43
+[04:40:43] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:43] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:43] TARGET TEMPLATE HIT stump3.png matches=2
+[04:40:43] TARGET 1 template=stump1.png x=499 y=297 dx=-265.5 dy=-204 distance=334.82
+[04:40:43] TARGET 2 template=stump3.png x=429 y=115 dx=-329 dy=-386.5 distance=507.57
+[04:40:43] TARGET 3 template=stump3.png x=364 y=156 dx=-394 dy=-345.5 distance=524.03
+[04:40:43] DISTANCE RESULT: targets=3; nearestIndex=0; dx=-265.5; dy=-204; distance=334.82; elapsedMs=219.69
+[04:40:43] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:43] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:43] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:44] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:44] TARGET 1 template=stump1.png x=383 y=155 dx=-381.5 dy=-346 distance=515.03
+[04:40:44] TARGET 2 template=stump1.png x=488 y=298 dx=-276.5 dy=-203 distance=343.02
+[04:40:44] TARGET 3 template=stump4.png x=1007 y=207 dx=241.5 dy=-301 distance=385.91
+[04:40:44] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-276.5; dy=-203; distance=343.02; elapsedMs=204.04
+[04:40:44] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:44] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:44] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:44] TARGET 1 template=stump1.png x=487 y=298 dx=-277.5 dy=-203 distance=343.82
+[04:40:44] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-277.5; dy=-203; distance=343.82; elapsedMs=186.16
+[04:40:44] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:44] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:47] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:47] TARGET 1 template=stump1.png x=360 y=162 dx=-404.5 dy=-339 distance=527.77
+[04:40:47] TARGET 2 template=stump1.png x=487 y=298 dx=-277.5 dy=-203 distance=343.82
+[04:40:47] TARGET 3 template=stump5.png x=965 y=183 dx=202.5 dy=-322 distance=380.38
+[04:40:47] TARGET 4 template=stump5.png x=458 y=301 dx=-304.5 dy=-204 distance=366.52
+[04:40:47] DISTANCE RESULT: targets=4; nearestIndex=1; dx=-277.5; dy=-203; distance=343.82; elapsedMs=3094.31
+[04:40:48] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:48] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:48] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:48] TARGET TEMPLATE HIT stump5.png matches=3
+[04:40:48] TARGET 1 template=stump1.png x=969 y=183 dx=204.5 dy=-318 distance=378.08
+[04:40:48] TARGET 2 template=stump3.png x=1218 y=356 dx=460 dy=-145.5 distance=482.46
+[04:40:48] TARGET 3 template=stump5.png x=487 y=354 dx=-275.5 dy=-151 distance=314.17
+[04:40:48] TARGET 4 template=stump5.png x=793 y=677 dx=30.5 dy=172 distance=174.68
+[04:40:48] DISTANCE RESULT: targets=4; nearestIndex=3; dx=30.5; dy=172; distance=174.68; elapsedMs=221.76
+[04:40:48] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:48] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:48] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:48] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:48] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:48] TARGET 1 template=stump1.png x=969 y=183 dx=204.5 dy=-318 distance=378.08
+[04:40:48] TARGET 2 template=stump3.png x=474 y=296 dx=-284 dy=-205.5 distance=350.55
+[04:40:48] TARGET 3 template=stump4.png x=1367 y=328 dx=601.5 dy=-180 distance=627.86
+[04:40:48] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-284; dy=-205.5; distance=350.55; elapsedMs=253.54
+[04:40:49] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:49] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:49] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:49] TARGET TEMPLATE HIT stump4.png matches=2
+[04:40:49] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:49] TARGET 1 template=stump1.png x=969 y=183 dx=204.5 dy=-318 distance=378.08
+[04:40:49] TARGET 2 template=stump1.png x=1367 y=333 dx=602.5 dy=-168 distance=625.48
+[04:40:49] TARGET 3 template=stump3.png x=1159 y=278 dx=401 dy=-223.5 distance=459.08
+[04:40:49] TARGET 4 template=stump4.png x=459 y=346 dx=-306.5 dy=-162 distance=346.68
+[04:40:49] TARGET 5 template=stump4.png x=764 y=673 dx=-1.5 dy=165 distance=165.01
+[04:40:49] DISTANCE RESULT: targets=5; nearestIndex=4; dx=-1.5; dy=165; distance=165.01; elapsedMs=254.92
+[04:40:49] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:49] TARGET TEMPLATE HIT stump1.png matches=3
+[04:40:49] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:49] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:49] TARGET 1 template=stump1.png x=969 y=183 dx=204.5 dy=-318 distance=378.08
+[04:40:49] TARGET 2 template=stump1.png x=505 y=297 dx=-259.5 dy=-204 distance=330.09
+[04:40:49] TARGET 3 template=stump1.png x=217 y=651 dx=-547.5 dy=150 distance=567.68
+[04:40:49] TARGET 4 template=stump3.png x=357 y=158 dx=-401 dy=-343.5 distance=528.01
+[04:40:49] DISTANCE RESULT: targets=4; nearestIndex=1; dx=-259.5; dy=-204; distance=330.09; elapsedMs=216.77
+[04:40:49] PLAYER FOUND template=SuperKiwi_selected.png x=748 y=512
+[04:40:49] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:49] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:49] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:49] TARGET 1 template=stump1.png x=969 y=183 dx=204.5 dy=-318 distance=378.08
+[04:40:49] TARGET 2 template=stump3.png x=1363 y=329 dx=605 dy=-172.5 distance=629.11
+[04:40:49] DISTANCE RESULT: targets=2; nearestIndex=0; dx=204.5; dy=-318; distance=378.08; elapsedMs=197.71
+[04:40:50] PLAYER FOUND template=SuperKiwi_selected.png x=765 y=457
+[04:40:50] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:50] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:50] TARGET 1 template=stump1.png x=995 y=128 dx=213.5 dy=-318 distance=383.02
+[04:40:50] TARGET 2 template=stump5.png x=1019 y=132 dx=239.5 dy=-318 distance=398.1
+[04:40:50] DISTANCE RESULT: targets=2; nearestIndex=0; dx=213.5; dy=-318; distance=383.02; elapsedMs=205.86
+[04:40:50] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:50] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:50] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:50] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:50] TARGET 1 template=stump1.png x=1023 y=132 dx=204.5 dy=-318 distance=378.08
+[04:40:50] TARGET 2 template=stump1.png x=511 y=252 dx=-307.5 dy=-198 distance=365.73
+[04:40:50] TARGET 3 template=stump4.png x=1224 y=345 dx=404.5 dy=-112 distance=419.72
+[04:40:50] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-307.5; dy=-198; distance=365.73; elapsedMs=250.37
+[04:40:51] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:51] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:51] TARGET TEMPLATE HIT stump4.png matches=3
+[04:40:51] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:51] TARGET 1 template=stump1.png x=1227 y=352 dx=408.5 dy=-98 distance=420.09
+[04:40:51] TARGET 2 template=stump4.png x=1058 y=154 dx=238.5 dy=-303 distance=385.61
+[04:40:51] TARGET 3 template=stump4.png x=442 y=281 dx=-377.5 dy=-176 distance=416.51
+[04:40:51] TARGET 4 template=stump4.png x=748 y=605 dx=-71.5 dy=148 distance=164.37
+[04:40:51] DISTANCE RESULT: targets=4; nearestIndex=3; dx=-71.5; dy=148; distance=164.37; elapsedMs=220.76
+[04:40:51] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:51] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:51] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:51] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:51] TARGET 1 template=stump1.png x=443 y=282 dx=-375.5 dy=-168 distance=411.37
+[04:40:51] TARGET 2 template=stump1.png x=748 y=605 dx=-70.5 dy=155 distance=170.28
+[04:40:51] TARGET 3 template=stump3.png x=1293 y=290 dx=481 dy=-160.5 distance=507.07
+[04:40:51] TARGET 4 template=stump5.png x=516 y=248 dx=-300.5 dy=-206 distance=364.33
+[04:40:51] DISTANCE RESULT: targets=4; nearestIndex=1; dx=-70.5; dy=155; distance=170.28; elapsedMs=224.03
+[04:40:51] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:51] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:51] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:51] TARGET 1 template=stump1.png x=1200 y=368 dx=381.5 dy=-82 distance=390.21
+[04:40:51] DISTANCE RESULT: targets=1; nearestIndex=0; dx=381.5; dy=-82; distance=390.21; elapsedMs=162.84
+[04:40:54] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:54] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:54] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:54] TARGET 1 template=stump1.png x=1310 y=290 dx=491.5 dy=-160 distance=516.89
+[04:40:54] TARGET 2 template=stump1.png x=1195 y=369 dx=376.5 dy=-81 distance=385.11
+[04:40:54] DISTANCE RESULT: targets=2; nearestIndex=1; dx=376.5; dy=-81; distance=385.11; elapsedMs=204.2
+[04:40:55] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:55] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:55] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:55] TARGET TEMPLATE HIT stump5.png matches=2
+[04:40:55] TARGET 1 template=stump1.png x=429 y=106 dx=-389.5 dy=-344 distance=519.66
+[04:40:55] TARGET 2 template=stump1.png x=1281 y=307 dx=462.5 dy=-143 distance=484.1
+[04:40:55] TARGET 3 template=stump4.png x=1164 y=375 dx=344.5 dy=-82 distance=354.12
+[04:40:55] DISTANCE RESULT: targets=3; nearestIndex=2; dx=344.5; dy=-82; distance=354.12; elapsedMs=216.64
+[04:40:55] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:55] PLAYER FOUND but TARGET MISS after 148.11 ms
+[04:40:55] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:55] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:55] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:55] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:55] TARGET 1 template=stump1.png x=855 y=626 dx=36.5 dy=176 distance=179.74
+[04:40:55] TARGET 2 template=stump3.png x=559 y=245 dx=-253 dy=-205.5 distance=325.94
+[04:40:55] DISTANCE RESULT: targets=2; nearestIndex=0; dx=36.5; dy=176; distance=179.74; elapsedMs=183.45
+[04:40:56] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:56] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:56] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:56] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:56] TARGET 1 template=stump1.png x=1140 y=389 dx=321.5 dy=-61 distance=327.24
+[04:40:56] TARGET 2 template=stump3.png x=1260 y=316 dx=448 dy=-134.5 distance=467.75
+[04:40:56] DISTANCE RESULT: targets=2; nearestIndex=0; dx=321.5; dy=-61; distance=327.24; elapsedMs=184.44
+[04:40:56] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:56] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:56] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:56] TARGET 1 template=stump3.png x=586 y=242 dx=-226 dy=-208.5 distance=307.49
+[04:40:56] TARGET 2 template=stump4.png x=1081 y=173 dx=261.5 dy=-284 distance=386.05
+[04:40:56] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-226; dy=-208.5; distance=307.49; elapsedMs=204.82
+[04:40:57] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:57] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:57] TARGET TEMPLATE HIT stump3.png matches=1
+[04:40:57] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:57] TARGET 1 template=stump1.png x=1233 y=232 dx=414.5 dy=-218 distance=468.33
+[04:40:57] TARGET 2 template=stump3.png x=615 y=235 dx=-197 dy=-215.5 distance=291.97
+[04:40:57] TARGET 3 template=stump4.png x=1058 y=154 dx=238.5 dy=-303 distance=385.61
+[04:40:57] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-197; dy=-215.5; distance=291.97; elapsedMs=198.71
+[04:40:57] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:57] TARGET TEMPLATE HIT stump1.png matches=2
+[04:40:57] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:57] TARGET 1 template=stump1.png x=455 y=93 dx=-363.5 dy=-357 distance=509.49
+[04:40:57] TARGET 2 template=stump1.png x=1087 y=397 dx=268.5 dy=-53 distance=273.68
+[04:40:57] DISTANCE RESULT: targets=2; nearestIndex=1; dx=268.5; dy=-53; distance=273.68; elapsedMs=188.24
+[04:40:57] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:57] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:57] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:57] TARGET TEMPLATE HIT stump5.png matches=1
+[04:40:57] TARGET 1 template=stump1.png x=1211 y=227 dx=392.5 dy=-223 distance=451.43
+[04:40:57] TARGET 2 template=stump4.png x=1041 y=139 dx=221.5 dy=-318 distance=387.54
+[04:40:58] DISTANCE RESULT: targets=2; nearestIndex=1; dx=221.5; dy=-318; distance=387.54; elapsedMs=166.13
+[04:40:58] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:58] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:58] TARGET TEMPLATE HIT stump3.png matches=3
+[04:40:58] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:58] TARGET 1 template=stump1.png x=1041 y=134 dx=222.5 dy=-316 distance=386.47
+[04:40:58] TARGET 2 template=stump3.png x=1128 y=200 dx=316 dy=-250.5 distance=403.24
+[04:40:58] TARGET 3 template=stump3.png x=1331 y=287 dx=519 dy=-163.5 distance=544.14
+[04:40:58] TARGET 4 template=stump3.png x=841 y=623 dx=29 dy=172.5 distance=174.92
+[04:40:58] TARGET 5 template=stump4.png x=1440 y=272 dx=620.5 dy=-185 distance=647.49
+[04:40:58] DISTANCE RESULT: targets=5; nearestIndex=3; dx=29; dy=172.5; distance=174.92; elapsedMs=223.45
+[04:40:58] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:58] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:58] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:58] TARGET 1 template=stump1.png x=1439 y=276 dx=620.5 dy=-174 distance=644.43
+[04:40:58] TARGET 2 template=stump4.png x=1018 y=130 dx=198.5 dy=-327 distance=382.53
+[04:40:58] DISTANCE RESULT: targets=2; nearestIndex=1; dx=198.5; dy=-327; distance=382.53; elapsedMs=176.74
+[04:40:59] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:59] TARGET TEMPLATE HIT stump4.png matches=1
+[04:40:59] TARGET 1 template=stump4.png x=990 y=129 dx=170.5 dy=-328 distance=369.67
+[04:40:59] DISTANCE RESULT: targets=1; nearestIndex=0; dx=170.5; dy=-328; distance=369.67; elapsedMs=173.45
+[04:40:59] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:40:59] TARGET TEMPLATE HIT stump1.png matches=1
+[04:40:59] TARGET TEMPLATE HIT stump3.png matches=2
+[04:40:59] TARGET 1 template=stump1.png x=990 y=130 dx=171.5 dy=-320 distance=363.06
+[04:40:59] TARGET 2 template=stump3.png x=1186 y=220 dx=374 dy=-230.5 distance=439.32
+[04:40:59] TARGET 3 template=stump3.png x=895 y=634 dx=83 dy=183.5 distance=201.4
+[04:40:59] DISTANCE RESULT: targets=3; nearestIndex=2; dx=83; dy=183.5; distance=201.4; elapsedMs=191.51
+[04:40:59] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:00] PLAYER FOUND but TARGET MISS after 168.56 ms
+[04:41:00] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:00] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:00] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:00] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:00] TARGET 1 template=stump1.png x=967 y=130 dx=148.5 dy=-320 distance=352.78
+[04:41:00] TARGET 2 template=stump3.png x=917 y=636 dx=105 dy=185.5 distance=213.16
+[04:41:00] DISTANCE RESULT: targets=2; nearestIndex=1; dx=105; dy=185.5; distance=213.16; elapsedMs=173.62
+[04:41:00] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:00] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:00] TARGET 1 template=stump3.png x=642 y=225 dx=-170 dy=-225.5 distance=282.4
+[04:41:00] TARGET 2 template=stump3.png x=1241 y=233 dx=429 dy=-217.5 distance=480.99
+[04:41:00] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-170; dy=-225.5; distance=282.4; elapsedMs=185.3
+[04:41:01] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:01] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:01] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:01] TARGET 1 template=stump3.png x=668 y=216 dx=-144 dy=-234.5 distance=275.18
+[04:41:01] TARGET 2 template=stump5.png x=1351 y=284 dx=534.5 dy=-170 distance=560.88
+[04:41:01] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-144; dy=-234.5; distance=275.18; elapsedMs=190.09
+[04:41:01] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:01] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:01] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:01] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:01] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:01] TARGET 1 template=stump1.png x=915 y=134 dx=96.5 dy=-316 distance=330.41
+[04:41:01] TARGET 2 template=stump3.png x=969 y=636 dx=157 dy=185.5 distance=243.02
+[04:41:01] TARGET 3 template=stump4.png x=1127 y=388 dx=307.5 dy=-69 distance=315.15
+[04:41:01] DISTANCE RESULT: targets=3; nearestIndex=1; dx=157; dy=185.5; distance=243.02; elapsedMs=188.94
+[04:41:02] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:02] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:02] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:02] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:02] TARGET 1 template=stump1.png x=905 y=134 dx=86.5 dy=-316 distance=327.63
+[04:41:02] TARGET 2 template=stump3.png x=689 y=204 dx=-123 dy=-246.5 distance=275.48
+[04:41:02] TARGET 3 template=stump3.png x=1292 y=242 dx=480 dy=-208.5 distance=523.33
+[04:41:02] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-123; dy=-246.5; distance=275.48; elapsedMs=211.25
+[04:41:02] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:02] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:02] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:02] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:02] TARGET 1 template=stump1.png x=900 y=134 dx=81.5 dy=-316 distance=326.34
+[04:41:02] TARGET 2 template=stump1.png x=1310 y=247 dx=491.5 dy=-203 distance=531.77
+[04:41:02] TARGET 3 template=stump3.png x=479 y=69 dx=-333 dy=-381.5 distance=506.39
+[04:41:02] DISTANCE RESULT: targets=3; nearestIndex=0; dx=81.5; dy=-316; distance=326.34; elapsedMs=212.81
+[04:41:02] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:02] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:02] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:02] TARGET 1 template=stump1.png x=901 y=134 dx=82.5 dy=-316 distance=326.59
+[04:41:02] DISTANCE RESULT: targets=1; nearestIndex=0; dx=82.5; dy=-316; distance=326.59; elapsedMs=173.23
+[04:41:03] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:03] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:03] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:03] TARGET 1 template=stump1.png x=904 y=134 dx=85.5 dy=-316 distance=327.36
+[04:41:03] TARGET 2 template=stump1.png x=1281 y=237 dx=462.5 dy=-213 distance=509.19
+[04:41:03] DISTANCE RESULT: targets=2; nearestIndex=0; dx=85.5; dy=-316; distance=327.36; elapsedMs=185.98
+[04:41:03] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:03] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:03] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:03] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:03] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:03] TARGET 1 template=stump1.png x=904 y=134 dx=85.5 dy=-316 distance=327.36
+[04:41:03] TARGET 2 template=stump1.png x=1280 y=237 dx=461.5 dy=-213 distance=508.28
+[04:41:03] TARGET 3 template=stump3.png x=1183 y=368 dx=371 dy=-82.5 distance=380.06
+[04:41:03] TARGET 4 template=stump4.png x=480 y=517 dx=-339.5 dy=60 distance=344.76
+[04:41:03] DISTANCE RESULT: targets=4; nearestIndex=0; dx=85.5; dy=-316; distance=327.36; elapsedMs=231.03
+[04:41:03] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:04] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:04] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:04] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:04] TARGET 1 template=stump1.png x=904 y=134 dx=85.5 dy=-316 distance=327.36
+[04:41:04] TARGET 2 template=stump1.png x=1283 y=238 dx=464.5 dy=-212 distance=510.59
+[04:41:04] TARGET 3 template=stump1.png x=1059 y=630 dx=240.5 dy=180 distance=300.4
+[04:41:04] TARGET 4 template=stump3.png x=1432 y=275 dx=620 dy=-175.5 distance=644.36
+[04:41:04] DISTANCE RESULT: targets=4; nearestIndex=2; dx=240.5; dy=180; distance=300.4; elapsedMs=214.98
+[04:41:04] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:04] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:04] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:04] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:04] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:04] TARGET 1 template=stump1.png x=904 y=134 dx=85.5 dy=-316 distance=327.36
+[04:41:04] TARGET 2 template=stump1.png x=1284 y=238 dx=465.5 dy=-212 distance=511.5
+[04:41:04] TARGET 3 template=stump3.png x=754 y=153 dx=-58 dy=-297.5 distance=303.1
+[04:41:04] TARGET 4 template=stump4.png x=1169 y=373 dx=349.5 dy=-84 distance=359.45
+[04:41:04] DISTANCE RESULT: targets=4; nearestIndex=2; dx=-58; dy=-297.5; distance=303.1; elapsedMs=218.21
+[04:41:04] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:04] TARGET TEMPLATE HIT stump1.png matches=5
+[04:41:04] TARGET TEMPLATE HIT stump5.png matches=4
+[04:41:04] TARGET 1 template=stump1.png x=904 y=134 dx=85.5 dy=-316 distance=327.36
+[04:41:04] TARGET 2 template=stump1.png x=1284 y=238 dx=465.5 dy=-212 distance=511.5
+[04:41:04] TARGET 3 template=stump1.png x=1450 y=274 dx=631.5 dy=-176 distance=655.57
+[04:41:04] TARGET 4 template=stump1.png x=1169 y=379 dx=350.5 dy=-71 distance=357.62
+[04:41:04] TARGET 5 template=stump1.png x=458 y=516 dx=-360.5 dy=66 distance=366.49
+[04:41:04] DISTANCE RESULT: targets=5; nearestIndex=0; dx=85.5; dy=-316; distance=327.36; elapsedMs=240.49
+[04:41:05] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:05] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:05] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:05] TARGET 1 template=stump1.png x=1159 y=383 dx=340.5 dy=-67 distance=347.03
+[04:41:05] DISTANCE RESULT: targets=1; nearestIndex=0; dx=340.5; dy=-67; distance=347.03; elapsedMs=170.38
+[04:41:05] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:05] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:05] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:05] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:05] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:05] TARGET 1 template=stump1.png x=860 y=138 dx=41.5 dy=-312 distance=314.75
+[04:41:05] TARGET 2 template=stump1.png x=1159 y=383 dx=340.5 dy=-67 distance=347.03
+[04:41:06] TARGET 3 template=stump3.png x=1284 y=239 dx=472 dy=-211.5 distance=517.22
+[04:41:06] TARGET 4 template=stump3.png x=1421 y=278 dx=609 dy=-172.5 distance=632.96
+[04:41:06] TARGET 5 template=stump4.png x=399 y=516 dx=-420.5 dy=59 distance=424.62
+[04:41:06] DISTANCE RESULT: targets=5; nearestIndex=0; dx=41.5; dy=-312; distance=314.75; elapsedMs=211.5
+[04:41:06] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:06] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:06] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:06] TARGET 1 template=stump1.png x=859 y=138 dx=40.5 dy=-312 distance=314.62
+[04:41:06] TARGET 2 template=stump1.png x=1307 y=246 dx=488.5 dy=-204 distance=529.38
+[04:41:06] TARGET 3 template=stump1.png x=1159 y=383 dx=340.5 dy=-67 distance=347.03
+[04:41:06] DISTANCE RESULT: targets=3; nearestIndex=0; dx=40.5; dy=-312; distance=314.62; elapsedMs=192.25
+[04:41:06] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:06] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:06] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:06] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:06] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:06] TARGET 1 template=stump1.png x=860 y=138 dx=41.5 dy=-312 distance=314.75
+[04:41:06] TARGET 2 template=stump1.png x=1159 y=383 dx=340.5 dy=-67 distance=347.03
+[04:41:06] TARGET 3 template=stump3.png x=1444 y=272 dx=632 dy=-178.5 distance=656.72
+[04:41:06] TARGET 4 template=stump4.png x=793 y=135 dx=-26.5 dy=-322 distance=323.09
+[04:41:06] DISTANCE RESULT: targets=4; nearestIndex=0; dx=41.5; dy=-312; distance=314.75; elapsedMs=214.9
+[04:41:06] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:06] TARGET TEMPLATE HIT stump1.png matches=5
+[04:41:06] TARGET TEMPLATE HIT stump5.png matches=4
+[04:41:06] TARGET 1 template=stump1.png x=792 y=138 dx=-26.5 dy=-312 distance=313.12
+[04:41:06] TARGET 2 template=stump1.png x=860 y=138 dx=41.5 dy=-312 distance=314.75
+[04:41:06] TARGET 3 template=stump1.png x=1159 y=383 dx=340.5 dy=-67 distance=347.03
+[04:41:06] TARGET 4 template=stump1.png x=375 y=526 dx=-443.5 dy=76 distance=449.96
+[04:41:06] TARGET 5 template=stump1.png x=957 y=636 dx=138.5 dy=186 distance=231.9
+[04:41:07] TARGET 6 template=stump5.png x=1286 y=240 dx=469.5 dy=-214 distance=515.97
+[04:41:07] DISTANCE RESULT: targets=6; nearestIndex=4; dx=138.5; dy=186; distance=231.9; elapsedMs=241.83
+[04:41:07] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:07] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:07] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:07] TARGET 1 template=stump1.png x=860 y=138 dx=41.5 dy=-312 distance=314.75
+[04:41:07] TARGET 2 template=stump1.png x=1159 y=383 dx=340.5 dy=-67 distance=347.03
+[04:41:08] DISTANCE RESULT: targets=2; nearestIndex=0; dx=41.5; dy=-312; distance=314.75; elapsedMs=178.56
+[04:41:08] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:08] TARGET TEMPLATE HIT stump1.png matches=4
+[04:41:08] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:08] TARGET TEMPLATE HIT stump5.png matches=4
+[04:41:08] TARGET 1 template=stump1.png x=860 y=138 dx=41.5 dy=-312 distance=314.75
+[04:41:08] TARGET 2 template=stump1.png x=744 y=175 dx=-74.5 dy=-275 distance=284.91
+[04:41:08] TARGET 3 template=stump1.png x=1159 y=383 dx=340.5 dy=-67 distance=347.03
+[04:41:08] TARGET 4 template=stump1.png x=324 y=570 dx=-494.5 dy=120 distance=508.85
+[04:41:08] TARGET 5 template=stump4.png x=1233 y=233 dx=413.5 dy=-224 distance=470.27
+[04:41:08] DISTANCE RESULT: targets=5; nearestIndex=1; dx=-74.5; dy=-275; distance=284.91; elapsedMs=217.78
+[04:41:08] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:08] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:08] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:08] TARGET 1 template=stump1.png x=860 y=138 dx=41.5 dy=-312 distance=314.75
+[04:41:08] TARGET 2 template=stump1.png x=1233 y=232 dx=414.5 dy=-218 distance=468.33
+[04:41:08] TARGET 3 template=stump1.png x=1159 y=383 dx=340.5 dy=-67 distance=347.03
+[04:41:08] DISTANCE RESULT: targets=3; nearestIndex=0; dx=41.5; dy=-312; distance=314.75; elapsedMs=183.61
+[04:41:08] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:08] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:08] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:08] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:08] TARGET 1 template=stump1.png x=860 y=138 dx=41.5 dy=-312 distance=314.75
+[04:41:08] TARGET 2 template=stump1.png x=1159 y=383 dx=340.5 dy=-67 distance=347.03
+[04:41:08] TARGET 3 template=stump4.png x=1211 y=227 dx=391.5 dy=-230 distance=454.06
+[04:41:08] TARGET 4 template=stump5.png x=710 y=197 dx=-106.5 dy=-257 distance=278.19
+[04:41:08] DISTANCE RESULT: targets=4; nearestIndex=3; dx=-106.5; dy=-257; distance=278.19; elapsedMs=215.3
+[04:41:09] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:09] TARGET TEMPLATE HIT stump1.png matches=4
+[04:41:09] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:09] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:09] TARGET 1 template=stump1.png x=860 y=138 dx=41.5 dy=-312 distance=314.75
+[04:41:09] TARGET 2 template=stump1.png x=1211 y=226 dx=392.5 dy=-224 distance=451.92
+[04:41:09] TARGET 3 template=stump1.png x=1159 y=383 dx=340.5 dy=-67 distance=347.03
+[04:41:09] TARGET 4 template=stump1.png x=982 y=636 dx=163.5 dy=186 distance=247.65
+[04:41:09] TARGET 5 template=stump3.png x=410 y=274 dx=-402 dy=-176.5 distance=439.04
+[04:41:09] DISTANCE RESULT: targets=5; nearestIndex=3; dx=163.5; dy=186; distance=247.65; elapsedMs=231.86
+[04:41:10] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:10] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:10] TARGET 1 template=stump4.png x=1132 y=387 dx=312.5 dy=-70 distance=320.24
+[04:41:10] DISTANCE RESULT: targets=1; nearestIndex=0; dx=312.5; dy=-70; distance=320.24; elapsedMs=164.99
+[04:41:10] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:10] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:10] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:10] TARGET TEMPLATE HIT stump4.png matches=3
+[04:41:10] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:10] TARGET 1 template=stump1.png x=1132 y=391 dx=313.5 dy=-59 distance=319
+[04:41:10] TARGET 2 template=stump3.png x=669 y=216 dx=-143 dy=-234.5 distance=274.66
+[04:41:10] TARGET 3 template=stump4.png x=837 y=136 dx=17.5 dy=-321 distance=321.48
+[04:41:10] TARGET 4 template=stump4.png x=1155 y=214 dx=335.5 dy=-243 distance=414.26
+[04:41:10] TARGET 5 template=stump4.png x=924 y=636 dx=104.5 dy=179 distance=207.27
+[04:41:10] DISTANCE RESULT: targets=5; nearestIndex=4; dx=104.5; dy=179; distance=207.27; elapsedMs=207.59
+[04:41:10] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:10] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:10] TARGET 1 template=stump1.png x=833 y=138 dx=14.5 dy=-312 distance=312.34
+[04:41:10] TARGET 2 template=stump1.png x=475 y=285 dx=-343.5 dy=-165 distance=381.07
+[04:41:10] DISTANCE RESULT: targets=2; nearestIndex=0; dx=14.5; dy=-312; distance=312.34; elapsedMs=174.26
+[04:41:11] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:11] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:11] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:11] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:11] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:11] TARGET 1 template=stump1.png x=1108 y=397 dx=289.5 dy=-53 distance=294.31
+[04:41:11] TARGET 2 template=stump3.png x=691 y=203 dx=-121 dy=-247.5 distance=275.49
+[04:41:11] TARGET 3 template=stump4.png x=1134 y=204 dx=314.5 dy=-253 distance=403.63
+[04:41:11] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-121; dy=-247.5; distance=275.49; elapsedMs=188.39
+[04:41:11] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:11] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:11] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:11] TARGET 1 template=stump1.png x=809 y=137 dx=-9.5 dy=-313 distance=313.14
+[04:41:11] TARGET 2 template=stump1.png x=452 y=284 dx=-366.5 dy=-166 distance=402.34
+[04:41:11] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-9.5; dy=-313; distance=313.14; elapsedMs=202.19
+[04:41:12] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:12] TARGET TEMPLATE HIT stump1.png matches=4
+[04:41:12] TARGET TEMPLATE HIT stump5.png matches=4
+[04:41:12] TARGET 1 template=stump1.png x=782 y=142 dx=-36.5 dy=-308 distance=310.16
+[04:41:12] TARGET 2 template=stump1.png x=1111 y=187 dx=292.5 dy=-263 distance=393.35
+[04:41:12] TARGET 3 template=stump1.png x=426 y=278 dx=-392.5 dy=-172 distance=428.53
+[04:41:12] TARGET 4 template=stump1.png x=1079 y=398 dx=260.5 dy=-52 distance=265.64
+[04:41:12] DISTANCE RESULT: targets=4; nearestIndex=3; dx=260.5; dy=-52; distance=265.64; elapsedMs=216.72
+[04:41:12] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:12] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:12] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:12] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:12] TARGET 1 template=stump1.png x=1107 y=185 dx=288.5 dy=-265 distance=391.74
+[04:41:12] TARGET 2 template=stump1.png x=693 y=211 dx=-125.5 dy=-239 distance=269.95
+[04:41:12] TARGET 3 template=stump1.png x=1079 y=398 dx=260.5 dy=-52 distance=265.64
+[04:41:12] TARGET 4 template=stump3.png x=1168 y=217 dx=356 dy=-233.5 distance=425.74
+[04:41:12] DISTANCE RESULT: targets=4; nearestIndex=2; dx=260.5; dy=-52; distance=265.64; elapsedMs=212.14
+[04:41:12] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:12] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:12] TARGET TEMPLATE HIT stump5.png matches=4
+[04:41:12] TARGET 1 template=stump1.png x=1108 y=186 dx=289.5 dy=-264 distance=391.8
+[04:41:12] TARGET 2 template=stump1.png x=1079 y=398 dx=260.5 dy=-52 distance=265.64
+[04:41:12] TARGET 3 template=stump1.png x=852 y=626 dx=33.5 dy=176 distance=179.16
+[04:41:12] TARGET 4 template=stump5.png x=260 y=603 dx=-556.5 dy=149 distance=576.1
+[04:41:12] DISTANCE RESULT: targets=4; nearestIndex=2; dx=33.5; dy=176; distance=179.16; elapsedMs=201.3
+[04:41:13] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:13] TARGET TEMPLATE HIT stump1.png matches=4
+[04:41:13] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:13] TARGET TEMPLATE HIT stump5.png matches=4
+[04:41:13] TARGET 1 template=stump1.png x=1110 y=187 dx=291.5 dy=-263 distance=392.61
+[04:41:13] TARGET 2 template=stump1.png x=668 y=221 dx=-150.5 dy=-229 distance=274.03
+[04:41:13] TARGET 3 template=stump1.png x=1079 y=398 dx=260.5 dy=-52 distance=265.64
+[04:41:13] TARGET 4 template=stump1.png x=264 y=603 dx=-554.5 dy=153 distance=575.22
+[04:41:13] TARGET 5 template=stump3.png x=1193 y=222 dx=381 dy=-228.5 distance=444.27
+[04:41:13] DISTANCE RESULT: targets=5; nearestIndex=2; dx=260.5; dy=-52; distance=265.64; elapsedMs=217.61
+[04:41:13] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:13] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:13] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:13] TARGET 1 template=stump1.png x=1110 y=187 dx=291.5 dy=-263 distance=392.61
+[04:41:13] TARGET 2 template=stump1.png x=1079 y=398 dx=260.5 dy=-52 distance=265.64
+[04:41:13] DISTANCE RESULT: targets=2; nearestIndex=1; dx=260.5; dy=-52; distance=265.64; elapsedMs=181.86
+[04:41:14] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:14] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:14] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:14] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:14] TARGET 1 template=stump1.png x=1110 y=187 dx=291.5 dy=-263 distance=392.61
+[04:41:14] TARGET 2 template=stump4.png x=1200 y=225 dx=380.5 dy=-232 distance=445.65
+[04:41:14] DISTANCE RESULT: targets=2; nearestIndex=0; dx=291.5; dy=-263; distance=392.61; elapsedMs=190.6
+[04:41:14] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:14] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:14] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:14] TARGET 1 template=stump1.png x=1110 y=187 dx=291.5 dy=-263 distance=392.61
+[04:41:14] TARGET 2 template=stump1.png x=1200 y=224 dx=381.5 dy=-226 distance=443.42
+[04:41:14] TARGET 3 template=stump5.png x=607 y=241 dx=-209.5 dy=-213 distance=298.76
+[04:41:14] DISTANCE RESULT: targets=3; nearestIndex=2; dx=-209.5; dy=-213; distance=298.76; elapsedMs=188.66
+[04:41:14] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:14] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:14] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:14] TARGET 1 template=stump1.png x=1110 y=187 dx=291.5 dy=-263 distance=392.61
+[04:41:14] TARGET 2 template=stump5.png x=1119 y=393 dx=302.5 dy=-61 distance=308.59
+[04:41:14] DISTANCE RESULT: targets=2; nearestIndex=1; dx=302.5; dy=-61; distance=308.59; elapsedMs=181.2
+[04:41:15] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:15] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:15] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:15] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:15] TARGET 1 template=stump1.png x=1177 y=218 dx=358.5 dy=-232 distance=427.02
+[04:41:15] TARGET 2 template=stump4.png x=576 y=243 dx=-243.5 dy=-214 distance=324.17
+[04:41:15] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-243.5; dy=-214; distance=324.17; elapsedMs=176.49
+[04:41:15] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:15] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:15] TARGET 1 template=stump4.png x=1094 y=395 dx=274.5 dy=-62 distance=281.41
+[04:41:15] DISTANCE RESULT: targets=1; nearestIndex=0; dx=274.5; dy=-62; distance=281.41; elapsedMs=174.49
+[04:41:16] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:16] PLAYER FOUND but TARGET MISS after 158.82 ms
+[04:41:16] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:16] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:16] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:16] TARGET 1 template=stump3.png x=896 y=132 dx=84 dy=-318.5 distance=329.39
+[04:41:16] TARGET 2 template=stump3.png x=1086 y=395 dx=274 dy=-55.5 distance=279.56
+[04:41:16] TARGET 3 template=stump4.png x=527 y=245 dx=-292.5 dy=-212 distance=361.25
+[04:41:16] DISTANCE RESULT: targets=3; nearestIndex=1; dx=274; dy=-55.5; distance=279.56; elapsedMs=209.85
+[04:41:16] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:16] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:16] TARGET 1 template=stump3.png x=1173 y=217 dx=361 dy=-233.5 distance=429.93
+[04:41:16] DISTANCE RESULT: targets=1; nearestIndex=0; dx=361; dy=-233.5; distance=429.93; elapsedMs=158.98
+[04:41:17] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:17] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:17] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:17] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:17] TARGET 1 template=stump3.png x=1111 y=393 dx=299 dy=-57.5 distance=304.48
+[04:41:17] TARGET 2 template=stump4.png x=502 y=250 dx=-317.5 dy=-207 distance=379.02
+[04:41:17] TARGET 3 template=stump5.png x=1232 y=233 dx=415.5 dy=-221 distance=470.62
+[04:41:17] DISTANCE RESULT: targets=3; nearestIndex=0; dx=299; dy=-57.5; distance=304.48; elapsedMs=204.42
+[04:41:17] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:17] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:17] TARGET 1 template=stump4.png x=1155 y=214 dx=335.5 dy=-243 distance=414.26
+[04:41:17] DISTANCE RESULT: targets=1; nearestIndex=0; dx=335.5; dy=-243; distance=414.26; elapsedMs=152.36
+[04:41:18] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:18] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:18] TARGET TEMPLATE HIT stump4.png matches=2
+[04:41:18] TARGET 1 template=stump3.png x=338 y=546 dx=-474 dy=95.5 distance=483.52
+[04:41:18] TARGET 2 template=stump4.png x=1132 y=202 dx=312.5 dy=-255 distance=403.34
+[04:41:18] TARGET 3 template=stump4.png x=1441 y=272 dx=621.5 dy=-185 distance=648.45
+[04:41:18] DISTANCE RESULT: targets=3; nearestIndex=1; dx=312.5; dy=-255; distance=403.34; elapsedMs=212.47
+[04:41:18] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:18] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:18] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:18] TARGET 1 template=stump1.png x=1442 y=276 dx=623.5 dy=-174 distance=647.32
+[04:41:18] TARGET 2 template=stump4.png x=1180 y=219 dx=360.5 dy=-238 distance=431.98
+[04:41:18] DISTANCE RESULT: targets=2; nearestIndex=1; dx=360.5; dy=-238; distance=431.98; elapsedMs=176.95
+[04:41:18] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:18] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:18] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:18] TARGET 1 template=stump3.png x=1142 y=208 dx=330 dy=-242.5 distance=409.52
+[04:41:18] TARGET 2 template=stump3.png x=357 y=529 dx=-455 dy=78.5 distance=461.72
+[04:41:18] TARGET 3 template=stump4.png x=1418 y=278 dx=598.5 dy=-179 distance=624.69
+[04:41:19] DISTANCE RESULT: targets=3; nearestIndex=0; dx=330; dy=-242.5; distance=409.52; elapsedMs=197.78
+[04:41:19] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:19] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:19] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:19] TARGET 1 template=stump1.png x=1417 y=282 dx=598.5 dy=-168 distance=621.63
+[04:41:19] TARGET 2 template=stump3.png x=560 y=243 dx=-252 dy=-207.5 distance=326.44
+[04:41:19] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-252; dy=-207.5; distance=326.44; elapsedMs=170.08
+[04:41:19] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:19] PLAYER FOUND but TARGET MISS after 153 ms
+[04:41:20] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:20] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:20] TARGET 1 template=stump3.png x=922 y=132 dx=110 dy=-318.5 distance=336.96
+[04:41:20] DISTANCE RESULT: targets=1; nearestIndex=0; dx=110; dy=-318.5; distance=336.96; elapsedMs=168.67
+[04:41:20] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:20] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:20] TARGET 1 template=stump3.png x=607 y=237 dx=-205 dy=-213.5 distance=295.99
+[04:41:20] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-205; dy=-213.5; distance=295.99; elapsedMs=152.95
+[04:41:20] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:20] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:20] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:20] TARGET 1 template=stump3.png x=946 y=127 dx=134 dy=-323.5 distance=350.15
+[04:41:20] TARGET 2 template=stump4.png x=1198 y=361 dx=378.5 dy=-96 distance=390.48
+[04:41:21] DISTANCE RESULT: targets=2; nearestIndex=0; dx=134; dy=-323.5; distance=350.15; elapsedMs=189.97
+[04:41:21] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:21] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:21] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:21] TARGET 1 template=stump1.png x=1196 y=369 dx=377.5 dy=-81 distance=386.09
+[04:41:21] TARGET 2 template=stump1.png x=1049 y=631 dx=230.5 dy=181 distance=293.07
+[04:41:21] TARGET 3 template=stump3.png x=630 y=230 dx=-182 dy=-220.5 distance=285.91
+[04:41:21] DISTANCE RESULT: targets=3; nearestIndex=2; dx=-182; dy=-220.5; distance=285.91; elapsedMs=197.48
+[04:41:21] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:21] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:21] TARGET 1 template=stump3.png x=419 y=106 dx=-393 dy=-344.5 distance=522.62
+[04:41:21] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-393; dy=-344.5; distance=522.62; elapsedMs=169.81
+[04:41:22] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:22] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:22] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:22] TARGET 1 template=stump3.png x=996 y=129 dx=184 dy=-321.5 distance=370.43
+[04:41:22] TARGET 2 template=stump5.png x=628 y=235 dx=-188.5 dy=-219 distance=288.95
+[04:41:22] TARGET 3 template=stump5.png x=1001 y=633 dx=184.5 dy=179 distance=257.06
+[04:41:22] DISTANCE RESULT: targets=3; nearestIndex=2; dx=184.5; dy=179; distance=257.06; elapsedMs=205.06
+[04:41:22] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:22] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:22] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:22] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:22] TARGET 1 template=stump1.png x=1001 y=633 dx=182.5 dy=183 distance=258.45
+[04:41:22] TARGET 2 template=stump4.png x=1135 y=204 dx=315.5 dy=-253 distance=404.41
+[04:41:22] DISTANCE RESULT: targets=2; nearestIndex=0; dx=182.5; dy=183; distance=258.45; elapsedMs=174.31
+[04:41:22] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:22] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:22] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:23] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:23] TARGET 1 template=stump1.png x=1003 y=633 dx=184.5 dy=183 distance=259.86
+[04:41:23] TARGET 2 template=stump4.png x=599 y=238 dx=-220.5 dy=-219 distance=310.78
+[04:41:23] DISTANCE RESULT: targets=2; nearestIndex=0; dx=184.5; dy=183; distance=259.86; elapsedMs=163.09
+[04:41:23] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:23] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:23] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:23] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:23] TARGET 1 template=stump1.png x=1004 y=633 dx=185.5 dy=183 distance=260.57
+[04:41:23] TARGET 2 template=stump4.png x=1115 y=195 dx=295.5 dy=-262 distance=394.92
+[04:41:23] DISTANCE RESULT: targets=2; nearestIndex=0; dx=185.5; dy=183; distance=260.57; elapsedMs=170.03
+[04:41:23] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:23] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:23] TARGET TEMPLATE HIT stump4.png matches=2
+[04:41:23] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:23] TARGET 1 template=stump1.png x=1004 y=633 dx=185.5 dy=183 distance=260.57
+[04:41:23] TARGET 2 template=stump4.png x=572 y=243 dx=-247.5 dy=-214 distance=327.19
+[04:41:23] TARGET 3 template=stump4.png x=1188 y=366 dx=368.5 dy=-91 distance=379.57
+[04:41:23] DISTANCE RESULT: targets=3; nearestIndex=0; dx=185.5; dy=183; distance=260.57; elapsedMs=282.31
+[04:41:24] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:24] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:24] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:24] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:24] TARGET 1 template=stump1.png x=461 y=283 dx=-357.5 dy=-167 distance=394.58
+[04:41:24] TARGET 2 template=stump1.png x=329 y=565 dx=-489.5 dy=115 distance=502.83
+[04:41:24] TARGET 3 template=stump3.png x=571 y=244 dx=-241 dy=-206.5 distance=317.37
+[04:41:24] TARGET 4 template=stump5.png x=1162 y=381 dx=345.5 dy=-73 distance=353.13
+[04:41:24] DISTANCE RESULT: targets=4; nearestIndex=2; dx=-241; dy=-206.5; distance=317.37; elapsedMs=210.3
+[04:41:24] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:24] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:24] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:24] TARGET 1 template=stump3.png x=1043 y=142 dx=231 dy=-308.5 distance=385.4
+[04:41:24] TARGET 2 template=stump4.png x=436 y=281 dx=-383.5 dy=-176 distance=421.96
+[04:41:24] DISTANCE RESULT: targets=2; nearestIndex=0; dx=231; dy=-308.5; distance=385.4; elapsedMs=183.42
+[04:41:25] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:25] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:25] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:25] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:25] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:25] TARGET 1 template=stump1.png x=436 y=281 dx=-382.5 dy=-169 distance=418.17
+[04:41:25] TARGET 2 template=stump3.png x=593 y=240 dx=-219 dy=-210.5 distance=303.76
+[04:41:25] TARGET 3 template=stump4.png x=1133 y=387 dx=313.5 dy=-70 distance=321.22
+[04:41:25] TARGET 4 template=stump5.png x=1066 y=157 dx=249.5 dy=-297 distance=387.89
+[04:41:25] DISTANCE RESULT: targets=4; nearestIndex=1; dx=-219; dy=-210.5; distance=303.76; elapsedMs=193.88
+[04:41:25] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:25] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:25] TARGET 1 template=stump3.png x=1069 y=163 dx=257 dy=-287.5 distance=385.62
+[04:41:25] DISTANCE RESULT: targets=1; nearestIndex=0; dx=257; dy=-287.5; distance=385.62; elapsedMs=175.43
+[04:41:25] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:25] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:25] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:25] TARGET 1 template=stump4.png x=1109 y=394 dx=289.5 dy=-63 distance=296.28
+[04:41:25] TARGET 2 template=stump5.png x=408 y=274 dx=-408.5 dy=-180 distance=446.4
+[04:41:25] DISTANCE RESULT: targets=2; nearestIndex=0; dx=289.5; dy=-63; distance=296.28; elapsedMs=175.19
+[04:41:26] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:26] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:26] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:26] TARGET 1 template=stump1.png x=1067 y=155 dx=248.5 dy=-295 distance=385.72
+[04:41:26] TARGET 2 template=stump1.png x=1101 y=397 dx=282.5 dy=-53 distance=287.43
+[04:41:26] TARGET 3 template=stump1.png x=329 y=565 dx=-489.5 dy=115 distance=502.83
+[04:41:26] DISTANCE RESULT: targets=3; nearestIndex=1; dx=282.5; dy=-53; distance=287.43; elapsedMs=203.09
+[04:41:26] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:26] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:26] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:26] TARGET 1 template=stump1.png x=1067 y=155 dx=248.5 dy=-295 distance=385.72
+[04:41:26] TARGET 2 template=stump1.png x=1310 y=247 dx=491.5 dy=-203 distance=531.77
+[04:41:26] TARGET 3 template=stump1.png x=1101 y=397 dx=282.5 dy=-53 distance=287.43
+[04:41:26] DISTANCE RESULT: targets=3; nearestIndex=2; dx=282.5; dy=-53; distance=287.43; elapsedMs=205.34
+[04:41:27] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:27] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:27] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:27] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:27] TARGET 1 template=stump1.png x=1067 y=155 dx=248.5 dy=-295 distance=385.72
+[04:41:27] TARGET 2 template=stump1.png x=1310 y=247 dx=491.5 dy=-203 distance=531.77
+[04:41:27] TARGET 3 template=stump1.png x=1101 y=397 dx=282.5 dy=-53 distance=287.43
+[04:41:27] TARGET 4 template=stump4.png x=1044 y=629 dx=224.5 dy=172 distance=282.81
+[04:41:27] DISTANCE RESULT: targets=4; nearestIndex=3; dx=224.5; dy=172; distance=282.81; elapsedMs=191.99
+[04:41:27] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:27] TARGET TEMPLATE HIT stump1.png matches=4
+[04:41:27] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:27] TARGET TEMPLATE HIT stump5.png matches=5
+[04:41:27] TARGET 1 template=stump1.png x=1067 y=155 dx=248.5 dy=-295 distance=385.72
+[04:41:27] TARGET 2 template=stump1.png x=1310 y=247 dx=491.5 dy=-203 distance=531.77
+[04:41:27] TARGET 3 template=stump1.png x=1101 y=397 dx=282.5 dy=-53 distance=287.43
+[04:41:27] TARGET 4 template=stump1.png x=329 y=565 dx=-489.5 dy=115 distance=502.83
+[04:41:27] TARGET 5 template=stump3.png x=1435 y=274 dx=623 dy=-176.5 distance=647.52
+[04:41:27] DISTANCE RESULT: targets=5; nearestIndex=2; dx=282.5; dy=-53; distance=287.43; elapsedMs=225.44
+[04:41:27] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:27] TARGET TEMPLATE HIT stump1.png matches=4
+[04:41:27] TARGET TEMPLATE HIT stump5.png matches=4
+[04:41:27] TARGET 1 template=stump1.png x=1067 y=155 dx=248.5 dy=-295 distance=385.72
+[04:41:27] TARGET 2 template=stump1.png x=1310 y=247 dx=491.5 dy=-203 distance=531.77
+[04:41:27] TARGET 3 template=stump1.png x=1101 y=397 dx=282.5 dy=-53 distance=287.43
+[04:41:27] TARGET 4 template=stump1.png x=329 y=565 dx=-489.5 dy=115 distance=502.83
+[04:41:28] DISTANCE RESULT: targets=4; nearestIndex=2; dx=282.5; dy=-53; distance=287.43; elapsedMs=287.79
+[04:41:28] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:28] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:28] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:28] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:28] TARGET 1 template=stump1.png x=1310 y=247 dx=491.5 dy=-203 distance=531.77
+[04:41:28] TARGET 2 template=stump1.png x=1101 y=397 dx=282.5 dy=-53 distance=287.43
+[04:41:28] TARGET 3 template=stump4.png x=1385 y=281 dx=565.5 dy=-176 distance=592.26
+[04:41:29] DISTANCE RESULT: targets=3; nearestIndex=1; dx=282.5; dy=-53; distance=287.43; elapsedMs=210.47
+[04:41:29] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:29] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:29] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:29] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:29] TARGET 1 template=stump1.png x=1310 y=247 dx=491.5 dy=-203 distance=531.77
+[04:41:29] TARGET 2 template=stump4.png x=1017 y=130 dx=197.5 dy=-327 distance=382.01
+[04:41:29] DISTANCE RESULT: targets=2; nearestIndex=1; dx=197.5; dy=-327; distance=382.01; elapsedMs=189.38
+[04:41:29] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:29] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:29] TARGET 1 template=stump3.png x=735 y=171 dx=-77 dy=-279.5 distance=289.91
+[04:41:29] TARGET 2 template=stump3.png x=1134 y=203 dx=322 dy=-247.5 distance=406.13
+[04:41:29] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-77; dy=-279.5; distance=289.91; elapsedMs=161.57
+[04:41:29] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:29] TARGET TEMPLATE HIT stump4.png matches=2
+[04:41:29] TARGET 1 template=stump4.png x=994 y=129 dx=174.5 dy=-328 distance=371.53
+[04:41:29] TARGET 2 template=stump4.png x=1283 y=239 dx=463.5 dy=-218 distance=512.21
+[04:41:29] DISTANCE RESULT: targets=2; nearestIndex=0; dx=174.5; dy=-328; distance=371.53; elapsedMs=200.6
+[04:41:30] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:30] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:30] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:30] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:30] TARGET 1 template=stump1.png x=1264 y=236 dx=445.5 dy=-214 distance=494.23
+[04:41:30] TARGET 2 template=stump3.png x=1156 y=378 dx=344 dy=-72.5 distance=351.56
+[04:41:30] TARGET 3 template=stump5.png x=966 y=130 dx=149.5 dy=-324 distance=356.83
+[04:41:30] DISTANCE RESULT: targets=3; nearestIndex=1; dx=344; dy=-72.5; distance=351.56; elapsedMs=194.42
+[04:41:31] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:31] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:31] TARGET 1 template=stump3.png x=1193 y=222 dx=381 dy=-228.5 distance=444.27
+[04:41:31] DISTANCE RESULT: targets=1; nearestIndex=0; dx=381; dy=-228.5; distance=444.27; elapsedMs=162.99
+[04:41:31] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:31] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:31] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:31] TARGET 1 template=stump3.png x=1178 y=371 dx=366 dy=-79.5 distance=374.53
+[04:41:31] TARGET 2 template=stump3.png x=1076 y=622 dx=264 dy=171.5 distance=314.81
+[04:41:31] TARGET 3 template=stump5.png x=944 y=131 dx=127.5 dy=-323 distance=347.25
+[04:41:31] TARGET 4 template=stump5.png x=1232 y=233 dx=415.5 dy=-221 distance=470.62
+[04:41:31] DISTANCE RESULT: targets=4; nearestIndex=1; dx=264; dy=171.5; distance=314.81; elapsedMs=237.03
+[04:41:31] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:31] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:31] TARGET 1 template=stump3.png x=804 y=134 dx=-8 dy=-316.5 distance=316.6
+[04:41:31] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-8; dy=-316.5; distance=316.6; elapsedMs=167.02
+[04:41:32] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:32] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:32] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:32] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:32] TARGET 1 template=stump1.png x=1442 y=276 dx=623.5 dy=-174 distance=647.32
+[04:41:32] TARGET 2 template=stump4.png x=915 y=132 dx=95.5 dy=-325 distance=338.74
+[04:41:32] DISTANCE RESULT: targets=2; nearestIndex=1; dx=95.5; dy=-325; distance=338.74; elapsedMs=179.87
+[04:41:32] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:32] TARGET TEMPLATE HIT stump4.png matches=3
+[04:41:33] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:33] TARGET 1 template=stump4.png x=888 y=132 dx=68.5 dy=-325 distance=332.14
+[04:41:33] TARGET 2 template=stump4.png x=1179 y=219 dx=359.5 dy=-238 distance=431.14
+[04:41:33] TARGET 3 template=stump4.png x=1219 y=229 dx=399.5 dy=-228 distance=459.98
+[04:41:33] DISTANCE RESULT: targets=3; nearestIndex=0; dx=68.5; dy=-325; distance=332.14; elapsedMs=416.24
+[04:41:33] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:33] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:33] TARGET 1 template=stump1.png x=504 y=292 dx=-314.5 dy=-158 distance=351.96
+[04:41:33] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-314.5; dy=-158; distance=351.96; elapsedMs=169.82
+[04:41:33] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:33] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:33] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:33] TARGET 1 template=stump1.png x=1163 y=215 dx=344.5 dy=-235 distance=417.02
+[04:41:33] TARGET 2 template=stump1.png x=1253 y=333 dx=434.5 dy=-117 distance=449.98
+[04:41:33] DISTANCE RESULT: targets=2; nearestIndex=0; dx=344.5; dy=-235; distance=417.02; elapsedMs=185.17
+[04:41:33] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:33] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:33] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:33] TARGET 1 template=stump1.png x=889 y=134 dx=70.5 dy=-316 distance=323.77
+[04:41:33] TARGET 2 template=stump1.png x=480 y=286 dx=-338.5 dy=-164 distance=376.14
+[04:41:33] DISTANCE RESULT: targets=2; nearestIndex=0; dx=70.5; dy=-316; distance=323.77; elapsedMs=186.57
+[04:41:34] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:34] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:34] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:34] TARGET 1 template=stump4.png x=1131 y=203 dx=311.5 dy=-254 distance=401.93
+[04:41:34] TARGET 2 template=stump5.png x=1226 y=350 dx=409.5 dy=-104 distance=422.5
+[04:41:34] DISTANCE RESULT: targets=2; nearestIndex=0; dx=311.5; dy=-254; distance=401.93; elapsedMs=171.07
+[04:41:34] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:34] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:34] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:34] TARGET 1 template=stump1.png x=1119 y=193 dx=300.5 dy=-257 distance=395.41
+[04:41:34] TARGET 2 template=stump1.png x=443 y=282 dx=-375.5 dy=-168 distance=411.37
+[04:41:34] TARGET 3 template=stump5.png x=1195 y=368 dx=378.5 dy=-86 distance=388.15
+[04:41:35] DISTANCE RESULT: targets=3; nearestIndex=2; dx=378.5; dy=-86; distance=388.15; elapsedMs=199.25
+[04:41:35] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:35] TARGET TEMPLATE HIT stump1.png matches=4
+[04:41:35] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:35] TARGET 1 template=stump1.png x=877 y=137 dx=58.5 dy=-313 distance=318.42
+[04:41:35] TARGET 2 template=stump1.png x=839 y=138 dx=20.5 dy=-312 distance=312.67
+[04:41:35] TARGET 3 template=stump1.png x=1117 y=192 dx=298.5 dy=-258 distance=394.55
+[04:41:35] TARGET 4 template=stump1.png x=441 y=282 dx=-377.5 dy=-168 distance=413.2
+[04:41:35] DISTANCE RESULT: targets=4; nearestIndex=1; dx=20.5; dy=-312; distance=312.67; elapsedMs=202.05
+[04:41:35] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:35] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:35] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:35] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:35] TARGET 1 template=stump1.png x=877 y=137 dx=58.5 dy=-313 distance=318.42
+[04:41:35] TARGET 2 template=stump1.png x=1117 y=192 dx=298.5 dy=-258 distance=394.55
+[04:41:35] TARGET 3 template=stump1.png x=441 y=282 dx=-377.5 dy=-168 distance=413.2
+[04:41:35] TARGET 4 template=stump4.png x=1165 y=375 dx=345.5 dy=-82 distance=355.1
+[04:41:35] DISTANCE RESULT: targets=4; nearestIndex=0; dx=58.5; dy=-313; distance=318.42; elapsedMs=217.35
+[04:41:35] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:35] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:36] TARGET TEMPLATE HIT stump5.png matches=4
+[04:41:36] TARGET 1 template=stump1.png x=877 y=137 dx=58.5 dy=-313 distance=318.42
+[04:41:36] TARGET 2 template=stump1.png x=1117 y=192 dx=298.5 dy=-258 distance=394.55
+[04:41:36] TARGET 3 template=stump1.png x=441 y=282 dx=-377.5 dy=-168 distance=413.2
+[04:41:36] TARGET 4 template=stump5.png x=807 y=136 dx=-9.5 dy=-318 distance=318.14
+[04:41:36] DISTANCE RESULT: targets=4; nearestIndex=3; dx=-9.5; dy=-318; distance=318.14; elapsedMs=236.36
+[04:41:36] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:36] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:36] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:36] TARGET TEMPLATE HIT stump4.png matches=2
+[04:41:36] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:36] TARGET 1 template=stump1.png x=1117 y=192 dx=298.5 dy=-258 distance=394.55
+[04:41:36] TARGET 2 template=stump1.png x=441 y=282 dx=-377.5 dy=-168 distance=413.2
+[04:41:36] TARGET 3 template=stump3.png x=1233 y=232 dx=421 dy=-218.5 distance=474.32
+[04:41:36] TARGET 4 template=stump4.png x=1138 y=386 dx=318.5 dy=-71 distance=326.32
+[04:41:36] TARGET 5 template=stump4.png x=1074 y=622 dx=254.5 dy=165 distance=303.31
+[04:41:36] DISTANCE RESULT: targets=5; nearestIndex=4; dx=254.5; dy=165; distance=303.31; elapsedMs=225.48
+[04:41:37] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:37] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:37] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:37] TARGET 1 template=stump1.png x=1275 y=237 dx=456.5 dy=-213 distance=503.75
+[04:41:37] TARGET 2 template=stump3.png x=903 y=132 dx=91 dy=-318.5 distance=331.24
+[04:41:37] DISTANCE RESULT: targets=2; nearestIndex=1; dx=91; dy=-318.5; distance=331.24; elapsedMs=183.51
+[04:41:37] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:37] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:37] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:37] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:37] TARGET 1 template=stump1.png x=1416 y=282 dx=597.5 dy=-168 distance=620.67
+[04:41:37] TARGET 2 template=stump3.png x=769 y=143 dx=-43 dy=-307.5 distance=310.49
+[04:41:37] TARGET 3 template=stump3.png x=1164 y=376 dx=352 dy=-74.5 distance=359.8
+[04:41:37] TARGET 4 template=stump4.png x=1028 y=629 dx=208.5 dy=172 distance=270.29
+[04:41:37] DISTANCE RESULT: targets=4; nearestIndex=3; dx=208.5; dy=172; distance=270.29; elapsedMs=207.27
+[04:41:37] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:37] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:37] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:37] TARGET 1 template=stump1.png x=1252 y=236 dx=433.5 dy=-214 distance=483.44
+[04:41:37] DISTANCE RESULT: targets=1; nearestIndex=0; dx=433.5; dy=-214; distance=483.44; elapsedMs=167
+[04:41:38] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:38] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:38] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:38] TARGET 1 template=stump3.png x=791 y=136 dx=-21 dy=-314.5 distance=315.2
+[04:41:38] TARGET 2 template=stump4.png x=1380 y=281 dx=560.5 dy=-176 distance=587.48
+[04:41:38] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-21; dy=-314.5; distance=315.2; elapsedMs=185.78
+[04:41:38] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:38] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:38] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:38] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:38] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:38] TARGET 1 template=stump1.png x=810 y=136 dx=-8.5 dy=-314 distance=314.12
+[04:41:38] TARGET 2 template=stump3.png x=500 y=294 dx=-312 dy=-156.5 distance=349.05
+[04:41:38] TARGET 3 template=stump4.png x=1217 y=229 dx=397.5 dy=-228 distance=458.25
+[04:41:38] DISTANCE RESULT: targets=3; nearestIndex=0; dx=-8.5; dy=-314; distance=314.12; elapsedMs=192.25
+[04:41:39] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:39] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:39] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:39] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:39] TARGET 1 template=stump1.png x=973 y=640 dx=154.5 dy=190 distance=244.89
+[04:41:39] TARGET 2 template=stump4.png x=311 y=570 dx=-508.5 dy=113 distance=520.9
+[04:41:39] TARGET 3 template=stump5.png x=1178 y=374 dx=361.5 dy=-80 distance=370.25
+[04:41:39] DISTANCE RESULT: targets=3; nearestIndex=0; dx=154.5; dy=190; distance=244.89; elapsedMs=199.77
+[04:41:39] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:39] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:39] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:39] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:39] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:39] TARGET 1 template=stump1.png x=1167 y=216 dx=348.5 dy=-234 distance=419.77
+[04:41:39] TARGET 2 template=stump1.png x=309 y=579 dx=-509.5 dy=129 distance=525.58
+[04:41:39] TARGET 3 template=stump3.png x=1205 y=226 dx=393 dy=-224.5 distance=452.6
+[04:41:39] TARGET 4 template=stump4.png x=755 y=151 dx=-64.5 dy=-306 distance=312.72
+[04:41:39] DISTANCE RESULT: targets=4; nearestIndex=3; dx=-64.5; dy=-306; distance=312.72; elapsedMs=218.26
+[04:41:39] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:39] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:40] TARGET 1 template=stump1.png x=755 y=163 dx=-63.5 dy=-287 distance=293.94
+[04:41:40] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-63.5; dy=-287; distance=293.94; elapsedMs=177.12
+[04:41:40] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:40] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:40] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:40] TARGET 1 template=stump3.png x=1228 y=232 dx=416 dy=-218.5 distance=469.89
+[04:41:40] TARGET 2 template=stump5.png x=952 y=129 dx=135.5 dy=-325 distance=352.12
+[04:41:40] TARGET 3 template=stump5.png x=1140 y=206 dx=323.5 dy=-248 distance=407.62
+[04:41:40] DISTANCE RESULT: targets=3; nearestIndex=1; dx=135.5; dy=-325; distance=352.12; elapsedMs=187.7
+[04:41:40] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:40] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:40] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:40] TARGET 1 template=stump1.png x=729 y=188 dx=-89.5 dy=-262 distance=276.87
+[04:41:40] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-89.5; dy=-262; distance=276.87; elapsedMs=163.8
+[04:41:41] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:41] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:41] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:41] TARGET 1 template=stump1.png x=1115 y=191 dx=296.5 dy=-259 distance=393.69
+[04:41:41] TARGET 2 template=stump1.png x=701 y=206 dx=-117.5 dy=-244 distance=270.82
+[04:41:41] TARGET 3 template=stump1.png x=327 y=567 dx=-491.5 dy=117 distance=505.23
+[04:41:41] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-117.5; dy=-244; distance=270.82; elapsedMs=209.45
+[04:41:41] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:41] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:41] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:41] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:41] TARGET 1 template=stump1.png x=1115 y=191 dx=296.5 dy=-259 distance=393.69
+[04:41:41] TARGET 2 template=stump4.png x=899 y=132 dx=79.5 dy=-325 distance=334.58
+[04:41:41] DISTANCE RESULT: targets=2; nearestIndex=1; dx=79.5; dy=-325; distance=334.58; elapsedMs=188.99
+[04:41:41] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:41] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:42] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:42] TARGET 1 template=stump1.png x=1117 y=192 dx=298.5 dy=-258 distance=394.55
+[04:41:42] TARGET 2 template=stump5.png x=669 y=219 dx=-147.5 dy=-235 distance=277.45
+[04:41:42] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-147.5; dy=-235; distance=277.45; elapsedMs=182.31
+[04:41:42] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:42] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:42] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:42] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:42] TARGET 1 template=stump1.png x=1117 y=192 dx=298.5 dy=-258 distance=394.55
+[04:41:42] TARGET 2 template=stump1.png x=1310 y=247 dx=491.5 dy=-203 distance=531.77
+[04:41:42] TARGET 3 template=stump4.png x=875 y=133 dx=55.5 dy=-324 distance=328.72
+[04:41:42] DISTANCE RESULT: targets=3; nearestIndex=2; dx=55.5; dy=-324; distance=328.72; elapsedMs=183.04
+[04:41:42] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:42] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:42] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:42] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:42] TARGET 1 template=stump1.png x=874 y=138 dx=55.5 dy=-312 distance=316.9
+[04:41:42] TARGET 2 template=stump1.png x=1117 y=192 dx=298.5 dy=-258 distance=394.55
+[04:41:42] TARGET 3 template=stump3.png x=1207 y=357 dx=395 dy=-93.5 distance=405.92
+[04:41:42] TARGET 4 template=stump5.png x=643 y=229 dx=-173.5 dy=-225 distance=284.13
+[04:41:42] DISTANCE RESULT: targets=4; nearestIndex=3; dx=-173.5; dy=-225; distance=284.13; elapsedMs=213.63
+[04:41:43] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:43] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:43] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:43] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:43] TARGET 1 template=stump1.png x=1117 y=192 dx=298.5 dy=-258 distance=394.55
+[04:41:43] TARGET 2 template=stump1.png x=615 y=239 dx=-203.5 dy=-211 distance=293.14
+[04:41:43] TARGET 3 template=stump1.png x=519 y=297 dx=-299.5 dy=-153 distance=336.32
+[04:41:43] TARGET 4 template=stump4.png x=1256 y=234 dx=436.5 dy=-223 distance=490.16
+[04:41:43] TARGET 5 template=stump5.png x=270 y=599 dx=-546.5 dy=145 distance=565.41
+[04:41:43] DISTANCE RESULT: targets=5; nearestIndex=1; dx=-203.5; dy=-211; distance=293.14; elapsedMs=234.65
+[04:41:43] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:43] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:43] TARGET 1 template=stump4.png x=1068 y=624 dx=248.5 dy=167 distance=299.4
+[04:41:43] DISTANCE RESULT: targets=1; nearestIndex=0; dx=248.5; dy=167; distance=299.4; elapsedMs=161.65
+[04:41:44] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:44] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:44] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:44] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:44] TARGET 1 template=stump1.png x=498 y=290 dx=-320.5 dy=-160 distance=358.22
+[04:41:44] TARGET 2 template=stump1.png x=1069 y=628 dx=250.5 dy=178 distance=307.3
+[04:41:44] TARGET 3 template=stump3.png x=834 y=136 dx=22 dy=-314.5 distance=315.27
+[04:41:44] TARGET 4 template=stump3.png x=1119 y=195 dx=307 dy=-255.5 distance=399.41
+[04:41:44] DISTANCE RESULT: targets=4; nearestIndex=1; dx=250.5; dy=178; distance=307.3; elapsedMs=206.96
+[04:41:44] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:44] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:44] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:44] TARGET 1 template=stump1.png x=486 y=286 dx=-332.5 dy=-164 distance=370.75
+[04:41:44] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-332.5; dy=-164; distance=370.75; elapsedMs=179.75
+[04:41:44] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:44] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:44] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:44] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:44] TARGET 1 template=stump1.png x=483 y=285 dx=-335.5 dy=-165 distance=373.88
+[04:41:44] TARGET 2 template=stump1.png x=274 y=599 dx=-544.5 dy=149 distance=564.52
+[04:41:44] TARGET 3 template=stump3.png x=858 y=136 dx=46 dy=-314.5 distance=317.85
+[04:41:44] TARGET 4 template=stump3.png x=1271 y=305 dx=459 dy=-145.5 distance=481.51
+[04:41:44] DISTANCE RESULT: targets=4; nearestIndex=2; dx=46; dy=-314.5; distance=317.85; elapsedMs=202.54
+[04:41:45] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:45] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:45] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:45] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:45] TARGET 1 template=stump1.png x=486 y=286 dx=-332.5 dy=-164 distance=370.75
+[04:41:45] TARGET 2 template=stump3.png x=1180 y=219 dx=368 dy=-231.5 distance=434.76
+[04:41:45] TARGET 3 template=stump3.png x=649 y=223 dx=-163 dy=-227.5 distance=279.87
+[04:41:45] DISTANCE RESULT: targets=3; nearestIndex=2; dx=-163; dy=-227.5; distance=279.87; elapsedMs=196.64
+[04:41:46] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:46] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:46] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:46] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:46] TARGET 1 template=stump1.png x=910 y=134 dx=91.5 dy=-316 distance=328.98
+[04:41:46] TARGET 2 template=stump1.png x=1201 y=224 dx=382.5 dy=-226 distance=444.28
+[04:41:46] TARGET 3 template=stump3.png x=1312 y=287 dx=500 dy=-163.5 distance=526.05
+[04:41:46] DISTANCE RESULT: targets=3; nearestIndex=0; dx=91.5; dy=-316; distance=328.98; elapsedMs=202.23
+[04:41:46] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:46] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:46] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:46] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:46] TARGET 1 template=stump3.png x=671 y=214 dx=-141 dy=-236.5 distance=275.34
+[04:41:46] TARGET 2 template=stump4.png x=455 y=282 dx=-364.5 dy=-175 distance=404.33
+[04:41:46] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-141; dy=-236.5; distance=275.34; elapsedMs=194.5
+[04:41:46] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:46] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:46] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:46] TARGET 1 template=stump1.png x=884 y=136 dx=65.5 dy=-314 distance=320.76
+[04:41:46] TARGET 2 template=stump1.png x=1181 y=219 dx=362.5 dy=-231 distance=429.85
+[04:41:46] TARGET 3 template=stump5.png x=689 y=209 dx=-127.5 dy=-245 distance=276.19
+[04:41:46] TARGET 4 template=stump5.png x=211 y=620 dx=-605.5 dy=166 distance=627.84
+[04:41:46] DISTANCE RESULT: targets=4; nearestIndex=2; dx=-127.5; dy=-245; distance=276.19; elapsedMs=216.22
+[04:41:47] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:47] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:47] TARGET 1 template=stump4.png x=430 y=280 dx=-389.5 dy=-177 distance=427.83
+[04:41:47] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-389.5; dy=-177; distance=427.83; elapsedMs=166.78
+[04:41:47] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:47] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:47] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:47] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:47] TARGET 1 template=stump1.png x=1158 y=212 dx=339.5 dy=-238 distance=414.61
+[04:41:47] TARGET 2 template=stump4.png x=406 y=273 dx=-413.5 dy=-184 distance=452.59
+[04:41:47] DISTANCE RESULT: targets=2; nearestIndex=0; dx=339.5; dy=-238; distance=414.61; elapsedMs=188.44
+[04:41:48] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:48] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:48] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:48] TARGET 1 template=stump1.png x=1158 y=212 dx=339.5 dy=-238 distance=414.61
+[04:41:48] TARGET 2 template=stump1.png x=648 y=229 dx=-170.5 dy=-221 distance=279.13
+[04:41:48] TARGET 3 template=stump1.png x=406 y=273 dx=-412.5 dy=-177 distance=448.87
+[04:41:48] TARGET 4 template=stump5.png x=829 y=138 dx=12.5 dy=-316 distance=316.25
+[04:41:48] DISTANCE RESULT: targets=4; nearestIndex=1; dx=-170.5; dy=-221; distance=279.13; elapsedMs=201.82
+[04:41:48] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:48] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:48] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:48] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:48] TARGET 1 template=stump1.png x=1158 y=212 dx=339.5 dy=-238 distance=414.61
+[04:41:48] TARGET 2 template=stump1.png x=647 y=228 dx=-171.5 dy=-222 distance=280.53
+[04:41:48] TARGET 3 template=stump1.png x=406 y=273 dx=-412.5 dy=-177 distance=448.87
+[04:41:48] TARGET 4 template=stump3.png x=1078 y=621 dx=266 dy=170.5 distance=315.95
+[04:41:48] DISTANCE RESULT: targets=4; nearestIndex=1; dx=-171.5; dy=-222; distance=280.53; elapsedMs=203.85
+[04:41:48] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:48] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:48] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:48] TARGET TEMPLATE HIT stump5.png matches=4
+[04:41:48] TARGET 1 template=stump1.png x=1158 y=212 dx=339.5 dy=-238 distance=414.61
+[04:41:48] TARGET 2 template=stump1.png x=648 y=228 dx=-170.5 dy=-222 distance=279.92
+[04:41:48] TARGET 3 template=stump1.png x=407 y=273 dx=-411.5 dy=-177 distance=447.95
+[04:41:48] TARGET 4 template=stump4.png x=799 y=134 dx=-20.5 dy=-323 distance=323.65
+[04:41:48] DISTANCE RESULT: targets=4; nearestIndex=1; dx=-170.5; dy=-222; distance=279.92; elapsedMs=223.57
+[04:41:49] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:49] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:49] TARGET TEMPLATE HIT stump5.png matches=4
+[04:41:49] TARGET 1 template=stump1.png x=1158 y=212 dx=339.5 dy=-238 distance=414.61
+[04:41:49] TARGET 2 template=stump1.png x=648 y=228 dx=-170.5 dy=-222 distance=279.92
+[04:41:49] TARGET 3 template=stump1.png x=407 y=273 dx=-411.5 dy=-177 distance=447.95
+[04:41:49] TARGET 4 template=stump5.png x=1106 y=616 dx=289.5 dy=162 distance=331.74
+[04:41:49] DISTANCE RESULT: targets=4; nearestIndex=1; dx=-170.5; dy=-222; distance=279.92; elapsedMs=211.91
+[04:41:50] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:50] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:50] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:50] TARGET 1 template=stump1.png x=648 y=228 dx=-170.5 dy=-222 distance=279.92
+[04:41:50] TARGET 2 template=stump1.png x=407 y=273 dx=-411.5 dy=-177 distance=447.95
+[04:41:50] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-170.5; dy=-222; distance=279.92; elapsedMs=187.23
+[04:41:50] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:50] TARGET TEMPLATE HIT stump1.png matches=3
+[04:41:50] TARGET TEMPLATE HIT stump4.png matches=3
+[04:41:50] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:50] TARGET 1 template=stump1.png x=753 y=165 dx=-65.5 dy=-285 distance=292.43
+[04:41:50] TARGET 2 template=stump1.png x=648 y=228 dx=-170.5 dy=-222 distance=279.92
+[04:41:50] TARGET 3 template=stump1.png x=407 y=273 dx=-411.5 dy=-177 distance=447.95
+[04:41:50] TARGET 4 template=stump4.png x=1108 y=191 dx=288.5 dy=-266 distance=392.41
+[04:41:50] TARGET 5 template=stump4.png x=1282 y=238 dx=462.5 dy=-219 distance=511.73
+[04:41:50] TARGET 6 template=stump4.png x=1055 y=628 dx=235.5 dy=171 distance=291.03
+[04:41:50] DISTANCE RESULT: targets=6; nearestIndex=1; dx=-170.5; dy=-222; distance=279.92; elapsedMs=243.88
+[04:41:50] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:50] TARGET TEMPLATE HIT stump1.png matches=4
+[04:41:50] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:50] TARGET 1 template=stump1.png x=746 y=171 dx=-72.5 dy=-279 distance=288.27
+[04:41:50] TARGET 2 template=stump1.png x=1109 y=186 dx=290.5 dy=-264 distance=392.54
+[04:41:50] TARGET 3 template=stump1.png x=407 y=273 dx=-411.5 dy=-177 distance=447.95
+[04:41:50] TARGET 4 template=stump1.png x=1054 y=631 dx=235.5 dy=181 distance=297.02
+[04:41:50] DISTANCE RESULT: targets=4; nearestIndex=0; dx=-72.5; dy=-279; distance=288.27; elapsedMs=211.53
+[04:41:51] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:51] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:51] TARGET TEMPLATE HIT stump4.png matches=4
+[04:41:51] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:51] TARGET 1 template=stump1.png x=746 y=171 dx=-72.5 dy=-279 distance=288.27
+[04:41:51] TARGET 2 template=stump4.png x=1087 y=178 dx=267.5 dy=-279 distance=386.52
+[04:41:51] TARGET 3 template=stump4.png x=619 y=234 dx=-200.5 dy=-223 distance=299.88
+[04:41:51] TARGET 4 template=stump4.png x=1257 y=235 dx=437.5 dy=-222 distance=490.6
+[04:41:51] TARGET 5 template=stump4.png x=1031 y=630 dx=211.5 dy=173 distance=273.24
+[04:41:51] DISTANCE RESULT: targets=5; nearestIndex=4; dx=211.5; dy=173; distance=273.24; elapsedMs=235.47
+[04:41:51] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:51] TARGET TEMPLATE HIT stump1.png matches=4
+[04:41:51] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:51] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:51] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:51] TARGET 1 template=stump1.png x=746 y=171 dx=-72.5 dy=-279 distance=288.27
+[04:41:51] TARGET 2 template=stump1.png x=1089 y=173 dx=270.5 dy=-277 distance=387.17
+[04:41:51] TARGET 3 template=stump1.png x=618 y=238 dx=-200.5 dy=-212 distance=291.79
+[04:41:51] TARGET 4 template=stump1.png x=1031 y=632 dx=212.5 dy=182 distance=279.79
+[04:41:51] TARGET 5 template=stump3.png x=411 y=275 dx=-401 dy=-175.5 distance=437.72
+[04:41:51] TARGET 6 template=stump4.png x=243 y=605 dx=-576.5 dy=148 distance=595.19
+[04:41:51] DISTANCE RESULT: targets=6; nearestIndex=3; dx=212.5; dy=182; distance=279.79; elapsedMs=238.65
+[04:41:52] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:52] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:52] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:52] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:52] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:52] TARGET 1 template=stump1.png x=746 y=171 dx=-72.5 dy=-279 distance=288.27
+[04:41:52] TARGET 2 template=stump3.png x=1074 y=167 dx=262 dy=-283.5 distance=386.03
+[04:41:52] TARGET 3 template=stump4.png x=1207 y=226 dx=387.5 dy=-231 distance=451.13
+[04:41:52] DISTANCE RESULT: targets=3; nearestIndex=0; dx=-72.5; dy=-279; distance=288.27; elapsedMs=192.27
+[04:41:52] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:52] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:52] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:52] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:52] TARGET 1 template=stump1.png x=1206 y=226 dx=387.5 dy=-224 distance=447.58
+[04:41:52] TARGET 2 template=stump1.png x=567 y=246 dx=-251.5 dy=-204 distance=323.83
+[04:41:52] TARGET 3 template=stump3.png x=465 y=282 dx=-347 dy=-168.5 distance=385.75
+[04:41:52] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-251.5; dy=-204; distance=323.83; elapsedMs=188.63
+[04:41:53] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:53] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:53] TARGET TEMPLATE HIT stump4.png matches=2
+[04:41:53] TARGET 1 template=stump3.png x=1101 y=185 dx=289 dy=-265.5 distance=392.44
+[04:41:53] TARGET 2 template=stump4.png x=713 y=189 dx=-106.5 dy=-268 distance=288.39
+[04:41:53] TARGET 3 template=stump4.png x=1184 y=220 dx=364.5 dy=-237 distance=434.77
+[04:41:53] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-106.5; dy=-268; distance=288.39; elapsedMs=190.53
+[04:41:53] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:53] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:53] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:53] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:53] TARGET 1 template=stump1.png x=1183 y=219 dx=364.5 dy=-231 distance=431.53
+[04:41:53] TARGET 2 template=stump1.png x=542 y=246 dx=-276.5 dy=-204 distance=343.61
+[04:41:53] TARGET 3 template=stump3.png x=490 y=290 dx=-322 dy=-160.5 distance=359.78
+[04:41:53] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-276.5; dy=-204; distance=343.61; elapsedMs=196.74
+[04:41:54] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:54] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:54] TARGET 1 template=stump1.png x=513 y=251 dx=-305.5 dy=-199 distance=364.6
+[04:41:54] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-305.5; dy=-199; distance=364.6; elapsedMs=175.22
+[04:41:54] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:54] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:54] TARGET 1 template=stump5.png x=658 y=223 dx=-158.5 dy=-231 distance=280.15
+[04:41:54] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-158.5; dy=-231; distance=280.15; elapsedMs=173.23
+[04:41:54] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:54] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:54] TARGET 1 template=stump4.png x=1144 y=208 dx=324.5 dy=-249 distance=409.02
+[04:41:54] DISTANCE RESULT: targets=1; nearestIndex=0; dx=324.5; dy=-249; distance=409.02; elapsedMs=154.76
+[04:41:55] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:55] TARGET TEMPLATE HIT stump1.png matches=2
+[04:41:55] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:55] TARGET TEMPLATE HIT stump5.png matches=2
+[04:41:55] TARGET 1 template=stump1.png x=1140 y=204 dx=321.5 dy=-246 distance=404.82
+[04:41:55] TARGET 2 template=stump1.png x=1032 y=632 dx=213.5 dy=182 distance=280.55
+[04:41:55] TARGET 3 template=stump3.png x=1187 y=221 dx=375 dy=-229.5 distance=439.65
+[04:41:55] DISTANCE RESULT: targets=3; nearestIndex=1; dx=213.5; dy=182; distance=280.55; elapsedMs=216.48
+[04:41:55] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:55] TARGET TEMPLATE HIT stump3.png matches=2
+[04:41:55] TARGET 1 template=stump3.png x=649 y=223 dx=-163 dy=-227.5 distance=279.87
+[04:41:55] TARGET 2 template=stump3.png x=534 y=245 dx=-278 dy=-205.5 distance=345.71
+[04:41:55] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-163; dy=-227.5; distance=279.87; elapsedMs=171.81
+[04:41:56] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:56] PLAYER FOUND but TARGET MISS after 165.72 ms
+[04:41:56] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:56] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:56] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:56] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:56] TARGET 1 template=stump1.png x=1097 y=180 dx=278.5 dy=-270 distance=387.89
+[04:41:56] TARGET 2 template=stump3.png x=1426 y=276 dx=614 dy=-174.5 distance=638.32
+[04:41:56] DISTANCE RESULT: targets=2; nearestIndex=0; dx=278.5; dy=-270; distance=387.89; elapsedMs=170.18
+[04:41:56] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:56] TARGET TEMPLATE HIT stump3.png matches=1
+[04:41:57] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:57] TARGET 1 template=stump3.png x=695 y=200 dx=-117 dy=-250.5 distance=276.48
+[04:41:57] TARGET 2 template=stump5.png x=1257 y=236 dx=440.5 dy=-218 distance=491.49
+[04:41:57] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-117; dy=-250.5; distance=276.48; elapsedMs=188.98
+[04:41:57] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:57] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:57] TARGET 1 template=stump5.png x=1072 y=162 dx=255.5 dy=-292 distance=388
+[04:41:57] DISTANCE RESULT: targets=1; nearestIndex=0; dx=255.5; dy=-292; distance=388; elapsedMs=159.71
+[04:41:57] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:57] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:57] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:57] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:57] TARGET 1 template=stump1.png x=723 y=191 dx=-95.5 dy=-259 distance=276.05
+[04:41:57] TARGET 2 template=stump4.png x=1235 y=232 dx=415.5 dy=-225 distance=472.51
+[04:41:57] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-95.5; dy=-259; distance=276.05; elapsedMs=185.24
+[04:41:58] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:58] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:58] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:58] TARGET TEMPLATE HIT stump5.png matches=3
+[04:41:58] TARGET 1 template=stump1.png x=699 y=206 dx=-119.5 dy=-244 distance=271.69
+[04:41:58] TARGET 2 template=stump4.png x=1206 y=226 dx=386.5 dy=-231 distance=450.27
+[04:41:58] TARGET 3 template=stump5.png x=558 y=246 dx=-258.5 dy=-208 distance=331.79
+[04:41:58] DISTANCE RESULT: targets=3; nearestIndex=0; dx=-119.5; dy=-244; distance=271.69; elapsedMs=199.67
+[04:41:58] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:58] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:58] TARGET 1 template=stump5.png x=1030 y=133 dx=213.5 dy=-321 distance=385.52
+[04:41:58] DISTANCE RESULT: targets=1; nearestIndex=0; dx=213.5; dy=-321; distance=385.52; elapsedMs=172.33
+[04:41:58] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:59] TARGET TEMPLATE HIT stump4.png matches=2
+[04:41:59] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:59] TARGET 1 template=stump4.png x=1184 y=220 dx=364.5 dy=-237 distance=434.77
+[04:41:59] TARGET 2 template=stump4.png x=531 y=243 dx=-288.5 dy=-214 distance=359.21
+[04:41:59] TARGET 3 template=stump5.png x=665 y=221 dx=-151.5 dy=-233 distance=277.92
+[04:41:59] DISTANCE RESULT: targets=3; nearestIndex=2; dx=-151.5; dy=-233; distance=277.92; elapsedMs=183.04
+[04:41:59] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:59] TARGET TEMPLATE HIT stump4.png matches=1
+[04:41:59] TARGET 1 template=stump4.png x=1001 y=130 dx=181.5 dy=-327 distance=373.99
+[04:41:59] DISTANCE RESULT: targets=1; nearestIndex=0; dx=181.5; dy=-327; distance=373.99; elapsedMs=172.38
+[04:41:59] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:41:59] TARGET TEMPLATE HIT stump1.png matches=1
+[04:41:59] TARGET TEMPLATE HIT stump4.png matches=3
+[04:41:59] TARGET TEMPLATE HIT stump5.png matches=1
+[04:41:59] TARGET 1 template=stump1.png x=939 y=638 dx=120.5 dy=188 distance=223.3
+[04:41:59] TARGET 2 template=stump4.png x=1161 y=214 dx=341.5 dy=-243 distance=419.13
+[04:41:59] TARGET 3 template=stump4.png x=635 y=228 dx=-184.5 dy=-229 distance=294.08
+[04:41:59] TARGET 4 template=stump4.png x=507 y=247 dx=-312.5 dy=-210 distance=376.51
+[04:41:59] DISTANCE RESULT: targets=4; nearestIndex=0; dx=120.5; dy=188; distance=223.3; elapsedMs=221.98
+[04:42:00] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:00] TARGET TEMPLATE HIT stump1.png matches=4
+[04:42:00] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:00] TARGET TEMPLATE HIT stump5.png matches=3
+[04:42:00] TARGET 1 template=stump1.png x=1141 y=204 dx=322.5 dy=-246 distance=405.61
+[04:42:00] TARGET 2 template=stump1.png x=611 y=240 dx=-207.5 dy=-210 distance=295.22
+[04:42:00] TARGET 3 template=stump1.png x=524 y=247 dx=-294.5 dy=-203 distance=357.69
+[04:42:00] TARGET 4 template=stump1.png x=939 y=638 dx=120.5 dy=188 distance=223.3
+[04:42:00] TARGET 5 template=stump3.png x=551 y=314 dx=-261 dy=-136.5 distance=294.54
+[04:42:00] DISTANCE RESULT: targets=5; nearestIndex=3; dx=120.5; dy=188; distance=223.3; elapsedMs=237.41
+[04:42:00] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:00] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:00] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:01] TARGET TEMPLATE HIT stump5.png matches=2
+[04:42:01] TARGET 1 template=stump1.png x=958 y=129 dx=139.5 dy=-321 distance=350
+[04:42:01] TARGET 2 template=stump1.png x=610 y=240 dx=-208.5 dy=-210 distance=295.93
+[04:42:01] TARGET 3 template=stump3.png x=939 y=636 dx=127 dy=185.5 distance=224.81
+[04:42:01] DISTANCE RESULT: targets=3; nearestIndex=2; dx=127; dy=185.5; distance=224.81; elapsedMs=226.62
+[04:42:01] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:01] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:01] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:01] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:01] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:01] TARGET 1 template=stump1.png x=610 y=240 dx=-208.5 dy=-210 distance=295.93
+[04:42:01] TARGET 2 template=stump3.png x=575 y=335 dx=-237 dy=-115.5 distance=263.65
+[04:42:01] TARGET 3 template=stump4.png x=1108 y=191 dx=288.5 dy=-266 distance=392.41
+[04:42:01] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-237; dy=-115.5; distance=263.65; elapsedMs=204.87
+[04:42:01] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:01] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:01] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:01] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:01] TARGET 1 template=stump1.png x=610 y=240 dx=-208.5 dy=-210 distance=295.93
+[04:42:01] TARGET 2 template=stump4.png x=922 y=132 dx=102.5 dy=-325 distance=340.78
+[04:42:01] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-208.5; dy=-210; distance=295.93; elapsedMs=190.45
+[04:42:01] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:01] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:01] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:01] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:01] TARGET 1 template=stump1.png x=610 y=240 dx=-208.5 dy=-210 distance=295.93
+[04:42:01] TARGET 2 template=stump4.png x=1089 y=179 dx=269.5 dy=-278 distance=387.19
+[04:42:01] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-208.5; dy=-210; distance=295.93; elapsedMs=187.97
+[04:42:02] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:02] TARGET TEMPLATE HIT stump1.png matches=3
+[04:42:02] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:02] TARGET TEMPLATE HIT stump5.png matches=3
+[04:42:02] TARGET 1 template=stump1.png x=896 y=134 dx=77.5 dy=-316 distance=325.36
+[04:42:02] TARGET 2 template=stump1.png x=1082 y=167 dx=263.5 dy=-283 distance=386.68
+[04:42:02] TARGET 3 template=stump1.png x=610 y=240 dx=-208.5 dy=-210 distance=295.93
+[04:42:02] TARGET 4 template=stump3.png x=632 y=367 dx=-180 dy=-83.5 distance=198.42
+[04:42:02] DISTANCE RESULT: targets=4; nearestIndex=3; dx=-180; dy=-83.5; distance=198.42; elapsedMs=228.9
+[04:42:02] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:02] TARGET TEMPLATE HIT stump1.png matches=3
+[04:42:03] TARGET TEMPLATE HIT stump5.png matches=2
+[04:42:03] TARGET 1 template=stump1.png x=897 y=134 dx=78.5 dy=-316 distance=325.6
+[04:42:03] TARGET 2 template=stump1.png x=1084 y=168 dx=265.5 dy=-282 distance=387.32
+[04:42:03] TARGET 3 template=stump1.png x=610 y=240 dx=-208.5 dy=-210 distance=295.93
+[04:42:03] DISTANCE RESULT: targets=3; nearestIndex=2; dx=-208.5; dy=-210; distance=295.93; elapsedMs=214.08
+[04:42:03] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:03] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:03] TARGET TEMPLATE HIT stump5.png matches=2
+[04:42:03] TARGET 1 template=stump1.png x=897 y=134 dx=78.5 dy=-316 distance=325.6
+[04:42:03] TARGET 2 template=stump1.png x=1084 y=168 dx=265.5 dy=-282 distance=387.32
+[04:42:03] DISTANCE RESULT: targets=2; nearestIndex=0; dx=78.5; dy=-316; distance=325.6; elapsedMs=187.3
+[04:42:03] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:03] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:03] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:03] TARGET 1 template=stump1.png x=897 y=134 dx=78.5 dy=-316 distance=325.6
+[04:42:03] TARGET 2 template=stump1.png x=1084 y=168 dx=265.5 dy=-282 distance=387.32
+[04:42:03] DISTANCE RESULT: targets=2; nearestIndex=0; dx=78.5; dy=-316; distance=325.6; elapsedMs=180.03
+[04:42:03] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:03] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:03] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:03] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:03] TARGET 1 template=stump1.png x=1084 y=168 dx=265.5 dy=-282 distance=387.32
+[04:42:03] TARGET 2 template=stump3.png x=898 y=132 dx=86 dy=-318.5 distance=329.91
+[04:42:04] DISTANCE RESULT: targets=2; nearestIndex=1; dx=86; dy=-318.5; distance=329.91; elapsedMs=197.1
+[04:42:04] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:04] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:04] TARGET 1 template=stump3.png x=927 y=132 dx=115 dy=-318.5 distance=338.63
+[04:42:04] DISTANCE RESULT: targets=1; nearestIndex=0; dx=115; dy=-318.5; distance=338.63; elapsedMs=166.55
+[04:42:04] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:04] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:05] TARGET TEMPLATE HIT stump5.png matches=2
+[04:42:05] TARGET 1 template=stump1.png x=557 y=246 dx=-261.5 dy=-204 distance=331.66
+[04:42:05] TARGET 2 template=stump5.png x=1060 y=152 dx=243.5 dy=-302 distance=387.94
+[04:42:05] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-261.5; dy=-204; distance=331.66; elapsedMs=180.8
+[04:42:05] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:05] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:05] TARGET 1 template=stump3.png x=948 y=127 dx=136 dy=-323.5 distance=350.92
+[04:42:05] DISTANCE RESULT: targets=1; nearestIndex=0; dx=136; dy=-323.5; distance=350.92; elapsedMs=180.34
+[04:42:05] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:05] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:05] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:05] TARGET 1 template=stump4.png x=1038 y=136 dx=218.5 dy=-321 distance=388.31
+[04:42:05] TARGET 2 template=stump5.png x=528 y=246 dx=-288.5 dy=-208 distance=355.66
+[04:42:05] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-288.5; dy=-208; distance=355.66; elapsedMs=171.52
+[04:42:05] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:06] PLAYER FOUND but TARGET MISS after 191.47 ms
+[04:42:06] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:06] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:06] TARGET 1 template=stump1.png x=1015 y=132 dx=196.5 dy=-318 distance=373.81
+[04:42:06] DISTANCE RESULT: targets=1; nearestIndex=0; dx=196.5; dy=-318; distance=373.81; elapsedMs=187.61
+[04:42:06] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:06] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:06] TARGET 1 template=stump1.png x=517 y=249 dx=-301.5 dy=-201 distance=362.36
+[04:42:07] DISTANCE RESULT: targets=1; nearestIndex=0; dx=-301.5; dy=-201; distance=362.36; elapsedMs=170.56
+[04:42:07] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:07] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:07] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:07] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:07] TARGET 1 template=stump1.png x=993 y=130 dx=174.5 dy=-320 distance=364.49
+[04:42:07] TARGET 2 template=stump1.png x=1165 y=592 dx=346.5 dy=142 distance=374.47
+[04:42:07] TARGET 3 template=stump3.png x=645 y=224 dx=-167 dy=-226.5 distance=281.41
+[04:42:07] DISTANCE RESULT: targets=3; nearestIndex=2; dx=-167; dy=-226.5; distance=281.41; elapsedMs=193.55
+[04:42:07] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:07] TARGET TEMPLATE HIT stump3.png matches=2
+[04:42:07] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:07] TARGET 1 template=stump3.png x=1029 y=132 dx=217 dy=-318.5 distance=385.4
+[04:42:07] TARGET 2 template=stump3.png x=507 y=248 dx=-305 dy=-202.5 distance=366.1
+[04:42:07] TARGET 3 template=stump4.png x=1139 y=599 dx=319.5 dy=142 distance=349.63
+[04:42:07] DISTANCE RESULT: targets=3; nearestIndex=2; dx=319.5; dy=142; distance=349.63; elapsedMs=191.46
+[04:42:07] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:07] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:07] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:07] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:07] TARGET TEMPLATE HIT stump5.png matches=3
+[04:42:07] TARGET 1 template=stump1.png x=1450 y=274 dx=631.5 dy=-176 distance=655.57
+[04:42:07] TARGET 2 template=stump1.png x=720 y=394 dx=-98.5 dy=-56 distance=113.31
+[04:42:07] TARGET 3 template=stump3.png x=667 y=215 dx=-145 dy=-235.5 distance=276.56
+[04:42:07] TARGET 4 template=stump4.png x=466 y=77 dx=-353.5 dy=-380 distance=519
+[04:42:07] TARGET 5 template=stump5.png x=962 y=130 dx=145.5 dy=-324 distance=355.17
+[04:42:08] DISTANCE RESULT: targets=5; nearestIndex=1; dx=-98.5; dy=-56; distance=113.31; elapsedMs=230.64
+[04:42:08] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:08] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:08] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:08] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:08] TARGET 1 template=stump1.png x=440 y=102 dx=-378.5 dy=-348 distance=514.17
+[04:42:08] TARGET 2 template=stump1.png x=1451 y=274 dx=632.5 dy=-176 distance=656.53
+[04:42:08] TARGET 3 template=stump4.png x=1045 y=141 dx=225.5 dy=-316 distance=388.21
+[04:42:08] DISTANCE RESULT: targets=3; nearestIndex=2; dx=225.5; dy=-316; distance=388.21; elapsedMs=204.94
+[04:42:09] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:09] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:09] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:09] TARGET TEMPLATE HIT stump4.png matches=2
+[04:42:09] TARGET TEMPLATE HIT stump5.png matches=3
+[04:42:09] TARGET 1 template=stump1.png x=430 y=106 dx=-388.5 dy=-344 distance=518.91
+[04:42:09] TARGET 2 template=stump1.png x=673 y=383 dx=-145.5 dy=-67 distance=160.19
+[04:42:09] TARGET 3 template=stump3.png x=934 y=132 dx=122 dy=-318.5 distance=341.07
+[04:42:09] TARGET 4 template=stump4.png x=620 y=233 dx=-199.5 dy=-224 distance=299.96
+[04:42:09] TARGET 5 template=stump4.png x=536 y=244 dx=-283.5 dy=-213 distance=354.6
+[04:42:09] TARGET 6 template=stump5.png x=1081 y=624 dx=264.5 dy=170 distance=314.42
+[04:42:09] DISTANCE RESULT: targets=6; nearestIndex=1; dx=-145.5; dy=-67; distance=160.19; elapsedMs=283.51
+[04:42:09] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:09] TARGET TEMPLATE HIT stump1.png matches=3
+[04:42:09] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:09] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:09] TARGET 1 template=stump1.png x=432 y=105 dx=-386.5 dy=-345 distance=518.08
+[04:42:09] TARGET 2 template=stump1.png x=620 y=238 dx=-198.5 dy=-212 distance=290.42
+[04:42:09] TARGET 3 template=stump1.png x=532 y=247 dx=-286.5 dy=-203 distance=351.13
+[04:42:09] TARGET 4 template=stump4.png x=1024 y=130 dx=204.5 dy=-327 distance=385.68
+[04:42:09] DISTANCE RESULT: targets=4; nearestIndex=1; dx=-198.5; dy=-212; distance=290.42; elapsedMs=222.09
+[04:42:09] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:09] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:09] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:09] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:09] TARGET 1 template=stump1.png x=433 y=104 dx=-385.5 dy=-346 distance=518
+[04:42:09] TARGET 2 template=stump4.png x=640 y=372 dx=-179.5 dy=-85 distance=198.61
+[04:42:09] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-179.5; dy=-85; distance=198.61; elapsedMs=171.4
+[04:42:10] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:10] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:10] TARGET TEMPLATE HIT stump5.png matches=2
+[04:42:10] TARGET 1 template=stump1.png x=433 y=104 dx=-385.5 dy=-346 distance=518
+[04:42:10] TARGET 2 template=stump1.png x=598 y=244 dx=-220.5 dy=-206 distance=301.76
+[04:42:10] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-220.5; dy=-206; distance=301.76; elapsedMs=185.63
+[04:42:10] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:10] TARGET TEMPLATE HIT stump1.png matches=4
+[04:42:10] TARGET TEMPLATE HIT stump5.png matches=4
+[04:42:10] TARGET 1 template=stump1.png x=571 y=245 dx=-247.5 dy=-205 distance=321.37
+[04:42:10] TARGET 2 template=stump1.png x=527 y=247 dx=-291.5 dy=-203 distance=355.22
+[04:42:10] TARGET 3 template=stump1.png x=631 y=365 dx=-187.5 dy=-85 distance=205.87
+[04:42:10] TARGET 4 template=stump1.png x=1067 y=628 dx=248.5 dy=178 distance=305.67
+[04:42:11] DISTANCE RESULT: targets=4; nearestIndex=2; dx=-187.5; dy=-85; distance=205.87; elapsedMs=214.88
+[04:42:11] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:11] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:11] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:11] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:11] TARGET 1 template=stump1.png x=631 y=365 dx=-187.5 dy=-85 distance=205.87
+[04:42:11] TARGET 2 template=stump4.png x=405 y=109 dx=-414.5 dy=-348 distance=541.22
+[04:42:11] DISTANCE RESULT: targets=2; nearestIndex=0; dx=-187.5; dy=-85; distance=205.87; elapsedMs=181.36
+[04:42:11] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:11] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:11] TARGET TEMPLATE HIT stump3.png matches=2
+[04:42:11] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:11] TARGET TEMPLATE HIT stump5.png matches=2
+[04:42:11] TARGET 1 template=stump1.png x=406 y=115 dx=-412.5 dy=-335 distance=531.4
+[04:42:11] TARGET 2 template=stump1.png x=631 y=365 dx=-187.5 dy=-85 distance=205.87
+[04:42:11] TARGET 3 template=stump3.png x=1016 y=127 dx=204 dy=-323.5 distance=382.45
+[04:42:11] TARGET 4 template=stump3.png x=1093 y=181 dx=281 dy=-269.5 distance=389.35
+[04:42:11] TARGET 5 template=stump4.png x=1446 y=271 dx=626.5 dy=-186 distance=653.53
+[04:42:11] TARGET 6 template=stump5.png x=541 y=246 dx=-275.5 dy=-208 distance=345.2
+[04:42:11] DISTANCE RESULT: targets=6; nearestIndex=1; dx=-187.5; dy=-85; distance=205.87; elapsedMs=236.29
+[04:42:11] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:11] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:11] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:11] TARGET TEMPLATE HIT stump5.png matches=2
+[04:42:11] TARGET 1 template=stump1.png x=631 y=365 dx=-187.5 dy=-85 distance=205.87
+[04:42:11] TARGET 2 template=stump1.png x=1067 y=628 dx=248.5 dy=178 distance=305.67
+[04:42:11] TARGET 3 template=stump3.png x=509 y=247 dx=-303 dy=-203.5 distance=364.99
+[04:42:11] DISTANCE RESULT: targets=3; nearestIndex=0; dx=-187.5; dy=-85; distance=205.87; elapsedMs=184.9
+[04:42:12] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:12] TARGET TEMPLATE HIT stump1.png matches=3
+[04:42:12] TARGET TEMPLATE HIT stump3.png matches=2
+[04:42:12] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:12] TARGET TEMPLATE HIT stump5.png matches=3
+[04:42:12] TARGET 1 template=stump1.png x=521 y=248 dx=-297.5 dy=-202 distance=359.6
+[04:42:12] TARGET 2 template=stump1.png x=631 y=365 dx=-187.5 dy=-85 distance=205.87
+[04:42:12] TARGET 3 template=stump1.png x=1067 y=628 dx=248.5 dy=178 distance=305.67
+[04:42:12] TARGET 4 template=stump3.png x=1039 y=138 dx=227 dy=-312.5 distance=386.25
+[04:42:12] TARGET 5 template=stump3.png x=1120 y=197 dx=308 dy=-253.5 distance=398.91
+[04:42:12] TARGET 6 template=stump4.png x=1421 y=277 dx=601.5 dy=-180 distance=627.86
+[04:42:12] DISTANCE RESULT: targets=6; nearestIndex=1; dx=-187.5; dy=-85; distance=205.87; elapsedMs=262.01
+[04:42:13] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:13] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:13] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:13] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:13] TARGET 1 template=stump1.png x=1422 y=281 dx=603.5 dy=-169 distance=626.72
+[04:42:13] TARGET 2 template=stump1.png x=608 y=352 dx=-210.5 dy=-98 distance=232.19
+[04:42:13] TARGET 3 template=stump3.png x=1072 y=623 dx=260 dy=172.5 distance=312.02
+[04:42:13] DISTANCE RESULT: targets=3; nearestIndex=1; dx=-210.5; dy=-98; distance=232.19; elapsedMs=195.79
+[04:42:13] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:13] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:13] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:13] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:13] TARGET 1 template=stump1.png x=1178 y=218 dx=359.5 dy=-232 distance=427.86
+[04:42:13] TARGET 2 template=stump1.png x=1422 y=281 dx=603.5 dy=-169 distance=626.72
+[04:42:13] TARGET 3 template=stump3.png x=1093 y=181 dx=281 dy=-269.5 distance=389.35
+[04:42:13] DISTANCE RESULT: targets=3; nearestIndex=2; dx=281; dy=-269.5; distance=389.35; elapsedMs=190.71
+[04:42:13] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:13] TARGET TEMPLATE HIT stump1.png matches=2
+[04:42:13] TARGET TEMPLATE HIT stump5.png matches=2
+[04:42:13] TARGET 1 template=stump1.png x=1422 y=281 dx=603.5 dy=-169 distance=626.72
+[04:42:13] TARGET 2 template=stump1.png x=587 y=338 dx=-231.5 dy=-112 distance=257.17
+[04:42:13] DISTANCE RESULT: targets=2; nearestIndex=1; dx=-231.5; dy=-112; distance=257.17; elapsedMs=186.98
+[04:42:14] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:14] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:14] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:14] TARGET 1 template=stump1.png x=1422 y=281 dx=603.5 dy=-169 distance=626.72
+[04:42:14] DISTANCE RESULT: targets=1; nearestIndex=0; dx=603.5; dy=-169; distance=626.72; elapsedMs=162.8
+[04:42:14] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:15] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:15] TARGET 1 template=stump3.png x=1150 y=212 dx=338 dy=-238.5 distance=413.67
+[04:42:15] DISTANCE RESULT: targets=1; nearestIndex=0; dx=338; dy=-238.5; distance=413.67; elapsedMs=159.99
+[04:42:15] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:15] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:15] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:15] TARGET TEMPLATE HIT stump4.png matches=1
+[04:42:15] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:15] TARGET 1 template=stump1.png x=546 y=306 dx=-272.5 dy=-144 distance=308.21
+[04:42:15] TARGET 2 template=stump3.png x=1143 y=597 dx=331 dy=146.5 distance=361.97
+[04:42:15] TARGET 3 template=stump4.png x=1106 y=190 dx=286.5 dy=-267 distance=391.63
+[04:42:15] DISTANCE RESULT: targets=3; nearestIndex=0; dx=-272.5; dy=-144; distance=308.21; elapsedMs=201.78
+[04:42:15] PLAYER FOUND template=SuperKiwi_selected.png x=802 y=461
+[04:42:15] TARGET TEMPLATE HIT stump1.png matches=1
+[04:42:15] TARGET TEMPLATE HIT stump3.png matches=1
+[04:42:15] TARGET TEMPLATE HIT stump5.png matches=1
+[04:42:15] TARGET 1 template=stump1.png x=1107 y=186 dx=288.5 dy=-264 distance=391.06
+[04:42:15] TARGET 2 template=stump3.png x=1176 y=218 dx=364 dy=-232.5 distance=431.92
+[04:42:15] TARGET 3 template=stump5.png x=1365 y=282 dx=548.5 dy=-172 distance=574.84
+[04:42:15] DISTANCE RESULT: targets=3; nearestIndex=0; dx=288.5; dy=-264; distance=391.06; elapsedMs=240.49
+[04:42:15] Continuous distance search disabled: Stopped by user.
+[04:51:25] Maple Template Library POC v3 stopped
