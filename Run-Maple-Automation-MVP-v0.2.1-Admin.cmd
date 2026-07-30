@@ -3,7 +3,7 @@ setlocal EnableExtensions
 
 set "ROOT=%~dp0"
 if "%ROOT:~-1%"=="\" set "ROOT=%ROOT:~0,-1%"
-set "SCRIPT=%ROOT%\MapleAutomationMVP_v0.1.1_Admin.au3"
+set "SCRIPT=%ROOT%\MapleAutomationMVP_v0.2.1_Admin.au3"
 
 if not exist "%SCRIPT%" (
     echo.

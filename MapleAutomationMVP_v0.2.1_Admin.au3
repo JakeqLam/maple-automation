@@ -21,7 +21,7 @@ Opt("SendKeyDelay", 10)
 Opt("SendKeyDownDelay", 25)
 
 ; ============================================================================
-; Maple Automation MVP v0.1
+; Maple Automation MVP v0.2.1
 ;
 ; Combined vertical slice:
 ;   1. Bind MapleSaga.exe / MapleStory.exe.
@@ -31,14 +31,14 @@ Opt("SendKeyDownDelay", 25)
 ;   5. Optionally tap a movement skill while moving.
 ;   6. Read the permanent bottom EXP HUD with Tesseract.
 ;   7. Track session EXP, events, last gain, and XP/hour.
+;   8. OCR HP/MP values and send configured potion keys below thresholds.
 ;
 ; Safety:
 ;   F6 toggles runtime start/pause.
 ;   F8 is an emergency stop and releases movement keys.
 ;   Automatic input is sent only while the bound game window is active.
-;
-; Not in this first combined slice:
-;   HP/MP OCR and autopot. Those need their own calibrated HUD readers.
+;   HP/MP autopot is disabled by default and uses stable OCR confirmation.
+;   Every OCR result and every potion decision is written to the debug log.
 ; ============================================================================
 
 Global Const $SEARCH_SCREEN = -1
@@ -73,7 +73,7 @@ Global Const $OVERLAY_BORDER = 3
 Global Const $MAX_OVERLAY_WINDOWS = 220
 
 Global Const $PANEL_WIDTH = 620
-Global Const $PANEL_HEIGHT = 950
+Global Const $PANEL_HEIGHT = 1180
 
 Global Const $APP_COLOR_BACKGROUND = 0x1F1F1F
 Global Const $APP_COLOR_PANEL = 0x2A2A2A
@@ -92,6 +92,18 @@ Global Const $APP_MISS_LOG_INTERVAL_MS = 5000
 Global Const $APP_VISION_STALE_MS = 900
 Global Const $APP_STATS_REFRESH_MS = 250
 
+; Bottom HP/MP HUD text crop, calibrated against the 1280x720 client HUD.
+Global Const $APP_VITALS_INTERVAL = 800
+Global Const $APP_VITALS_STABLE_READS = 2
+Global Const $APP_VITALS_SEVERE_MARGIN = 10
+Global Const $APP_VITALS_MAX_CHANGE_READS = 4
+Global Const $APP_VITALS_MAX_CHANGE_PERCENT = 20
+Global Const $APP_VITALS_SCALE = 4
+Global Const $APP_VITALS_X1_RATIO = 0.167
+Global Const $APP_VITALS_X2_RATIO = 0.329
+Global Const $APP_VITALS_Y1_RATIO = 0.948
+Global Const $APP_VITALS_Y2_RATIO = 0.979
+
 Global $g_aTargetProcessNames[2] = ["MapleSaga.exe", "MapleStory.exe"]
 
 Global $g_hTargetWindow = 0
@@ -104,6 +116,8 @@ Global $g_sOcrTempDirectory = $g_sDebugDirectory & "\ocr_temp"
 Global $g_sLogPath = $g_sDebugDirectory & "\MapleAutomationMVP.log"
 Global $g_sLatestHudRawPath = $g_sOcrTempDirectory & "\latest_exp_hud_raw.png"
 Global $g_sLatestHudScaledPath = $g_sOcrTempDirectory & "\latest_exp_hud_scaled.png"
+Global $g_sLatestVitalsRawPath = $g_sOcrTempDirectory & "\latest_vitals_hud_raw.png"
+Global $g_sLatestVitalsScaledPath = $g_sOcrTempDirectory & "\latest_vitals_hud_scaled.png"
 
 Global $g_bImageSearchStarted = False
 Global $g_bGdiPlusStarted = False
@@ -114,10 +128,13 @@ Global $g_bSearchBusy = False
 Global $g_hContinuousTimer = TimerInit()
 Global $g_hAutoDetectTimer = TimerInit()
 Global $g_hOcrTimer = TimerInit()
+Global $g_hVitalsTimer = TimerInit()
 Global $g_hStatsRefreshTimer = TimerInit()
 Global $g_hSkillTimer = TimerInit()
 Global $g_hVisionSuccessTimer = TimerInit()
 Global $g_hMissLogTimer = TimerInit()
+Global $g_hHpPotionTimer = TimerInit()
+Global $g_hMpPotionTimer = TimerInit()
 
 Global $g_aOverlayHandles[$MAX_OVERLAY_WINDOWS]
 Global $g_iOverlayCount = 0
@@ -146,6 +163,29 @@ Global $g_iLastAcceptedHudExp = -1
 Global $g_iHudCandidateExp = -1
 Global $g_iHudCandidateReads = 0
 Global $g_sLastHudOcr = ""
+
+; HP/MP OCR and autopot state.
+Global $g_iCurrentHp = -1
+Global $g_iMaximumHp = -1
+Global $g_nCurrentHpPercent = -1
+Global $g_iCurrentMp = -1
+Global $g_iMaximumMp = -1
+Global $g_nCurrentMpPercent = -1
+Global $g_sLastVitalsOcr = ""
+Global $g_sLastAutopotDecision = "Waiting for runtime start"
+
+Global $g_iHpCandidateCurrent = -1
+Global $g_iHpCandidateMaximum = -1
+Global $g_nHpCandidatePercent = -1
+Global $g_iHpCandidateReads = 0
+Global $g_iMpCandidateCurrent = -1
+Global $g_iMpCandidateMaximum = -1
+Global $g_nMpCandidatePercent = -1
+Global $g_iMpCandidateReads = 0
+Global $g_iAcceptedHpMaximum = -1
+Global $g_iAcceptedMpMaximum = -1
+Global $g_bHpPotionHasFired = False
+Global $g_bMpPotionHasFired = False
 
 ; GUI handles and controls.
 Global $g_hControlGui = 0
@@ -177,6 +217,18 @@ Global $g_idTapRightButton = 0
 Global $g_idTestSkillButton = 0
 Global $g_idResetSessionButton = 0
 
+Global $g_idHpAutopotCheckbox = 0
+Global $g_idMpAutopotCheckbox = 0
+Global $g_idHpThresholdInput = 0
+Global $g_idMpThresholdInput = 0
+Global $g_idHpPotionKeyCombo = 0
+Global $g_idMpPotionKeyCombo = 0
+Global $g_idPotionCooldownInput = 0
+Global $g_idHpCurrentValue = 0
+Global $g_idMpCurrentValue = 0
+Global $g_idVitalsStatusValue = 0
+Global $g_idAutopotDecisionValue = 0
+
 Global $g_idDetectButton = 0
 Global $g_idDelayedBindButton = 0
 Global $g_idSearchButton = 0
@@ -204,7 +256,7 @@ HotKeySet("{F6}", "_HotkeyToggleRuntime")
 HotKeySet("{F8}", "_HotkeyEmergencyStop")
 
 _Log("============================================================")
-_Log("Maple Automation MVP v0.1 starting")
+_Log("Maple Automation MVP v0.2.1 starting")
 _Log("Script directory: " & @ScriptDir)
 _Log("AutoIt architecture: " & (@AutoItX64 ? "x64" : "x86"))
 _Log("Administrator token: " & (IsAdmin() ? "yes" : "no"))
@@ -306,6 +358,11 @@ While True
         _ScanExperienceOnce()
     EndIf
 
+    If $g_bOcrMonitoring And TimerDiff($g_hVitalsTimer) >= $APP_VITALS_INTERVAL Then
+        $g_hVitalsTimer = TimerInit()
+        _ScanVitalsOnce()
+    EndIf
+
     If TimerDiff($g_hStatsRefreshTimer) >= $APP_STATS_REFRESH_MS Then
         $g_hStatsRefreshTimer = TimerInit()
         _UpdateSessionStats()
@@ -327,7 +384,7 @@ Exit
 
 Func _CreateControlPanel()
     $g_hControlGui = GUICreate( _
-            "Maple Automation MVP v0.1", _
+            "Maple Automation MVP v0.2.1", _
             $PANEL_WIDTH, _
             $PANEL_HEIGHT, _
             -1, _
@@ -342,7 +399,7 @@ Func _CreateControlPanel()
     GUICtrlSetColor($idTitle, $APP_COLOR_TEXT)
 
     Local $idSubtitle = GUICtrlCreateLabel( _
-            "Template navigation + bottom EXP HUD telemetry", _
+            "Vision + EXP telemetry + OCR HP/MP autopot", _
             18, 38, 584, 18, $SS_CENTER)
     GUICtrlSetColor($idSubtitle, $APP_COLOR_MUTED)
 
@@ -400,58 +457,97 @@ Func _CreateControlPanel()
     _CreateCaption("Last input", 18, 490)
     $g_idLastInputValue = _CreateValueLabel("None", 116, 487, 486, 28)
 
-    _CreateSectionLabel("EXP SESSION", 18, 530)
-    _CreateCaption("Tesseract", 18, 558)
-    $g_idTesseractValue = _CreateValueLabel("Checking...", 116, 555, 486, 28)
+    _CreateSectionLabel("HP / MP AUTOPOT", 18, 530)
 
-    _CreateMiniStat("Session time", 18, 594, 178, $g_idSessionTimeValue)
-    _CreateMiniStat("XP / hr", 212, 594, 178, $g_idXpHourValue)
-    _CreateMiniStat("Total XP", 406, 594, 196, $g_idTotalValue)
-    _CreateMiniStat("Events", 18, 646, 178, $g_idEventsValue)
-    _CreateMiniStat("Last gain", 212, 646, 178, $g_idLastGainValue)
-    _CreateMiniStat("Last HUD read", 406, 646, 196, $g_idLastReadValue)
+    $g_idHpAutopotCheckbox = GUICtrlCreateCheckbox("Enable HP autopot", 18, 558, 168, 24)
+    GUICtrlSetState($g_idHpAutopotCheckbox, $GUI_UNCHECKED)
+    GUICtrlSetColor($g_idHpAutopotCheckbox, $APP_COLOR_TEXT)
+    _CreateCaption("Threshold %", 196, 562)
+    $g_idHpThresholdInput = GUICtrlCreateInput("40", 278, 558, 46, 24)
+    _CreateCaption("Key", 340, 562)
+    $g_idHpPotionKeyCombo = GUICtrlCreateCombo("F1", 382, 558, 74, 24, $CBS_DROPDOWNLIST)
+    GUICtrlSetData($g_idHpPotionKeyCombo, "F1|F2|F3|F4|F5|F7|F9|F10|F11|F12", "F1")
+    $g_idHpCurrentValue = _CreateValueLabel("HP: waiting", 470, 556, 132, 28)
 
-    $g_idResetSessionButton = GUICtrlCreateButton("Reset EXP Session", 406, 696, 196, 28)
+    $g_idMpAutopotCheckbox = GUICtrlCreateCheckbox("Enable MP autopot", 18, 594, 168, 24)
+    GUICtrlSetState($g_idMpAutopotCheckbox, $GUI_UNCHECKED)
+    GUICtrlSetColor($g_idMpAutopotCheckbox, $APP_COLOR_TEXT)
+    _CreateCaption("Threshold %", 196, 598)
+    $g_idMpThresholdInput = GUICtrlCreateInput("30", 278, 594, 46, 24)
+    _CreateCaption("Key", 340, 598)
+    $g_idMpPotionKeyCombo = GUICtrlCreateCombo("F2", 382, 594, 74, 24, $CBS_DROPDOWNLIST)
+    GUICtrlSetData($g_idMpPotionKeyCombo, "F1|F2|F3|F4|F5|F7|F9|F10|F11|F12", "F2")
+    $g_idMpCurrentValue = _CreateValueLabel("MP: waiting", 470, 592, 132, 28)
 
-    _CreateSectionLabel("TOOLS", 18, 738)
-    $g_idDetectButton = GUICtrlCreateButton("Detect Client", 18, 764, 136, 28)
-    $g_idSearchButton = GUICtrlCreateButton("Search Once", 166, 764, 136, 28)
-    $g_idReloadDataButton = GUICtrlCreateButton("Reload /data", 314, 764, 136, 28)
-    $g_idOpenDebugButton = GUICtrlCreateButton("Open Debug", 462, 764, 140, 28)
+    _CreateCaption("Vitals OCR", 18, 634)
+    $g_idVitalsStatusValue = _CreateValueLabel("Waiting for F6", 116, 630, 486, 28)
 
-    $g_idCapturePlayerButton = GUICtrlCreateButton("Capture Player", 18, 800, 136, 28)
-    $g_idCaptureTargetButton = GUICtrlCreateButton("Capture Target", 166, 800, 136, 28)
-    $g_idOpenDataButton = GUICtrlCreateButton("Open /data", 314, 800, 136, 28)
-    $g_idCaptureButton = GUICtrlCreateButton("Capture Client", 462, 800, 140, 28)
+    _CreateCaption("Cooldown", 18, 670)
+    $g_idPotionCooldownInput = GUICtrlCreateInput("800", 116, 666, 72, 24)
+    Local $idCooldownSuffix = GUICtrlCreateLabel("ms per potion", 196, 670, 100, 20)
+    GUICtrlSetColor($idCooldownSuffix, $APP_COLOR_MUTED)
 
-    ; Less-frequent controls remain available without dominating the MVP UI.
-    $g_idDelayedBindButton = GUICtrlCreateButton("Bind Active", 18, 836, 106, 26)
-    $g_idImportPlayerButton = GUICtrlCreateButton("Import Player", 132, 836, 106, 26)
-    $g_idImportTargetButton = GUICtrlCreateButton("Import Target", 246, 836, 106, 26)
-    $g_idClearButton = GUICtrlCreateButton("Clear Marks", 360, 836, 106, 26)
-    $g_idActivateButton = GUICtrlCreateButton("Activate", 474, 836, 62, 26)
-    $g_idExitButton = GUICtrlCreateButton("Exit", 544, 836, 58, 26)
+    _CreateCaption("Decision", 318, 670)
+    $g_idAutopotDecisionValue = _CreateValueLabel("Autopot disabled by default", 416, 666, 186, 42)
+
+    GUICtrlSetTip($g_idHpAutopotCheckbox, _
+            "Uses OCR values from the permanent bottom HP HUD. Disabled by default.")
+    GUICtrlSetTip($g_idMpAutopotCheckbox, _
+            "Uses OCR values from the permanent bottom MP HUD. Disabled by default.")
+    GUICtrlSetTip($g_idPotionCooldownInput, _
+            "Minimum time between repeated sends for each potion channel.")
+
+    _CreateSectionLabel("EXP SESSION", 18, 726)
+    _CreateCaption("Tesseract", 18, 754)
+    $g_idTesseractValue = _CreateValueLabel("Checking...", 116, 751, 486, 28)
+
+    _CreateMiniStat("Session time", 18, 790, 178, $g_idSessionTimeValue)
+    _CreateMiniStat("XP / hr", 212, 790, 178, $g_idXpHourValue)
+    _CreateMiniStat("Total XP", 406, 790, 196, $g_idTotalValue)
+    _CreateMiniStat("Events", 18, 842, 178, $g_idEventsValue)
+    _CreateMiniStat("Last gain", 212, 842, 178, $g_idLastGainValue)
+    _CreateMiniStat("Last HUD read", 406, 842, 196, $g_idLastReadValue)
+
+    $g_idResetSessionButton = GUICtrlCreateButton("Reset EXP Session", 406, 892, 196, 28)
+
+    _CreateSectionLabel("TOOLS", 18, 934)
+    $g_idDetectButton = GUICtrlCreateButton("Detect Client", 18, 960, 136, 28)
+    $g_idSearchButton = GUICtrlCreateButton("Search Once", 166, 960, 136, 28)
+    $g_idReloadDataButton = GUICtrlCreateButton("Reload /data", 314, 960, 136, 28)
+    $g_idOpenDebugButton = GUICtrlCreateButton("Open Debug", 462, 960, 140, 28)
+
+    $g_idCapturePlayerButton = GUICtrlCreateButton("Capture Player", 18, 996, 136, 28)
+    $g_idCaptureTargetButton = GUICtrlCreateButton("Capture Target", 166, 996, 136, 28)
+    $g_idOpenDataButton = GUICtrlCreateButton("Open /data", 314, 996, 136, 28)
+    $g_idCaptureButton = GUICtrlCreateButton("Capture Client", 462, 996, 140, 28)
+
+    $g_idDelayedBindButton = GUICtrlCreateButton("Bind Active", 18, 1032, 106, 26)
+    $g_idImportPlayerButton = GUICtrlCreateButton("Import Player", 132, 1032, 106, 26)
+    $g_idImportTargetButton = GUICtrlCreateButton("Import Target", 246, 1032, 106, 26)
+    $g_idClearButton = GUICtrlCreateButton("Clear Marks", 360, 1032, 106, 26)
+    $g_idActivateButton = GUICtrlCreateButton("Activate", 474, 1032, 62, 26)
+    $g_idExitButton = GUICtrlCreateButton("Exit", 544, 1032, 58, 26)
 
     $g_idStatusValue = GUICtrlCreateEdit( _
-            "", 18, 872, 584, 28, BitOR($ES_READONLY, $ES_MULTILINE))
+            "", 18, 1068, 584, 42, BitOR($ES_READONLY, $ES_MULTILINE))
     GUICtrlSetBkColor($g_idStatusValue, $APP_COLOR_PANEL)
     GUICtrlSetColor($g_idStatusValue, $APP_COLOR_TEXT)
 
     $g_idContinuousButton = GUICtrlCreateButton( _
-            "F6 Start", 18, 906, 282, 28)
+            "F6 Start", 18, 1122, 282, 30)
     $g_idEmergencyButton = GUICtrlCreateButton( _
-            "F8 EMERGENCY STOP", 314, 906, 288, 28)
+            "F8 EMERGENCY STOP", 314, 1122, 288, 30)
     GUICtrlSetTip($g_idEmergencyButton, _
-            "Press F8 at any time to stop and release movement keys.")
+            "Press F8 at any time to stop and release movement and potion keys.")
 
     GUICtrlSetTip($g_idContinuousButton, _
-            "F6 starts or pauses target vision, optional movement, and EXP OCR.")
+            "F6 starts or pauses vision, movement, EXP OCR, and HP/MP OCR.")
     GUICtrlSetTip($g_idAutoMoveCheckbox, _
             "Automatic input is sent only while the bound game window is active.")
     GUICtrlSetTip($g_idStopDistanceInput, _
             "Horizontal center distance at which movement keys are released.")
 
-    _SetStatus("Ready. F6 starts the combined runtime; F8 stops immediately.")
+    _SetStatus("Ready. F6 starts the combined runtime; F8 releases everything immediately.")
 EndFunc
 
 Func _CreateSectionLabel($sText, $iX, $iY)
@@ -1977,12 +2073,14 @@ Func _ToggleContinuousSearch()
     $g_bOcrMonitoring = ($g_sTesseractPath <> "")
     $g_hContinuousTimer = TimerInit()
     $g_hOcrTimer = TimerInit()
+    $g_hVitalsTimer = TimerInit()
     $g_hSkillTimer = TimerInit()
 
     ; Establish a fresh baseline so EXP earned while paused is not counted.
     $g_iLastAcceptedHudExp = -1
     $g_iHudCandidateExp = -1
     $g_iHudCandidateReads = 0
+    _ResetVitalsCandidates()
 
     _SetContinuousUi()
     _SetAutomationStatus("Starting vision...")
@@ -2001,6 +2099,7 @@ Func _DisableContinuousSearch($sReason)
     $g_bContinuous = False
     $g_bOcrMonitoring = False
     _ReleaseMovementKey()
+    _ReleaseAllConfiguredPotionKeys()
     _SetContinuousUi()
     _SetAutomationStatus("Paused")
     _Log("Combined runtime disabled: " & $sReason)
@@ -2019,9 +2118,10 @@ Func _EmergencyStop($sReason)
     $g_bOcrMonitoring = False
     _ReleaseMovementKey()
     _ReleaseAllConfiguredMovementKeys()
+    _ReleaseAllConfiguredPotionKeys()
     _SetContinuousUi()
     _SetAutomationStatus("EMERGENCY STOPPED")
-    _SetStatus($sReason & ". Movement keys released.")
+    _SetStatus($sReason & ". Movement and potion keys released.")
     _Log("EMERGENCY STOP: " & $sReason)
 EndFunc
 
@@ -2137,6 +2237,19 @@ Func _ReleaseAllConfiguredMovementKeys()
     $g_sHeldMovementKey = ""
 EndFunc
 
+Func _ReleaseAllConfiguredPotionKeys()
+    ; Potion keys are sent as taps, but force every supported key up for F8/exit safety.
+    Send("{F1 up}{F2 up}{F3 up}{F4 up}{F5 up}{F7 up}{F9 up}{F10 up}{F11 up}{F12 up}")
+EndFunc
+
+Func _PotionSendToken($sKeyLabel)
+    Switch StringUpper(StringStripWS($sKeyLabel, 8))
+        Case "F1", "F2", "F3", "F4", "F5", "F7", "F9", "F10", "F11", "F12"
+            Return StringUpper(StringStripWS($sKeyLabel, 8))
+    EndSwitch
+    Return ""
+EndFunc
+
 Func _MovementHoldToken($sKeyLabel)
     Switch StringUpper(StringStripWS($sKeyLabel, 8))
         Case "LEFT ARROW"
@@ -2215,6 +2328,277 @@ Func _EnsureGameActiveForManualInput()
 EndFunc
 
 ; ============================================================================
+; Bottom HP/MP HUD OCR and autopot
+; ============================================================================
+
+Func _ResetVitalsCandidates()
+    $g_iHpCandidateCurrent = -1
+    $g_iHpCandidateMaximum = -1
+    $g_nHpCandidatePercent = -1
+    $g_iHpCandidateReads = 0
+    $g_iMpCandidateCurrent = -1
+    $g_iMpCandidateMaximum = -1
+    $g_nMpCandidatePercent = -1
+    $g_iMpCandidateReads = 0
+    $g_iAcceptedHpMaximum = -1
+    $g_iAcceptedMpMaximum = -1
+    $g_sLastAutopotDecision = "Waiting for stable HP/MP OCR"
+    If $g_idAutopotDecisionValue <> 0 Then _SetAutopotDecision($g_sLastAutopotDecision)
+EndFunc
+
+Func _SetAutopotDecision($sDecision)
+    $g_sLastAutopotDecision = $sDecision
+    If $g_idAutopotDecisionValue <> 0 Then GUICtrlSetData($g_idAutopotDecisionValue, $sDecision)
+EndFunc
+
+Func _ScanVitalsOnce()
+    If $g_bSearchBusy Then
+        _Log("VITALS DECISION: scan skipped because another capture/OCR operation is busy")
+        Return
+    EndIf
+    $g_bSearchBusy = True
+
+    Local $iHp = -1, $iHpMax = -1, $iMp = -1, $iMpMax = -1
+    Local $sOcrOutput = ""
+
+    If Not _TryReadCurrentVitals($iHp, $iHpMax, $iMp, $iMpMax, $sOcrOutput) Then
+        $g_sLastVitalsOcr = $sOcrOutput
+        _SetAutopotDecision("OCR miss; no potion decision")
+        GUICtrlSetData($g_idVitalsStatusValue, "Unreadable; see debug images")
+        _Log("VITALS OCR MISS: raw='" & $sOcrOutput & _
+                "'; crop=" & $g_sLatestVitalsRawPath & _
+                "; scaled=" & $g_sLatestVitalsScaledPath & _
+                "; no potion keys sent")
+        $g_bSearchBusy = False
+        Return
+    EndIf
+
+    $g_sLastVitalsOcr = $sOcrOutput
+    Local $nHpPercent = ($iHpMax > 0 ? ($iHp / $iHpMax) * 100.0 : -1)
+    Local $nMpPercent = ($iMpMax > 0 ? ($iMp / $iMpMax) * 100.0 : -1)
+
+    $g_iCurrentHp = $iHp
+    $g_iMaximumHp = $iHpMax
+    $g_nCurrentHpPercent = $nHpPercent
+    $g_iCurrentMp = $iMp
+    $g_iMaximumMp = $iMpMax
+    $g_nCurrentMpPercent = $nMpPercent
+
+    GUICtrlSetData($g_idHpCurrentValue, _FormatVitalRead("HP", $iHp, $iHpMax, $nHpPercent))
+    GUICtrlSetData($g_idMpCurrentValue, _FormatVitalRead("MP", $iMp, $iMpMax, $nMpPercent))
+    GUICtrlSetData($g_idVitalsStatusValue, _
+            "HP " & StringFormat("%.1f", $nHpPercent) & "% | MP " & _
+            StringFormat("%.1f", $nMpPercent) & "%")
+
+    _Log("VITALS OCR: HP=" & $iHp & "/" & $iHpMax & _
+            " (" & StringFormat("%.2f", $nHpPercent) & "%)" & _
+            "; MP=" & $iMp & "/" & $iMpMax & _
+            " (" & StringFormat("%.2f", $nMpPercent) & "%)" & _
+            "; OCR='" & $sOcrOutput & "'")
+
+    Local $sHpDecision = _ProcessVitalChannel( _
+            "HP", $iHp, $iHpMax, $nHpPercent, _
+            $g_idHpAutopotCheckbox, $g_idHpThresholdInput, $g_idHpPotionKeyCombo, _
+            $g_iHpCandidateCurrent, $g_iHpCandidateMaximum, _
+            $g_nHpCandidatePercent, $g_iHpCandidateReads, _
+            $g_iAcceptedHpMaximum, $g_hHpPotionTimer, $g_bHpPotionHasFired)
+
+    Local $sMpDecision = _ProcessVitalChannel( _
+            "MP", $iMp, $iMpMax, $nMpPercent, _
+            $g_idMpAutopotCheckbox, $g_idMpThresholdInput, $g_idMpPotionKeyCombo, _
+            $g_iMpCandidateCurrent, $g_iMpCandidateMaximum, _
+            $g_nMpCandidatePercent, $g_iMpCandidateReads, _
+            $g_iAcceptedMpMaximum, $g_hMpPotionTimer, $g_bMpPotionHasFired)
+
+    _SetAutopotDecision("HP: " & $sHpDecision & @CRLF & "MP: " & $sMpDecision)
+    $g_bSearchBusy = False
+EndFunc
+
+Func _ProcessVitalChannel( _
+        $sKind, $iCurrent, $iMaximum, $nPercent, _
+        $idEnabledCheckbox, $idThresholdInput, $idKeyCombo, _
+        ByRef $iCandidateCurrent, ByRef $iCandidateMaximum, _
+        ByRef $nCandidatePercent, ByRef $iCandidateReads, _
+        ByRef $iAcceptedMaximum, ByRef $hPotionTimer, ByRef $bPotionHasFired)
+
+    Local $iThreshold = Int(Number(GUICtrlRead($idThresholdInput)))
+    $iThreshold = _ClampValue($iThreshold, 1, 99)
+    Local $iRequiredReads = $APP_VITALS_STABLE_READS
+    If $nPercent <= ($iThreshold - $APP_VITALS_SEVERE_MARGIN) Then $iRequiredReads = 1
+
+    ; Accept consecutive reads with the same maximum and a nearby percentage.
+    If $iMaximum = $iCandidateMaximum And _
+            $nCandidatePercent >= 0 And Abs($nPercent - $nCandidatePercent) <= 5.0 Then
+        $iCandidateReads += 1
+    Else
+        $iCandidateReads = 1
+    EndIf
+    $iCandidateCurrent = $iCurrent
+    $iCandidateMaximum = $iMaximum
+    $nCandidatePercent = $nPercent
+
+    If $iCandidateReads < $iRequiredReads Then
+        Local $sPending = "stable read " & $iCandidateReads & "/" & $iRequiredReads
+        _Log("AUTOPOT " & $sKind & ": " & $sPending & _
+                "; current=" & $iCurrent & "/" & $iMaximum & _
+                " (" & StringFormat("%.2f", $nPercent) & "%)" & _
+                "; no key sent")
+        Return $sPending
+    EndIf
+
+    If $iAcceptedMaximum > 0 Then
+        Local $nMaxChange = Abs($iMaximum - $iAcceptedMaximum) / $iAcceptedMaximum * 100.0
+        If $nMaxChange > $APP_VITALS_MAX_CHANGE_PERCENT And _
+                $iCandidateReads < $APP_VITALS_MAX_CHANGE_READS Then
+            Local $sMaxPending = "max changed; verify " & $iCandidateReads & "/" & _
+                    $APP_VITALS_MAX_CHANGE_READS
+            _Log("AUTOPOT " & $sKind & ": suspicious maximum change " & _
+                    $iAcceptedMaximum & " -> " & $iMaximum & _
+                    " (" & StringFormat("%.1f", $nMaxChange) & "%)" & _
+                    "; " & $sMaxPending & "; no key sent")
+            Return $sMaxPending
+        EndIf
+    EndIf
+    $iAcceptedMaximum = $iMaximum
+
+    If GUICtrlRead($idEnabledCheckbox) <> $GUI_CHECKED Then
+        _Log("AUTOPOT " & $sKind & ": disabled; current=" & _
+                StringFormat("%.2f", $nPercent) & "%" & _
+                "; threshold=" & $iThreshold & "%; no key sent")
+        Return "disabled"
+    EndIf
+
+    If $nPercent > $iThreshold Then
+        _Log("AUTOPOT " & $sKind & ": " & _
+                StringFormat("%.2f", $nPercent) & "% > threshold " & _
+                $iThreshold & "%; no key sent")
+        Return StringFormat("%.1f%% > %d%%", $nPercent, $iThreshold)
+    EndIf
+
+    If $g_hTargetWindow = 0 Or Not WinExists($g_hTargetWindow) Then
+        _Log("AUTOPOT " & $sKind & ": threshold crossed but game window is unavailable; no key sent")
+        Return "low; window unavailable"
+    EndIf
+
+    If Not WinActive($g_hTargetWindow) Then
+        _Log("AUTOPOT " & $sKind & ": threshold crossed but game window is not active; no key sent")
+        Return "low; game inactive"
+    EndIf
+
+    Local $iCooldown = Int(Number(GUICtrlRead($g_idPotionCooldownInput)))
+    $iCooldown = _ClampValue($iCooldown, 250, 10000)
+    Local $nElapsed = $iCooldown
+    If $bPotionHasFired Then $nElapsed = TimerDiff($hPotionTimer)
+
+    If $bPotionHasFired And $nElapsed < $iCooldown Then
+        _Log("AUTOPOT " & $sKind & ": " & _
+                StringFormat("%.2f", $nPercent) & "% <= " & $iThreshold & _
+                "%; cooldown " & Int($nElapsed) & "/" & $iCooldown & _
+                " ms; no key sent")
+        Return "cooldown " & Int($nElapsed) & "/" & $iCooldown & " ms"
+    EndIf
+
+    Local $sKeyLabel = GUICtrlRead($idKeyCombo)
+    Local $sToken = _PotionSendToken($sKeyLabel)
+    If $sToken = "" Then
+        _Log("AUTOPOT " & $sKind & ": threshold crossed but configured key is invalid; no key sent")
+        Return "invalid key"
+    EndIf
+
+    Send("{" & $sToken & "}")
+    $hPotionTimer = TimerInit()
+    $bPotionHasFired = True
+    $g_sLastInput = $sKind & " potion " & $sKeyLabel
+    GUICtrlSetData($g_idLastInputValue, $g_sLastInput)
+
+    _Log("AUTOPOT " & $sKind & " SEND: key=" & $sKeyLabel & _
+            "; current=" & $iCurrent & "/" & $iMaximum & _
+            " (" & StringFormat("%.2f", $nPercent) & "%)" & _
+            "; threshold=" & $iThreshold & "%" & _
+            "; cooldown=" & $iCooldown & " ms")
+    Return "sent " & $sKeyLabel
+EndFunc
+
+Func _TryReadCurrentVitals( _
+        ByRef $iHp, ByRef $iHpMax, ByRef $iMp, ByRef $iMpMax, ByRef $sOcrOutput)
+    $iHp = -1
+    $iHpMax = -1
+    $iMp = -1
+    $iMpMax = -1
+    $sOcrOutput = ""
+    If $g_sTesseractPath = "" Then Return False
+
+    Local $iLeft = 0, $iTop = 0, $iRight = 0, $iBottom = 0
+    If Not _GetTargetWindowRect($iLeft, $iTop, $iRight, $iBottom) Then Return False
+
+    Local $iClientWidth = $iRight - $iLeft + 1
+    Local $iClientHeight = $iBottom - $iTop + 1
+    Local $iVitalsLeft = $iLeft + Int($iClientWidth * $APP_VITALS_X1_RATIO)
+    Local $iVitalsRight = $iLeft + Int($iClientWidth * $APP_VITALS_X2_RATIO)
+    Local $iVitalsTop = $iTop + Int($iClientHeight * $APP_VITALS_Y1_RATIO)
+    Local $iVitalsBottom = $iTop + Int($iClientHeight * $APP_VITALS_Y2_RATIO)
+
+    Local $bSaved = _ImageSearch_ScreenCapture_SaveImage( _
+            $g_sLatestVitalsRawPath, _
+            $iVitalsLeft, $iVitalsTop, $iVitalsRight, $iVitalsBottom, $SEARCH_SCREEN)
+    If Not $bSaved Or Not FileExists($g_sLatestVitalsRawPath) Then Return False
+
+    If Not _CreateScaledOcrImage( _
+            $g_sLatestVitalsRawPath, $g_sLatestVitalsScaledPath, $APP_VITALS_SCALE) Then Return False
+
+    $sOcrOutput = _RunTesseractOnVitalsImage($g_sLatestVitalsScaledPath)
+    If $sOcrOutput = "" Then Return False
+    Return _ExtractVitalsValues($sOcrOutput, $iHp, $iHpMax, $iMp, $iMpMax)
+EndFunc
+
+Func _RunTesseractOnVitalsImage($sImagePath)
+    Local $sOutputBase = $g_sOcrTempDirectory & "\vitals_ocr_result"
+    Local $sOutputPath = $sOutputBase & ".txt"
+    FileDelete($sOutputPath)
+
+    Local $sCommand = '"' & $g_sTesseractPath & '" "' & $sImagePath & _
+            '" "' & $sOutputBase & '" -l eng --psm 7'
+    Local $iExitCode = RunWait($sCommand, @ScriptDir, @SW_HIDE)
+    If $iExitCode <> 0 Or Not FileExists($sOutputPath) Then Return ""
+
+    Local $sOutput = FileRead($sOutputPath)
+    Return StringStripWS( _
+            StringReplace(StringReplace($sOutput, @CR, " "), @LF, " "), 7)
+EndFunc
+
+Func _ExtractVitalsValues( _
+        $sText, ByRef $iHp, ByRef $iHpMax, ByRef $iMp, ByRef $iMpMax)
+    $iHp = -1
+    $iHpMax = -1
+    $iMp = -1
+    $iMpMax = -1
+    If $sText = "" Then Return False
+
+    Local $sUpper = StringUpper($sText)
+    Local $aHp = StringRegExp( _
+            $sUpper, 'HP[^0-9]*([0-9]{1,6})[^0-9]+([0-9]{1,6})', 3)
+    Local $aMp = StringRegExp( _
+            $sUpper, 'MP[^0-9]*([0-9]{1,6})[^0-9]+([0-9]{1,6})', 3)
+
+    If Not IsArray($aHp) Or UBound($aHp) < 2 Then Return False
+    If Not IsArray($aMp) Or UBound($aMp) < 2 Then Return False
+
+    $iHp = Int(Number($aHp[0]))
+    $iHpMax = Int(Number($aHp[1]))
+    $iMp = Int(Number($aMp[0]))
+    $iMpMax = Int(Number($aMp[1]))
+
+    If $iHp < 0 Or $iHpMax <= 0 Or $iHp > $iHpMax Then Return False
+    If $iMp < 0 Or $iMpMax <= 0 Or $iMp > $iMpMax Then Return False
+    Return True
+EndFunc
+
+Func _FormatVitalRead($sKind, $iCurrent, $iMaximum, $nPercent)
+    Return $sKind & ": " & $iCurrent & "/" & $iMaximum & @CRLF & _
+            StringFormat("%.1f%%", $nPercent)
+EndFunc
+
+; ============================================================================
 ; Bottom EXP HUD OCR and session statistics
 ; ============================================================================
 
@@ -2263,7 +2647,7 @@ Func _UpdateSessionStats()
     GUICtrlSetData($g_idLastGainValue, _FormatCompact($g_nLastGain))
     GUICtrlSetData($g_idLastReadValue, ($g_sLastRead <> "" ? $g_sLastRead : "-"))
     GUICtrlSetData($g_idTesseractValue, _
-            ($g_sTesseractPath <> "" ? $g_sTesseractPath : "Not found; EXP OCR disabled"))
+            ($g_sTesseractPath <> "" ? $g_sTesseractPath : "Not found; EXP + HP/MP OCR disabled"))
     _UpdateWindowDisplay()
 EndFunc
 
@@ -2472,10 +2856,11 @@ Func _OnExit()
     $g_bOcrMonitoring = False
     _ReleaseMovementKey()
     _ReleaseAllConfiguredMovementKeys()
+    _ReleaseAllConfiguredPotionKeys()
     _ClearHighlights()
     HotKeySet("{F6}")
     HotKeySet("{F8}")
     If $g_bGdiPlusStarted Then _GDIPlus_Shutdown()
     If $g_bImageSearchStarted Then _ImageSearch_Shutdown()
-    _Log("Maple Automation MVP v0.1 stopped")
+    _Log("Maple Automation MVP v0.2.1 stopped")
 EndFunc

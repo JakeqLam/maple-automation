@@ -1,6 +1,6 @@
-MAPLE AUTOMATION MVP v0.2.0
+MAPLE AUTOMATION MVP v0.2.1
 
-This build extends the verified combined movement + EXP OCR POC with OCR-based HP/MP reading and guarded autopot decisions.
+This packaging update adds a one-click dependency installer to the verified v0.2.0 movement, EXP OCR, HP/MP OCR, and guarded autopot runtime.
 
 FEATURES
 - Binds MapleSaga.exe or MapleStory.exe.
@@ -14,6 +14,21 @@ FEATURES
 - F6 starts/pauses the combined runtime.
 - F8 immediately stops automation and forces movement/potion keys up.
 - Logs every vitals OCR result and every autopot decision.
+
+ONE-CLICK DEPENDENCY INSTALL
+1. Extract this folder.
+2. Double-click install.bat.
+3. Approve the Windows administrator prompt.
+4. The installer uses WinGet to install or verify:
+   - AutoIt
+   - Tesseract OCR
+   - English Tesseract language data
+5. It validates the application with Au3Check when available.
+6. Review install_dependencies.log if anything fails.
+
+LOCAL PROJECT DEPENDENCY
+- ImageSearchDLL_UDF_Embedded.au3 is not installed globally.
+- Keep your existing known-working copy beside the main AutoIt script and launcher.
 
 SAFETY DEFAULTS
 - Automatic movement is OFF.
@@ -29,11 +44,8 @@ DEFAULT AUTOPOT SETTINGS
 - MP threshold: 30%, key F2
 - Cooldown: 800 ms per potion channel
 
-INSTALL
-1. Extract into C:\Users\Jake Lam\code\maple-automation.
-2. Keep ImageSearchDLL_UDF_Embedded.au3 beside the main script.
-3. Keep Tesseract installed at C:\Program Files\Tesseract-OCR\tesseract.exe.
-4. Run Run-Maple-Automation-MVP-v0.2.0-Admin.cmd.
+RUN
+- Run Run-Maple-Automation-MVP-v0.2.1-Admin.cmd.
 
 FIRST TEST
 1. Start MapleSaga at 1280x720.
@@ -44,6 +56,7 @@ FIRST TEST
 6. Configure thresholds/keys, enable one channel at a time, and test with F8 ready.
 
 DEBUG OUTPUT
+- install_dependencies.log
 - debug\MapleAutomationMVP.log
 - debug\ocr_temp\latest_vitals_hud_raw.png
 - debug\ocr_temp\latest_vitals_hud_scaled.png
